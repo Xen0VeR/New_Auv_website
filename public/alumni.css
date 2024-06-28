@@ -1,0 +1,102 @@
+
+/* styles for the startups sectoon */
+
+
+.hero {
+  background: white ; 
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 30vh;
+  padding: 1rem calc((100vw - 1300px) / 2);
+}
+
+.hero1 {
+  background: white ; 
+}
+
+.hero-container1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 30vh;
+  padding: 2rem calc((100vw - 1300px) / 2);
+}
+
+.column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #000;
+  padding: 0rem 2rem;
+}
+
+.column-left h5 {
+  margin-bottom: 5rem;
+  font-size: 10rem;
+}
+
+.column-left p {
+  
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.column-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 2rem;
+}
+
+.hero-image {
+  width: 100%;
+  height: 20%;
+}
+
+.hero1-image {
+  filter: drop-shadow(5px 5px 5px #222);
+  /* box-shadow: 5px 10px #888888; */
+  width: 100%;
+  height: 80%;
+}
+
+/* startup styling ends here */
+
+/* new startup styling starts here */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:center;
+}
+
+.flex-item {
+  width: 75px;
+  height: 200px;
+  text-align: center;
+  font-size: 2em;
+  color: red;
+  font-weight: bold;
+  line-height: 1.4;
+  
+}
+#flex-item-1 {
+  background-color: pink;
+  flex-basis: 1000px;
+}
+#flex-item-2 {
+  background-color: rgb(237, 145, 160);
+  flex-basis: 400px;
+}
+
+#founders {
+  align-content:flex-start;
+}
+
+.row1 {
+ margin: auto;
+}

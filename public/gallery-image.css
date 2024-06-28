@@ -1,0 +1,10 @@
+.portfolio-wrap{
+height: 225px;
+width:400px;
+background-size: cover;
+}
+
+img{
+    height: 100%
+    
+}
