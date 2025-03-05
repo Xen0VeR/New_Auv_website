@@ -82,47 +82,16 @@
 
 <body>
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-      <h1 class="logo me-auto"><a href="index.html"> <img src="./images/logo.png" alt=""> </a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>-->
+  <div id="navbar-placeholder"></div>
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="about-us.html">About</a></li>
-          <li><a href="vehicles.html" class="nav-link scrollto">Vehicles</a></li>
-          <li class="dropdown"><a href="achievements.html" class="nav-link scrollto active"><span>Achievements</span> <i
-                class="bi bi-chevron-right"></i></a>
-            <ul>
-              <li><a href="achievements.html#journey">Team's Journey</a></li>
-              <li><a href="achievements.html#inc">Industrial Collaborations</a></li>
-              <li><a href="achievements.html#rnd">Research & Development</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto " href="robosub.html">Robosub</a></li>
-          <li class="dropdown"><a href="team.html" class="nav-link scrollto active"><span>Team</span> <i
-                class="bi bi-chevron-right"></i></a>
-            <ul>
-              <li><a href="team.html#mech">Mechanical</a></li>
-              <li><a href="team.html#elec">Electrical</a></li>
-              <li><a href="team.html#soft">Software</a></li>
-              <li><a href="team.html#business">Business</a></li>
-              <li><a href="team_page2021-22.html">Team-2021-22</a></li>
-              <li><a href="team_page2020-21.html">Team-2020-21</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto " href="alumni.html">Alumni</a></li>
-          <li><a class="nav-link scrollto" href="gallery.html">Gallery</a></li>
-          <li><a href="blog.html">Media & Blogs</a></li>
-
-          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar --><!-- .navbar -->
-    </div>
-  </header><!-- End Header -->
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script><!-- End Header -->
   <section id="team" class="team section-bg">
     <div class="container" data-aos="fade-up">
 
@@ -213,16 +182,15 @@
               <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="member" style="width: 15em;" data-aos="fade-up" data-aos-delay="300">
                   <div class="member-img">
-                    <img src="images/Team/RS2024 Website Photo/Kalp Vyas.jpg" class="img-fluid" alt="">
+                    <img src="images/Team/RS2024 Website Photo/Archit Swamy.jpg"" class=" img-fluid" alt="">
                     <div class="social">
-                      <a href="https://www.instagram.com/_kalp__vyas__/" target="_blank"><i
-                          class="bi bi-instagram"></i></a>
-                      <a href="https://www.linkedin.com/in/kalp-vyas-ab5946219/" target="_blank"><i
+                      <a href="https://www.instagram.com/ar_x_is" target="_blank"><i class="bi bi-instagram"></i></a>
+                      <a href="https://www.linkedin.com/in/archit-swamy-78765a24b/" target="_blank"><i
                           class="bi bi-linkedin"></i></a>
                     </div>
                   </div>
                   <div class="member-info">
-                    <h4>Kalp Vyas</h4>
+                    <h4>Archit Swamy</h4>
                     <span class="post">Team Leader</span>
                   </div>
                 </div>
@@ -231,16 +199,16 @@
               <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="member" style="width: 15em;" data-aos="fade-up" data-aos-delay="200">
                   <div class="member-img">
-                    <img src="images/Team/Kc.jpg" class="img-fluid" alt="">
+                    <img src="images/Team/freshies/Kaushik.png" class="img-fluid" alt="">
                     <div class="social">
-                      <a href="https://www.instagram.com/kaustubh_chourasia03/" target="_blank"><i
+                      <a href="https://www.instagram.com/kaushik_chavali/" target="_blank"><i
                           class="bi bi-instagram"></i></a>
-                      <a href="https://www.linkedin.com/in/kaustubh-chourasia-08232a217/" target="_blank"><i
+                      <a href="https://www.linkedin.com/in/kaushik-chavali-a66885233/" target="_blank"><i
                           class="bi bi-linkedin"></i></a>
                     </div>
                   </div>
                   <div class="member-info">
-                    <h4>Kaustubh Chourasia</h4>
+                    <h4>Kaushik Chavali</h4>
                     <span class="post">Team Leader</span>
                   </div>
                 </div>
@@ -249,16 +217,16 @@
               <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="member" style="width: 15em;" data-aos="fade-up" data-aos-delay="100">
                   <div class="member-img">
-                    <img src="images/Team/RS2024 Website Photo/Shivam Ambokar.jpg" class="img-fluid" alt="">
+                    <img src="images/Team/freshies/Sameer.png" class="img-fluid" alt="">
                     <div class="social">
-                      <a href="https://www.instagram.com/__sada_shiv/" target="_blank"><i
+                      <a href="https://www.instagram.com/sameer_mannava/" target="_blank"><i
                           class="bi bi-instagram"></i></a>
-                      <a href="https://www.linkedin.com/in/shivam-ambokar-1762911bb" target="_blank"><i
+                      <a href="https://www.linkedin.com/in/sameer-mannava-76251b1a0" target="_blank"><i
                           class="bi bi-linkedin"></i></a>
                     </div>
                   </div>
                   <div class="member-info">
-                    <h4>Shivam Ambokar</h4>
+                    <h4>Sameer Mannava</h4>
                     <span class="post">Team Leader</span>
                   </div>
                 </div>
@@ -273,18 +241,18 @@
                 <h3>Team Advisors</h3>
                 <br> <br> <br> <br>
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                  <div class="member" style="width: 15em;" data-aos="fade-up" data-aos-delay="200">
+                  <div class="member" style="width: 15em;" data-aos="fade-up" data-aos-delay="100">
                     <div class="member-img">
-                      <img src="images/Team/sophies/Advait_AUV 2021.jpg" class="img-fluid" alt="">
+                      <img src="images/Team/freshies/Anuj_Bangad.png" class="img-fluid" alt="">
                       <div class="social">
-                        <a href="https://www.instagram.com/bolozubaankesari/" target="_blank"><i
+                        <a href="https://www.instagram.com/anuj_pos/" target="_blank"><i
                             class="bi bi-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/advait-risbud/" target="_blank"><i
+                        <a href="https://www.linkedin.com/in/anuj-bangad-5b9146252/" target="_blank"><i
                             class="bi bi-linkedin"></i></a>
                       </div>
                     </div>
                     <div class="member-info">
-                      <h4>Advait Risbud</h4>
+                      <h4>Anuj Bangad</h4>
                       <span class="post">Team Advisor</span>
                     </div>
                   </div>
@@ -293,16 +261,34 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                   <div class="member" style="width: 15em;" data-aos="fade-up" data-aos-delay="300">
                     <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Govind Saju.jpg" class="img-fluid" alt="">
+                      <img src="images/Team/RS2024 Website Photo/Anurag Deshpande.jpg" class="img-fluid" alt="">
                       <div class="social">
-                        <a href="https://www.instagram.com/govind_saju/" target="_blank"><i
+                        <a href="https://www.facebook.com/anurag_deshpande" target="_blank"><i
                             class="bi bi-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/govind-saju-1915981b9" target="_blank"><i
+                        <a href="https://www.linkedin.com/in/anurag-deshpande-98833a226/" target="_blank"><i
                             class="bi bi-linkedin"></i></a>
                       </div>
                     </div>
                     <div class="member-info">
-                      <h4>Govind Saju</h4>
+                      <h4>Anurag Deshpande</h4>
+                      <span class="post">Team Advisor</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="member" style="width: 15em;" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-img">
+                      <img src="images/Team/freshies/Mayank_bajaj.png" class="img-fluid" alt="">
+                      <div class="social">
+                        <a href="https://www.instagram.com/mayankb1105/" target="_blank"><i
+                            class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/mayank-bajaj-867631223/" target="_blank"><i
+                            class="bi bi-linkedin"></i></a>
+                      </div>
+                    </div>
+                    <div class="member-info">
+                      <h4>Mayank Bajaj</h4>
                       <span class="post">Team Advisor</span>
                     </div>
                   </div>
@@ -311,906 +297,167 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                   <div class="member" style="width: 15em;" data-aos="fade-up" data-aos-delay="100">
                     <div class="member-img">
-                      <img src="images/Team/sophies/Sankalp B_AUV 2021.jpg" class="img-fluid" alt="">
+                      <img src="images/Team/RS2024 Website Photo/Yashas Salian.jpg" class="img-fluid" alt="">
                       <div class="social">
-                        <a href="https://www.instagram.com/sankalpbhamare/" target="_blank"><i
+                        <a href="https://www.instagram.com/_earlylife_crysis/" target="_blank"><i
                             class="bi bi-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/sankalp-bhamare-871a43206/?originalSubdomain=in"
-                          target="_blank"><i class="bi bi-linkedin"></i></a>
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Sankalp Bhamare</h4>
-                      <span class="post">Team Advisors</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <br> <br>
-
-              <div class="page-section" id="mech">
-
-                <!-- Mechanical sub -->
-                <h3> Mechanical Subdivision</h3> <br> <br>
-
-                <!-- Mech thirdies -->
-
-                <div class="container">
-                  <div class="row">
-                    <div class="col">
-                      <div class="member sophie" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member-img">
-                          <img src="images/Team/freshies/Anuj_Bangad.png" class="img-fluid" alt="">
-                          <div class="social">
-                            <a href="https://www.instagram.com/anuj_pos/" target="_blank"><i
-                                class="bi bi-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/anuj-bangad-5b9146252/" target="_blank"><i
-                                class="bi bi-linkedin"></i></a>
-                          </div>
-                        </div>
-                        <div class="member-info">
-                          <h4>Anuj Bangad</h4>
-                          <span class="post">Subdivision Head</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="member sophie" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member-img">
-                          <img src="images/Team/RS2024 Website Photo/Anurag Deshpande.jpg" class="img-fluid" alt="">
-                          <div class="social">
-                            <a href="https://www.facebook.com/anurag_deshpande" target="_blank"><i
-                                class="bi bi-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/anurag-deshpande-98833a226/" target="_blank"><i
-                                class="bi bi-linkedin"></i></a>
-                          </div>
-                        </div>
-                        <div class="member-info">
-                          <h4>Anurag Deshpande</h4>
-                          <span class="post">Subdivision Head</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="member sophie" data-aos="fade-up" data-aos-delay="300">
-                        <div class="member-img">
-                          <img src="images/Team/freshies/Kaushik.png" class="img-fluid" alt="">
-                          <div class="social">
-                            <a href="https://www.instagram.com/kaushik_chavali/" target="_blank"><i
-                                class="bi bi-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/kaushik-chavali-a66885233/" target="_blank"><i
-                                class="bi bi-linkedin"></i></a>
-                          </div>
-                        </div>
-                        <div class="member-info">
-                          <h4>Kaushik Chavali</h4>
-                          <span class="post">Subdivision Head</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="member sophie" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member-img">
-                          <img src="images/Team/freshies/Mayank_bajaj.png" class="img-fluid" alt="">
-                          <div class="social">
-                            <a href="https://www.instagram.com/mayankb1105/" target="_blank"><i
-                                class="bi bi-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/mayank-bajaj-867631223/" target="_blank"><i
-                                class="bi bi-linkedin"></i></a>
-                          </div>
-                        </div>
-                        <div class="member-info">
-                          <h4>Mayank Bajaj</h4>
-                          <span class="post">Subdivision Head</span>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div>
-                </div>
-              </div>
-              <br> <br>
-
-              <!-- Mech Sophies -->
-
-              <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="100">
-                      <div class="member-img">
-                        <img src="images/Team/photos/Gokul_Mech.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                          <a href="https://www.instagram.com/hey_its_gokul/" target="_blank"><i
-                              class="bi bi-instagram"></i></a>
-                          <a href="https://www.linkedin.com/in/gokul-rajaraman-263256252?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                            target="_blank"><i class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Gokul R</h4>
-                        <span class="post">Mechanical designer </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="300">
-                      <div class="member-img">
-                        <img src="images/Team/RS2024 Website Photo/Khushajh Verma.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                          <a href="https://www.instagram.com/v.khushajh?igsh=ZGUzMzM3NWJiOQ==" target="_blank"><i
-                              class="bi bi-instagram"></i></a>
-                          <a href="https://www.linkedin.com/in/khushajh-verma-1b9a79254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                            target="_blank"><i class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Khushajh Verma</h4>
-                        <span class="post">Mechanical designer </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="300">
-                      <div class="member-img">
-                        <img src="images/Team/RS2024 Website Photo/Yash Sanjay Sawant.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                          <a href="https://www.instagram.com/yash_sasa?igsh=MW81ZDN5ZjY2eDdhNQ==" target="_blank"><i
-                              class="bi bi-instagram"></i></a>
-                          <a href="https://in.linkedin.com/in/yash-sawant-49174b280" target="_blank"><i
-                              class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Yash Sanjay Sawant</h4>
-                        <span class="post">Mechanical designer </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br> <br>
-
-            <!-- mech frieshies -->
-
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Anuj Patel.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Anuj Patel</h4>
-                      <span class="post">Mechanical Trainee</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="200">
-                    <div class="member-img">
-                      <img src="images/Team/photos/Arham_Mech_Freshie.JPG" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Arham Shah</h4>
-                      <span class="post">Mechanical Trainee</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="300">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Ayush Kumar.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Ayush Kumar</h4>
-                      <span class="post">Mechanical Trainee</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Ayush Lonakadi.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Ayush lonakadi</h4>
-                      <span class="post">Mechanical Trainee</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Divya Mehta.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Divya Mehta</h4>
-                      <span class="post">Mechanical Trainee</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Manaswi Goyal.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Manaswi Goyal</h4>
-                      <span class="post">Mechanical Trainee</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Electrical Subdivision -->
-
-            <div class="page-section" id="elec">
-              <h3>Electrical Subdivision</h3> <br> <br>
-
-              <!-- Elec thirdies -->
-              <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="100">
-                      <div class="member-img">
-                        <img src="images/Team/RS2024 Website Photo/Archit Swamy.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                          <a href="https://www.instagram.com/ar_x_is" target="_blank"><i
-                              class="bi bi-instagram"></i></a>
-                          <a href="https://www.linkedin.com/in/archit-swamy-624a58234/" target="_blank"><i
-                              class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Archit Swamy</h4>
-                        <span class="post">Subdivision Head</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="200">
-                      <div class="member-img">
-                        <img src="images/Team/RS2024 Website Photo/Yashas Salian.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                          <a href="https://www.instagram.com/_earlylife_crysis/" target="_blank"><i
-                              class="bi bi-instagram"></i></a>
-                          <a href="https://www.linkedin.com/in/yashas-m-salian-b266a2222/" target="_blank"><i
-                              class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Yashas Salian</h4>
-                        <span class="post">Subdivision Head</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <br> <br>
-
-              <!-- Elec Sophies -->
-
-              <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="100">
-                      <div class="member-img">
-                        <img src="images/Team/photos/anshuelec (updated).png" class="img-fluid" alt="">
-                        <div class="social">
-                          <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Anshu arora</h4>
-                        <span class="post">Electrical Designer</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="200">
-                      <div class="member-img">
-                        <img src="images/Team/RS2024 Website Photo/Anirudh Jangid.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                          <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Anirudh Jangid</h4>
-                        <span class="post">Electrical Designer</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="300">
-                      <div class="member-img">
-                        <img src="images/Team/RS2024 Website Photo/Ayush Prasad.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                          <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Ayush Prasad</h4>
-                        <span class="post">Electrical Designer</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="100">
-                      <div class="member-img">
-                        <img src="images/Team/RS2024 Website Photo/Siddhi Deshpande.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                          <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a> -->
-                          <a href="https://www.linkedin.com/in/siddhi-deshpande-a64044254" target="_blank"><i
-                              class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Siddhi Deshpande</h4>
-                        <span class="post">Electrical Designer</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="100">
-                      <div class="member-img">
-                        <img src="images/Team/photos/Swaprabha_Elec.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                          <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Swaprabha Dey</h4>
-                        <span class="post">Electrical Designer</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- elec frieshies -->
-
-                <div class="container">
-                  <div class="row">
-                    <div class="col">
-                      <div class="member" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member-img">
-                          <img src="images/Team/RS2024 Website Photo/Aniket Gupta.jpg" class="img-fluid" alt="">
-                          <div class="social">
-                            <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                      <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                          </div>
-                        </div>
-                        <div class="member-info">
-                          <h4>Aniket Gupta</h4>
-                          <span class="post">Electrical Trainee</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="member" data-aos="fade-up" data-aos-delay="200">
-                        <div class="member-img">
-                          <img src="images/Team/RS2024 Website Photo/Jigar Mehta.jpg" class="img-fluid" alt="">
-                          <div class="social">
-                            <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                      <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                          </div>
-                        </div>
-                        <div class="member-info">
-                          <h4>Jigar Mehta</h4>
-                          <span class="post">Electrical Trainee</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="member" data-aos="fade-up" data-aos-delay="300">
-                        <div class="member-img">
-                          <img src="images/Team/RS2024 Website Photo/Om Inamdar.jpg" class="img-fluid" alt="">
-                          <div class="social">
-                            <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                      <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                          </div>
-                        </div>
-                        <div class="member-info">
-                          <h4>Om inamdar</h4>
-                          <span class="post">Electrical Trainee</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="member" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member-img">
-                          <img src="images/Team/RS2024 Website Photo/Shlok Rathi.jpg" class="img-fluid" alt="">
-                          <div class="social">
-                            <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                      <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                          </div>
-                        </div>
-                        <div class="member-info">
-                          <h4>Shlok Rathi</h4>
-                          <span class="post">Electrical Trainee</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="member" data-aos="fade-up" data-aos-delay="100">
-                        <div class="member-img">
-                          <img src="images/Team/RS2024 Website Photo/Shresth Keshari.jpg" class="img-fluid" alt="">
-                          <div class="social">
-                            <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                      <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                          </div>
-                        </div>
-                        <div class="member-info">
-                          <h4>Shresth Keshari</h4>
-                          <span class="post">Electrical Trainee</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Software Subdivision -->
-
-            <div id="soft" class="page-section">
-              <h2>Software Subdivision</h2> <br> <br>
-
-              <!-- Software thirdies -->
-
-              <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="100">
-                      <div class="member-img">
-                        <img src="images/Team/freshies/Aaryan_Dangi_2022-3.png" class="img-fluid" alt="">
-                        <div class="social">
-                          <a href="https://www.instagram.com/ubermensch_123/" target="_blank"><i
-                              class="bi bi-instagram"></i></a>
-                          <a href="https://www.linkedin.com/in/aaryandangi/" target="_blank"><i
-                              class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Aaryan Dangi</h4>
-                        <span class="post">Subdivision Head</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="300">
-                      <div class="member-img">
-                        <img src="images/Team/RS2024 Website Photo/Archit Gupta.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                          <a href="https://www.instagram.com/_gupta_archit/" target="_blank"><i
-                              class="bi bi-instagram"></i></a>
-                          <a href="https://www.linkedin.com/in/archit-gupta20/" target="_blank"><i
-                              class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Archit Gupta</h4>
-                        <span class="post">Subdivision Head</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="300">
-                      <div class="member-img">
-                        <img src="images/Team/freshies/Sameer.png" class="img-fluid" alt="">
-                        <div class="social">
-                          <a href="https://www.instagram.com/sameer_mannava/" target="_blank"><i
-                              class="bi bi-instagram"></i></a>
-                          <a href="https://www.linkedin.com/in/sameer-mannava-76251b1a0/" target="_blank"><i
-                              class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Sameer Mannava</h4>
-                        <span class="post">Subdivision Head</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Software Sophies -->
-
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Adwai Krishna.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <a href="https://www.instagram.com/adwai_krishna?igsh=NGV4Z3k2bjc4MjR6&utm_source=qr"
-                          target="_blank"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/adwai-krishna-3b65b9269" target="_blank"><i
+                        <a href="https://www.linkedin.com/in/yashas-m-salian-b266a2222/" target="_blank"><i
                             class="bi bi-linkedin"></i></a>
                       </div>
                     </div>
                     <div class="member-info">
-                      <h4>Adwai Krishna</h4>
-                      <span class="post">Software developer </span>
+                      <h4>Yashas Salian</h4>
+                      <span class="post">Team Advisor</span>
                     </div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="member" style="width: 15em;" data-aos="fade-up" data-aos-delay="300">
                     <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Akshaj.jpg" class="img-fluid" alt="">
+                      <img src="images/Team/freshies/Aaryan_Dangi_2022-3.png" class="img-fluid" alt="">
                       <div class="social">
-                        <a href="https://www.instagram.com/akshajaithal/" target="_blank"><i
+                        <a href="https://www.instagram.com/ubermensch_123/" target="_blank"><i
                             class="bi bi-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/akshaj-aithal/" target="_blank"><i
+                        <a href="https://www.linkedin.com/in/aaryandangi/" target="_blank"><i
                             class="bi bi-linkedin"></i></a>
                       </div>
                     </div>
                     <div class="member-info">
-                      <h4>Akshaj</h4>
-                      <span class="post">Software developer </span>
+                      <h4>Aaryan Dangi</h4>
+                      <span class="post">Team Advisor</span>
                     </div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="300">
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="member" style="width: 15em;" data-aos="fade-up" data-aos-delay="200">
                     <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Dhruvi Despande.jpg" class="img-fluid" alt="">
+                      <img src="images/Team/RS2024 Website Photo/Archit Gupta.jpg" class="img-fluid" alt="">
                       <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a> -->
-                        <a href="https://www.linkedin.com/in/dhruvi-modi-b908b125b/?originalSubdomain=in"
-                          target="_blank"><i class="bi bi-linkedin"></i></a>
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Dhruvi Modi</h4>
-                      <span class="post">Software developer </span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Sparsh Badjate.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <a href="https://www.instagram.com/sparsh_0070/" target="_blank"><i
+                        <a href="https://www.instagram.com/_gupta_archit/" target="_blank"><i
                             class="bi bi-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/sparsh-badjate/?originalSubdomain=in" target="_blank"><i
+                        <a href="https://www.linkedin.com/in/archit-gupta20/" target="_blank"><i
                             class="bi bi-linkedin"></i></a>
                       </div>
                     </div>
                     <div class="member-info">
-                      <h4>Sparsh Badjate</h4>
-                      <span class="post">Software developer </span>
+                      <h4>Archit Gupta</h4>
+                      <span class="post">Team Advisor</span>
                     </div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Urvi Gupta.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a> -->
-                        <a href="https://www.linkedin.com/in/urvi-gupta-80771b267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                          target="_blank"><i class="bi bi-linkedin"></i></a>
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Urvi Gupta</h4>
-                      <span class="post">Software developer </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <!-- software freshies -->
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch"></div>
 
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                  <div class="member" style="width: 15em;" data-aos="fade-up" data-aos-delay="100">
                     <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Akshika Jain.jpg" class="img-fluid" alt="">
+                      <img src="images/Team/RS2024 Website Photo/Shumail Malik.jpg" class="img-fluid" alt="">
                       <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Akshika Jain</h4>
-                      <span class="post">Software Trainee</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="200">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Divyanshu Gupta.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Divyanshu Gupta</h4>
-                      <span class="post">Software Trainee</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="300">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Jash Dalal.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Jash Dalal</h4>
-                      <span class="post">Software Trainee</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Khushi Taxak.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Khushi Taxak</h4>
-                      <span class="post">Software Trainee</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Manit Jhajharia.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Manit Jhajharia</h4>
-                      <span class="post">Software Trainee</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/ratan.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-              <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Ratan Kokal</h4>
-                      <span class="post">Software Trainee</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Business Subdivision -->
-
-            <div class="page-section" id="business">
-              <h3>Business Subdivision</h3> <br> <br>
-
-              <!-- Business thirdies -->
-              <div class="container">
-                <div class="row">
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="100">
-                      <div class="member-img">
-                        <img src="images/Team/RS2024 Website Photo/Shumail Malik.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                          <a href="https://www.instagram.com/mohd_shumail_/" target="_blank"><i
-                              class="bi bi-instagram"></i></a>
-                          <a href="https://www.linkedin.com/in/shumail-malik-039a86222/" target="_blank"><i
-                              class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Shumail Malik</h4>
-                        <span class="post">Subdivision Head</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="200">
-                      <div class="member-img">
-                        <img src="images/Team/freshies/Suyash.png" class="img-fluid" alt="">
-                        <div class="social">
-                          <a href="https://www.instagram.com/still.saw/" target="_blank"><i
-                              class="bi bi-instagram"></i></a>
-                          <a href="https://www.linkedin.com/in/suyash-waghmare-0aa318226/" target="_blank"><i
-                              class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Suyash Waghmare</h4>
-                        <span class="post">Subdivision Head</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <br> <br>
-              <!-- Business Sophies -->
-              <div class="container">
-                <div class="row gx-5">
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="100">
-                      <div class="member-img">
-                        <img src="images/Team/RS2024 Website Photo/Atharv Mittal.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                          <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a> -->
-                          <a href="https://www.linkedin.com/in/shumail-malik-039a86222/" target="_blank"><i
-                              class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Atharva Mittal</h4>
-                        <span class="post">Business Executive</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="200">
-                      <div class="member-img">
-                        <img src="images/Team/photos/formal.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                          <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a> -->
-                          <a href="https://www.linkedin.com/in/shubhi-ajmera-aa7b59263?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-                            target="_blank"><i class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Shubhi Ajmera</h4>
-                        <span class="post">Business Executive</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="member" data-aos="fade-up" data-aos-delay="300">
-                      <div class="member-img">
-                        <img src="images/Team/RS2024 Website Photo/Shivam Agarwal.jpg" class="img-fluid" alt="">
-                        <div class="social">
-                          <a href="https://www.instagram.com/shivamagarwal1305?igsh=ZHlnNDE0ZDMzZm85" target="_blank"><i
-                              class="bi bi-instagram"></i></a>
-                          <a href="https://www.linkedin.com/in/shivam-agarwal-b72b72270/" target="_blank"><i
-                              class="bi bi-linkedin"></i></a>
-                        </div>
-                      </div>
-                      <div class="member-info">
-                        <h4>Shivam Agarwal</h4>
-                        <span class="post">Business Executive</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- business freshies -->
-
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="300">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Avani Jain.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                    <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Avani gala</h4>
-                      <span class="post">Business Executive</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="300">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Arush Narayan Srivastav.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a> -->
-                        <a href="https://www.linkedin.com/in/arush-narayan-srivastav-001/" target="_blank"><i
+                        <a href="https://www.instagram.com/mohd_shumail_/" target="_blank"><i
+                            class="bi bi-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/shumail-malik-039a86222/" target="_blank"><i
                             class="bi bi-linkedin"></i></a>
                       </div>
                     </div>
                     <div class="member-info">
-                      <h4>Arush Narayan Srivastav</h4>
-                      <span class="post">Business Executive</span>
+                      <h4>Shumail Malik</h4>
+                      <span class="post">Team Advisor</span>
                     </div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="300">
-                    <div class="member-img">
-                      <img src="images/Team/RS2024 Website Photo/Jinay Vora.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                      <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch"></div>
+
+
+                <div class="page-section" id="mech">
+
+                  <!-- Mechanical sub -->
+                  <h2>Mechanical Subdivision</h2><br> <br>
+
+                  <!-- Third Year Team Container -->
+                  <div class="container">
+                    <div class="row" id="MechTeam3-container">
                     </div>
-                    <div class="member-info">
-                      <h4>Jinay Vora</h4>
-                      <span class="post">Business Trainee</span>
+                  </div>
+
+                  <!-- Second Year Team Container -->
+                  <div class="container">
+                    <div class="row" id="MechTeam2-container">
+                    </div>
+                  </div>
+
+                  <!-- First Year Team Container -->
+                  <div class="container">
+                    <div class="row" id="MechTeam1-container">
                     </div>
                   </div>
                 </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-img">
-                      <img src="images/Team/photos/Shaurya_Bteam_Freshie.jpg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                      <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
-                    </div>
-                    <div class="member-info">
-                      <h4>Shaurya Khobragade</h4>
-                      <span class="post">Business Trainee</span>
+
+                <div id="elec" class="page-section">
+                  <h2>Electrical Subdivision</h2> <br> <br>
+
+                  <!-- Third Year Team Container -->
+                  <div class="container">
+                    <div class="row" id="ElecTeam3-container">
                     </div>
                   </div>
-                </div>
-                <div class="col">
-                  <div class="member" data-aos="fade-up" data-aos-delay="100">
-                    <div class="member-img">
-                      <img src="images/Team/photos/Shivam singh yadav_Bussines.jpeg" class="img-fluid" alt="">
-                      <div class="social">
-                        <!-- <a href=" " target="_blank"><i class="bi bi-instagram"></i></a>
-                      <a href=" " target="_blank"><i class="bi bi-linkedin"></i></a> -->
-                      </div>
+
+                  <!-- Second Year Team Container -->
+                  <div class="container">
+                    <div class="row" id="ElecTeam2-container">
                     </div>
-                    <div class="member-info">
-                      <h4>Shivam Singh Yadav</h4>
-                      <span class="post">Business Trainee</span>
+                  </div>
+
+                  <!-- First Year Team Container -->
+                  <div class="container">
+                    <div class="row" id="ElecTeam1-container">
+                    </div>
+                  </div>
+
+                </div>
+                <div id="soft" class="page-section">
+                  <h2>Software Subdivision</h2> <br> <br>
+
+                  <!-- Third Year Team Container -->
+                  <div class="container">
+                    <div class="row" id="SoftTeam3-container">
+                    </div>
+                  </div>
+
+                  <!-- Second Year Team Container -->
+                  <div class="container">
+                    <div class="row" id="SoftTeam2-container">
+                    </div>
+                  </div>
+
+                  <!-- First Year Team Container -->
+                  <div class="container">
+                    <div class="row" id="SoftTeam1-container">
+                    </div>
+                  </div>
+
+                </div>
+
+                <div id="business" class="page-section">
+                  <h2>Business Subdivision</h2> <br> <br>
+
+                  <!-- Third Year Team Container -->
+                  <div class="container">
+                    <div class="row" id="BusTeam3-container">
+                    </div>
+                  </div>
+
+                  <!-- Second Year Team Container -->
+                  <div class="container">
+                    <div class="row" id="BusTeam2-container">
+                    </div>
+                  </div>
+
+                  <!-- First Year Team Container -->
+                  <div class="container">
+                    <div class="row" id="BusTeam1-container">
                     </div>
                   </div>
                 </div>
@@ -1219,10 +466,10 @@
           </div>
         </div>
       </div>
+      <br>
+      <br>
+      <br>
     </div>
-    <br>
-    <br>
-    <br>
   </section>
   <br>
   <br>
@@ -1230,95 +477,519 @@
   <br>
   <br>
   <br>
+
+
+  <script>
+    // Array of team members for first, second, and third years of each subdivision
+    const mechTeamMembers = {
+      secondYear:
+        [
+          {
+            name: "Anuj Patel",
+            role: "Mechanical Designer",
+            image: "images/Team/RS2024 Website Photo/Anuj Patel.jpg",
+            instagram: "http://instagram.com/anujpatel0808/?hl=en",
+            linkedin: "https://www.linkedin.com/in/anuj-patel-679550297/",
+            delay: 100
+          },
+          {
+            name: "Ayush Kumar",
+            role: "Mechanical Designer",
+            image: "images/Team/RS2024 Website Photo/Ayush Kumar.jpg",
+            instagram: "https://www.instagram.com/ayush.kumar508/?hl=en",
+            linkedin: "https://www.linkedin.com/in/ayush-kumar-7bb8442a1/",
+            delay: 300
+          },
+          {
+            name: "Divya Mehta",
+            role: "Mechanical Designer",
+            image: "images/Team/RS2024 Website Photo/Divya Mehta.jpg",
+            instagram: "https://www.instagram.com/divyamehta_007/?hl=en",
+            linkedin: "https://www.linkedin.com/in/divya-mehta-4a7b73288/",
+            delay: 200
+          },
+        ],
+      thirdYear:
+        [
+          {
+            name: "Khushajh Verma",
+            role: "Chief Mechanical Designer",
+            image: "images/Team/RS2024 Website Photo/Khushajh Verma.jpg",
+            instagram: "https://www.instagram.com/v.khushajh?igsh=ZGUzMzM3NWJiOQ==",
+            linkedin: "https://www.linkedin.com/in/khushajh-verma-1b9a79254",
+            delay: 100
+          },
+          {
+            name: "Yash Sanjay Sawant",
+            role: "RnD Head",
+            image: "images/Team/RS2024 Website Photo/Yash Sanjay Sawant.jpg",
+            instagram: "https://www.instagram.com/yash_sasa?igsh=MW81ZDN5ZjY2eDdhNQ==",
+            linkedin: "https://in.linkedin.com/in/yash-sawant-49174b280",
+            delay: 200
+          }
+        ],
+      firstYear:
+        [
+          {
+            name: "Aaditya Patnaik Koppara",
+            role: "Mechanical Trainee",
+            image: "images/Team/Freshers24/Aaditya Patnaik.png",
+            instagram: "https://www.instagram.com/aaditya_patnaik_42/?hl=en",
+            linkedin: "https://www.linkedin.com/in/aaditya-patnaik-223977317/",
+            delay: 100
+          },
+          {
+            name: "Abbas Hussain",
+            role: "Mechanical Trainee",
+            image: "images/Team/Freshers24/Abbas Husain.png",
+            instagram: "https://www.instagram.com/abbashusain6561/?hl=en",
+            linkedin: "https://www.linkedin.com/in/abbas-husain-0a029a320/",
+            delay: 200
+          },
+          {
+            name: "Guna Preetham Pydisetti",
+            role: "Mechanical Trainee",
+            image: "images/Team/Freshers24/Guna Preetham.png",
+            instagram: "https://www.instagram.com/pgpreetham_10/?hl=en",
+            linkedin: "https://www.linkedin.com/in/guna-preetham-pydisetti-212473318/",
+            delay: 300
+          },
+          {
+            name: "Shaurya Gupta",
+            role: "Mechanical Trainee",
+            image: "images/Team/Freshers24/Shaurya Gupta.png",
+            instagram: "https://www.instagram.com/shauryag_1210/?hl=en",
+            linkedin: "https://www.linkedin.com/in/shauryaguptaiitb/",
+            delay: 200
+          },
+          {
+            name: "Shivansh Gupta",
+            role: "Mechanical Trainee",
+            image: "images/Team/Freshers24/Shivansh Gupta.png",
+            instagram: "https://www.instagram.com/shivanshgupta_5/?hl=en",
+            linkedin: "https://www.linkedin.com/in/shivanshgupta981234/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+            delay: 100
+          }
+        ]
+    };
+
+    const softTeamMembers = {
+
+      firstYear:
+        [
+          {
+            name: "Denver Zuzarte",
+            role: "Software Trainee",
+            position: "Mapping Trainee",
+            image: "images/Team/Freshers24/Denver.jpg",
+            instagram: "http://instagram.com/denver_zuzarte/?hl=en",
+            linkedin: "https://www.linkedin.com/in/denver-zuzarte-b3a9b42a8/",
+            delay: 100
+          },
+          {
+            name: "Dhruv Savot",
+            role: "Software Trainee",
+            position: "Mapping Trainee",
+            image: "images/Team/Freshers24/Dhruv.jpg",
+            instagram: "https://www.instagram.com/dhruv_savot_01/?hl=en",
+            linkedin: "https://www.linkedin.com/in/dhruv-savot-0b7739313/",
+            delay: 200
+          },
+          {
+            name: "Kiara Thapar",
+            role: "Software Trainee",
+            position: "Mapping Trainee",
+            image: "images/Team/Freshers24/Kiara.jpg",
+            instagram: "https://www.instagram.com/kiaraathapar/?hl=en",
+            linkedin: "https://www.linkedin.com/in/kiara-thapar-83940a318/",
+            delay: 300
+          },
+          {
+            name: "Navneet Mathur",
+            role: "Software Trainee",
+            position: "Mapping Trainee",
+            image: "images/Team/Freshers24/Navneet.jpg",
+            instagram: "https://www.instagram.com/navneetmathurr/?hl=en",
+            linkedin: "https://www.linkedin.com/in/navneet-mathur-52a929230/",
+            delay: 200
+          },
+          {
+            name: "Nilkrishna",
+            role: "Software Trainee",
+            position: "Mapping Trainee",
+            image: "images/Team/Freshers24/Nilkrishna.jpg",
+            instagram: "https://www.instagram.com/nilkrishna.gajare/?hl=en",
+            linkedin: "https://www.linkedin.com/in/nilkrishna-gajare-520051268/",
+            delay: 100
+          },
+          {
+            name: "Pratham Chollera",
+            role: "Software Trainee",
+            position: "Mapping Trainee",
+            image: "images/Team/Freshers24/Pratham Chollera.png",
+            instagram: "https://www.instagram.com/the.pratham.cholera/?hl=en",
+            linkedin: "https://www.linkedin.com/in/pratham-chollera-99622134a?",
+            delay: 100
+          }
+        ],
+      thirdYear:
+        [
+          {
+            name: "Adwai Krishna",
+            role: "Senior Software Architect",
+            position: "Mapping Developer",
+            image: "images/Team/RS2024 Website Photo/Adwai Krishna.jpg",
+            instagram: "https://www.instagram.com/adwai_krishna?igsh=NGV4Z3k2bjc4MjR6&utm_source=qr",
+            linkedin: "https://www.linkedin.com/in/adwai-krishna-3b65b9269"
+          },
+          {
+            name: "Dhruvi Modi",
+            role: "Senior Software Architect",
+            position: "Mapping Developer",
+            instagram: " ",
+            image: "images/Team/RS2024 Website Photo/Dhruvi Despande.jpg",
+            linkedin: "https://www.linkedin.com/in/dhruvi-modi-b908b125b/?originalSubdomain=in",
+            delay: 100
+          },
+          {
+            name: "Sparsh Badjate",
+            role: "Senior Software Architect",
+            position: "Mapping Developer",
+            image: "images/Team/RS2024 Website Photo/Sparsh Badjate.jpg",
+            instagram: "https://www.instagram.com/sparsh_0070/",
+            linkedin: "https://www.linkedin.com/in/sparsh-badjate/?originalSubdomain=in",
+            delay: 200
+          },
+          {
+            name: "Urvi Gupta",
+            role: "Senior Software Architect",
+            position: "Mapping Developer",
+            instagram: " ",
+            image: "images/Team/RS2024 Website Photo/Urvi Gupta.jpg",
+            linkedin: "https://www.linkedin.com/in/urvi-gupta-80771b267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+            delay: 100
+          }
+        ],
+      secondYear:
+        [
+          {
+            name: "Akshika Jain",
+            role: "Software Developer",
+            position: "Mapping Trainee",
+            image: "images/Team/RS2024 Website Photo/Akshika Jain.jpg",
+            instagram: "https://www.instagram.com/akshikahere/?hl=en",
+            linkedin: "https://www.linkedin.com/in/akshika-jain-a4a191308/",
+            delay: 100
+          },
+          {
+            name: "Divyanshu Gupta",
+            role: "Software Developer",
+            position: "Mapping Trainee",
+            image: "images/Team/RS2024 Website Photo/Divyanshu Gupta.jpg",
+            instagram: "https://www.instagram.com/divyanshu0311/?hl=en",
+            linkedin: "https://www.linkedin.com/in/divyanshu-gupta-2bb9b9284/",
+            delay: 200
+          },
+          {
+            name: "Jash Dalal",
+            role: "Software Developer",
+            position: "Mapping Trainee",
+            image: "images/Team/RS2024 Website Photo/Jash Dalal.jpg",
+            instagram: "https://www.instagram.com/jashdalal_/?hl=en",
+            linkedin: " ",
+            delay: 300
+          },
+          {
+            name: "Khushi Taxak",
+            role: "Software Developer",
+            position: "Mapping Trainee",
+            image: "images/Team/RS2024 Website Photo/Khushi Taxak.jpg",
+            instagram: " ",
+            linkedin: " ",
+            delay: 200
+          },
+          {
+            name: "Manit Jhajharia",
+            role: "Software Developer",
+            position: "Mapping Trainee",
+            image: "images/Team/RS2024 Website Photo/Manit Jhajharia.jpg",
+            instagram:"https://www.instagram.com/_i_eat_kids_now/ ",
+            linkedin: "https://www.linkedin.com/in/manit-jhajharia-85b6682a8/",
+            delay: 100
+          },
+        ],
+    }
+
+    const elecTeamMembers = {
+
+      firstYear:
+        [
+          {
+            name: "Aayush Shah",
+            role: "Electrical Trainee",
+            position: "Mapping Trainee",
+            image: "images/Team/Freshers24/Aayush Shah.png",
+            instagram: "https://www.instagram.com/aayush.0703/?hl=en",
+            linkedin: "https://www.linkedin.com/in/aayush-shah-8211b3343/",
+            delay: 100
+          },
+          {
+            name: "Ankush",
+            role: "Electrical Trainee",
+            position: "Mapping Trainee",
+            image: "images/Team/Freshers24/Ankush.png",
+            instagram: "https://www.instagram.com/anku2005sh/",
+            linkedin: "https://www.linkedin.com/in/ankush-05350b212/",
+            delay: 200
+          },
+          {
+            name: "Kunal Paroda",
+            role: "Electrical Trainee",
+            position: "Mapping Trainee",
+            image: "images/Team/Freshers24/Kunal Paroda.png",
+            instagram: " ",
+            linkedin: "https://www.linkedin.com/in/kunal-paroda-126180225",
+            delay: 300
+          },
+          {
+            name: "Rucha Ranade",
+            role: "Electrical Trainee",
+            position: "Mapping Trainee",
+            image: "images/Team/Freshers24/Rucha Ranade.png",
+            instagram: "https://www.instagram.com/righteous_ru_cha/?hl=en",
+            linkedin: "https://www.linkedin.com/in/rucha-ranade-6b035533b/",
+            delay: 100
+          },
+          {
+            name: "Supriya Mishra",
+            role: "Electrical Trainee",
+            position: "Mapping Trainee",
+            image: "images/Team/Freshers24/Supriya Anand.png",
+            instagram: "https://www.instagram.com/supriya_mishra06/?hl=en",
+            linkedin: "https://www.linkedin.com/in/supriya-mishra-5a0673325/",
+            delay: 100
+          }
+        ],
+      thirdYear:
+        [
+          {
+            name: "Anshu Arora",
+            role: "Senior Initiatives Executive",
+            image: "images/Team/photos/anshuelec (updated).png",
+            instagram: " ",
+            linkedin: "https://www.linkedin.com/in/anshu-arora-039256253/",
+            delay: 100,
+          },
+          {
+            name: "Anirudh Jangid",
+            role: "Chief Electrical Designer",
+            image: "images/Team/RS2024 Website Photo/Anirudh Jangid.jpg",
+            instagram: "https://www.instagram.com/anirudhjangid_07/?hl=en",
+            linkedin: "https://www.linkedin.com/in/anirudh-jangid-69a308174/",
+            delay: 200,
+          },
+          {
+            name: "Ayush Prasad",
+            role: "Chief Electrical Designer",
+            image: "images/Team/RS2024 Website Photo/Ayush Prasad.jpg",
+            instagram: "https://www.instagram.com/_prasadayush_/?hl=en",
+            linkedin: "https://www.linkedin.com/in/ayush-prasad-bbab77254/",
+            delay: 300,
+          },
+          {
+            name: "Siddhi Deshpande",
+            role: "Chief Industrial Engineer",
+            image: "images/Team/RS2024 Website Photo/Siddhi Deshpande.jpg",
+            instagram: " ",
+            linkedin: "https://www.linkedin.com/in/siddhi-deshpande-a64044254",
+            delay: 100,
+          },
+          {
+            name: "Swaprabha Dey",
+            role: "RnD Head",
+            image: "images/Team/photos/Swaprabha_Elec.jpg",
+            instagram: " ",
+            linkedin: "https://www.linkedin.com/in/swaprabha-dey-96989627b/",
+            delay: 100,
+          }
+        ],
+      secondYear:
+        [
+          {
+            name: "Aniket Gupta",
+            role: "Electrical Designer",
+            image: "images/Team/RS2024 Website Photo/Aniket Gupta.jpg",
+            instagram: "https://www.instagram.com/aniket.__.gupta/?hl=en",
+            linkedin: "https://www.linkedin.com/in/aniket-gupta-252113308/",
+            delay: 100,
+          },
+          {
+            name: "Jigar Mehta",
+            role: "Electrical Designer",
+            image: "images/Team/RS2024 Website Photo/Jigar Mehta.jpg",
+            instagram: "https://www.instagram.com/mehta6583/?hl=en",
+            linkedin: " ",
+            delay: 200,
+          },
+          {
+            name: "Shlok Rathi",
+            role: "Electrical Designer",
+            image: "images/Team/RS2024 Website Photo/Shlok Rathi.jpg",
+            instagram: "https://www.instagram.com/rathi_shlok/?hl=en",
+            linkedin: "https://www.linkedin.com/in/shlok-rathi-b16a912a6/",
+            delay: 100,
+          },
+          {
+            name: "Shresth Keshari",
+            role: "Electrical Designer",
+            image: "images/Team/RS2024 Website Photo/Shresth Keshari.jpg",
+            instagram: "https://www.instagram.com/social.lonewolf/?hl=en",
+            linkedin: "https://www.linkedin.com/in/shresth-keshari-626b2a267/",
+            delay: 100,
+          }
+        ],
+    }
+
+    const businessTeamMembers = {
+      firstYear:
+        [
+          {
+            name: "Mridhula Vishwanath",
+            role: "Business Trainee",
+            image: "images/Team/Freshers24/Mridhula.jpg",
+            instagram: "https://www.instagram.com/mridhulavishwanath/?hl=en",
+            linkedin: "https://www.linkedin.com/in/mridhula-vishwanath-489315336/",
+            delay: 100
+          },
+          {
+            name: "Saket Vispute",
+            role: "Business Trainee",
+            image: "images/Team/Freshers24/Saket.png",
+            linkedin: "https://www.linkedin.com/in/saket-vispute-83176831b/",
+            instagram: "https://www.instagram.com/saket_vispute/?hl=en",
+            delay: 200
+          },
+          {
+            name: "Satyadev Suvesh",
+            role: "Business Trainee",
+            image: "images/Team/Freshers24/Satyadev.png",
+            instagram: "https://www.instagram.com/satyadev.suvesh/?hl=en",
+            linkedin: "https://www.linkedin.com/in/satyadev-suvesh-344226302/",
+            delay: 300
+          },
+          {
+            name: "Shivakshi Gupta",
+            role: "Business Trainee",
+            image: "images/Team/Freshers24/Shivakshi Gupta.jpg",
+            instagram: "https://www.instagram.com/_._shivakshi/?hl=en",
+            linkedin: "https://www.linkedin.com/in/shivakshi-gupta-7b70562a2/",
+            delay: 200
+          },
+          {
+            name: "Tanvi Gattani",
+            role: "Business Trainee",
+            image: "images/Team/Freshers24/Tanvi.jpg",
+            instagram: "https://www.instagram.com/tanvig_24/?hl=en",
+            linkedin: "https://www.linkedin.com/in/tanvi-gattani-703b61313/",
+            delay: 100
+          }
+        ],
+      thirdYear:
+        [
+          {
+            name: "Anshu Arora",
+            role: "Senior Initiatives Executive",
+            image: "images/Team/photos/anshuelec (updated).png",
+            instagram: " ",
+            linkedin: " ",
+            delay: 100,
+          }
+        ],
+      secondYear:
+        [
+          {
+            name: "Avani Gala",
+            role: "Business Executive",
+            image: "images/Team/RS2024 Website Photo/Avani Jain.jpg",
+            instagram: "https://www.instagram.com/avan.i9650/?hl=en",
+            linkedin: "https://www.linkedin.com/in/avani-gala-ba12b0222/",
+            delay: 100
+          },
+          {
+            name: "Arush Narayan Srivastav",
+            role: "Business Executive",
+            image: "images/Team/RS2024 Website Photo/Arush Narayan Srivastav.jpg",
+            instagram: "https://www.instagram.com/itss.arushhh/?hl=en",
+            linkedin: "https://www.linkedin.com/in/arush-narayan-srivastav-001/",
+            delay: 200
+          },
+          {
+            name: "Jinay Vora",
+            role: "Business Executive",
+            image: "images/Team/RS2024 Website Photo/Jinay Vora.jpg",
+            instagram: "https://www.instagram.com/jin_ayyy_/?hl=en",
+            linkedin: "https://www.linkedin.com/in/jinay-vora-20b7562a4/",
+            delay: 100
+          }
+        ],
+    }
+
+    // Function to render team members to the corresponding container
+    function renderTeam(year, members, division) {
+      const container = document.getElementById(`${division}Team${year}-container`);
+      if (container) {
+        const membersHTML = members.map(member => `
+                <div class="col">
+                    <div class="member" data-aos="fade-up" data-aos-delay="${member.delay}">
+                        <div class="member-img">
+                            <img src="${member.image}" class="img-fluid" alt="${member.name}">
+                            <div class="social">
+                                ${member.instagram ? `<a href="${member.instagram}" target="_blank"><i class="bi bi-instagram"></i></a>` : ""}
+                                ${member.linkedin ? `<a href="${member.linkedin}" target="_blank"><i class="bi bi-linkedin"></i></a>` : ""}
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4>${member.name}</h4>
+                            <span class="post">${member.role}</span>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        container.innerHTML = membersHTML;
+      }
+    }
+
+    // Render team members for each year
+    renderTeam(1, mechTeamMembers.firstYear, "Mech");
+    renderTeam(2, mechTeamMembers.secondYear, "Mech");
+    renderTeam(3, mechTeamMembers.thirdYear, "Mech");
+
+    renderTeam(1, softTeamMembers.firstYear, "Soft");
+    renderTeam(2, softTeamMembers.secondYear, "Soft");
+    renderTeam(3, softTeamMembers.thirdYear, "Soft");
+
+    renderTeam(1, elecTeamMembers.firstYear, "Elec");
+    renderTeam(2, elecTeamMembers.secondYear, "Elec");
+    renderTeam(3, elecTeamMembers.thirdYear, "Elec");
+
+    renderTeam(1, businessTeamMembers.firstYear, "Bus");
+    renderTeam(2, businessTeamMembers.secondYear, "Bus");
+    renderTeam(3, businessTeamMembers.thirdYear, "Bus");
+
+    // Initialize AOS (Animate On Scroll)
+    AOS.init();
+  </script>
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <div id="footer-placeholder"></div>
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-4 footer-contact">
-            <h3>AUV-<span>IITB</span></h3>
-            <p>AUV Lab, Aerospace department basement <br>
-              YP Road,<br>
-              IIT Area, Powai,<br>
-              Mumbai Maharashtra- 400076 <br><br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-4 footer-contact">
-            <p class="teamphone"> <strong>Phone:</strong>
-              <br>
-            <table style="color: white;" id="teamtable">
-              <tr>
-                <td>Kalp Vyas :</td>
-                <td><a href="tel: +91 9731068620"> +91 9731068620</a></td>
-              </tr>
-
-              <tr>
-
-                <td>Kaustubh Chourasia :</td>
-                <td><a href="tel: +91 9082933012">+91 9082933012</a></td>
-              </tr>
-              <tr>
-
-                <td>Shivam Ambokar :</td>
-                <td><a href="tel: +91 8805563317">+91 8805563317</a></td>
-              </tr>
-            </table> <br>
-            <!-- <strong>Phone:</strong> +1 5589 55488 55<br> -->
-            <strong>Email:</strong> <a href="mailto: contact@auv-iitb.org">contact@auv-iitb.org</a><br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about-us.html">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="vehicles.html">Vehicles</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="achievements.html">Achievements</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="robosub.html">Robosub</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="team.html">Team</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="Alumni.html">Alumni</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="gallery.html">Gallery</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Media & Blogs</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html#contact">Contact</a></li>
-            </ul>
-          </div>
-
-
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
-          Designed by AUV-IITB
-        </div>
-      </div>
-      <div class="social-links text-center text-md-end pt-3 pt-md-0">
-        <a href="https://twitter.com/auviitb?lang=en" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
-        <a href="https://www.facebook.com/AUVIITB/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/auviitb/?hl=en" class="instagram" target="_blank"><i
-            class="bx bxl-instagram"></i></a>
-        <a href="https://in.linkedin.com/company/auv-iitbombay" class="linkedin" target="_blank"><i
-            class="bx bxl-linkedin"></i></a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+</script><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>

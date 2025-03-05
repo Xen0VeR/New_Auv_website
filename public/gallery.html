@@ -44,45 +44,17 @@
 <body>
 
      <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-      <h1 class="logo me-auto"><a href="index.html"> <img src="./images/logo.png" alt=""> </a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>-->
+     <div id="navbar-placeholder"></div>
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="about-us.html">About</a></li>
-          <li><a href="vehicles.html" class="nav-link scrollto">Vehicles</a></li>
-          <li class="dropdown"><a href="achievements.html" class="nav-link scrollto active" ><span>Achievements</span> <i class="bi bi-chevron-right"></i></a>
-            <ul>
-              <li><a href="achievements.html#journey">Team's Journey</a></li>
-              <li><a href="achievements.html#inc">Industrial Collaborations</a></li>
-              <li><a href="achievements.html#rnd">Research & Development</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto " href="robosub.html">Robosub</a></li>
-          <li class="dropdown"><a href="team.html"><span>Team</span> <i class="bi bi-chevron-right"></i></a>
-            <ul>
-              <li><a href="team.html#mech">Mechanical</a></li>
-              <li><a href="team.html#elec">Electrical</a></li>
-              <li><a href="team.html#soft">Software</a></li>
-              <li><a href="team.html#business">Business</a></li>
-              <li><a href="team_page2021-22.html">Team-2021-22</a></li>
-              <li><a href="team_page2020-21.html">Team-2020-21</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto " href="alumni.html">Alumni</a></li>
-          <li><a class="nav-link scrollto active" href="gallery.html">Gallery</a></li>
-          <li><a href="blog.html">Media & Blogs</a></li>
-      
-          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar --><!-- .navbar -->
-    </div>
-  </header><!-- End Header -->
+     <script>
+       fetch('navbar.html')
+         .then(response => response.text())
+         .then(data => {
+           document.getElementById('navbar-placeholder').innerHTML = data;
+         })
+         .catch(error => console.error('Error loading navbar:', error));
+     </script>
+     <!-- End Header -->
 
     
 
@@ -424,91 +396,16 @@
        <br><br>
 
         <!-- ======= Footer ======= -->
-        <footer id="footer">
-        
-            <div class="footer-top">
-                <div class="container">
-                    <div class="row">
-        
-                        <div class="col-lg-3 col-md-4 footer-contact">
-                            <h3>AUV-<span>IITB</span></h3>
-                            <p>AUV Lab, Aerospace department basement <br>
-                                YP Road,<br>
-                               IIT Area, Powai,<br>
-                               Mumbai Maharashtra- 400076 <br><br>
-                             </p>
-                        </div>
-        
-                        <div class="col-lg-3 col-md-4 footer-contact">
-                            <p class = "teamphone"> <strong>Phone:</strong>
-                            <br>
-                            <table style="color: white;" id = "teamtable">
-                              <tr>  
-                                  <td>Kalp Vyas :</td>
-                                  <td><a href="tel: +91 9731068620"> +91 9731068620</a></td>
-                                  </tr>
-                                 
-                                  <tr>
-                                    
-                                    <td>Kaustubh Chourasia :</td>
-                                    <td><a href="tel: +91 9082933012">+91 9082933012</a></td>
-                                  </tr>
-                                  <tr>
-                                   
-                                    <td>Shivam Ambokar :</td>
-                                    <td><a href="tel: +91 8805563317">+91 8805563317</a></td>
-                                  </tr>
-                            </table> <br>
-                            <!-- <strong>Phone:</strong> +1 5589 55488 55<br> -->
-                            <strong>Email:</strong> <a href="mailto: contact@auv-iitb.org">contact@auv-iitb.org</a><br>
-                        </div>
-        
-                        <div class="col-lg-3 col-md-6 footer-links">
-        
-                            <ul>
-                                <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="about-us.html">About us</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="vehicles.html">Vehicles</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="achievements.html">Achievements</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="robosub.html">Robosub</a></li>
-                              </ul>
-                            </div>
-                
-                            <div class="col-lg-3 col-md-6 footer-links">
-                              <ul>
-                                <li><i class="bx bx-chevron-right"></i> <a href="team.html">Team</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="Alumni.html">Alumni</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="gallery.html">Gallery</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Media & Blogs</a></li>
-                                <li><i class="bx bx-chevron-right"></i> <a href="index.html#contact">Contact</a></li>
-                              </ul>
-                        </div>
-        
-        
-        
-                    </div>
-                </div>
-            </div>
-        
-            <div class="container d-md-flex py-4">
-        
-                <div class="me-md-auto text-center text-md-start">
-                    <div class="credits">
-                        <!-- All the links in the footer should remain intact. -->
-                        <!-- You can delete the links only if you purchased the pro version. -->
-                        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
-                        Designed by AUV-IITB
-                    </div>
-                </div>
-                <div class="social-links text-center text-md-end pt-3 pt-md-0">
-                    <a href="https://twitter.com/auviitb?lang=en" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
-                    <a href="https://www.facebook.com/AUVIITB/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-                    <a href="https://www.instagram.com/auviitb/?hl=en" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
-                    <a href="https://in.linkedin.com/company/auv-iitbombay" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
-                </div>
-            </div>
-        </footer><!-- End Footer -->
+        <div id="footer-placeholder"></div>
+
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-placeholder').innerHTML = data;
+    })
+    .catch(error => console.error('Error loading navbar:', error));
+</script><!-- End Footer -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
     

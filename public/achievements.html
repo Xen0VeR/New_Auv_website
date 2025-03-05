@@ -14,7 +14,9 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -32,19 +34,20 @@
   <link rel="stylesheet" href="about-us.css">
 
   <!-- Font awesome stylesheet -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
   <style>
     @media (minwidth: 1000px) {
-      iframe{
+      iframe {
         margin-top: -2em;
       }
     }
-    
+
     p {
-  margin-left: 20%;
-  margin-right: 20%;
-}
+      margin-left: 20%;
+      margin-right: 20%;
+    }
   </style>
 
   <!-- =======================================================
@@ -57,46 +60,17 @@
 
 <body>
 
-   <!-- ======= Header ======= -->
-   <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex align-items-center">
-      <h1 class="logo me-auto"><a href="index.html"> <img src="./images/logo.png" alt=""> </a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt=""></a>-->
+  <!-- ======= Header ======= -->
+  <div id="navbar-placeholder"></div>
 
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
-          <li><a class="nav-link scrollto" href="about-us.html">About</a></li>
-          <li><a href="vehicles.html" class="nav-link scrollto">Vehicles</a></li>
-          <li class="dropdown"><a href="achievements.html" class="nav-link scrollto active" ><span>Achievements</span> <i class="bi bi-chevron-right"></i></a>
-            <ul>
-              <li><a href="achievements.html#journey">Team's Journey</a></li>
-              <li><a href="achievements.html#inc">Industrial Collaborations</a></li>
-              <li><a href="achievements.html#rnd">Research & Development</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto " href="robosub.html">Robosub</a></li>
-          <li class="dropdown"><a href="team.html"><span>Team</span> <i class="bi bi-chevron-right"></i></a>
-            <ul>
-              <li><a href="team.html#mech">Mechanical</a></li>
-              <li><a href="team.html#elec">Electrical</a></li>
-              <li><a href="team.html#soft">Software</a></li>
-              <li><a href="team.html#business">Business</a></li>
-              <li><a href="team_page2021-22.html">Team-2021-22</a></li>
-              <li><a href="team_page2020-21.html">Team-2020-21</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto " href="alumni.html">Alumni</a></li>
-          <li><a class="nav-link scrollto" href="gallery.html">Gallery</a></li>
-          <li><a href="blog.html">Media & Blogs</a></li>
-      
-          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar --><!-- .navbar -->
-    </div>
-  </header><!-- End Header -->
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script><!-- End Header -->
   <br>
   <br>
   <br>
@@ -104,277 +78,309 @@
   <br>
   <div class="section-title">
     <h2>Achievements</h2>
-    <p class="intro" >AUV IITB was established in 2011 by 3 tech enthusiasts with a passion for underwater robotics. It's been more than 10 years since our inception, we've grown to a team of 50+ bright and dedicated individuals. We're still learning and growing, here is a glimpse of our journey</p>
+    <p class="intro">AUV IITB was established in 2011 by 3 tech enthusiasts with a passion for underwater robotics. It's
+      been more than 10 years since our inception, we've grown to a team of 50+ bright and dedicated individuals. We're
+      still learning and growing, here is a glimpse of our journey</p>
   </div>
 
-<!-- Timeline -->
+  <!-- Timeline -->
 
-    <div class="container" id="journey">
-               <h4>Our Journey</h4>
-               <div class="row">
-                   <div class="col-md-12">
-                       <div class="main-timeline">
-                           <a href="#" class="timeline">
-                               <div class="timeline-icon"> <i class="fas fa-play-circle"></i> </div>
-                               <div class="timeline-content">
-                                   <h3 class="title">2011: Inception</h3>
-                                   <p class="description">
-                                    Team AUV-IITB was born in 2011 out of the efforts of a group of highly enthusiastic students 
-                                    who were passionate to explore the field of underwater robotics and autonomous systems.
+  <div class="container" id="journey">
+    <h4>Our Journey</h4>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="main-timeline">
+          <a href="#" class="timeline">
+            <div class="timeline-icon"> <i class="fas fa-play-circle"></i> </div>
+            <div class="timeline-content">
+              <h3 class="title">2011: Inception</h3>
+              <p class="description">
+                Team AUV-IITB was born in 2011 out of the efforts of a group of highly enthusiastic students
+                who were passionate to explore the field of underwater robotics and autonomous systems.
 
-                                   </p>
-                               </div>
-                           </a>
-                           <a href="#" class="timeline">
-                               <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
-                               <div class="timeline-content">
-                                   <h3 class="title">2012: Matsya 1</h3>
-                                   <p class="description">
-                                    Matsya 1 was the first AUV designed and built by our team with a goal to develop a state of the art AUV . It was the first AUV entered by our team in the Robosub competition. Matsya 1 was the <b>lightest AUV in Robosub 2012</b>
-                                    <!-- Matsya 1 was the first AUV designed and built by our team. It was the first AUV entered by our team in the 
+              </p>
+            </div>
+          </a>
+          <a href="#" class="timeline">
+            <div class="timeline-icon"><i class="fa fa-rocket"></i></div>
+            <div class="timeline-content">
+              <h3 class="title">2012: Matsya 1</h3>
+              <p class="description">
+                Matsya 1 was the first AUV designed and built by our team with a goal to develop a state of the art AUV
+                . It was the first AUV entered by our team in the Robosub competition. Matsya 1 was the <b>lightest AUV
+                  in Robosub 2012</b>
+                <!-- Matsya 1 was the first AUV designed and built by our team. It was the first AUV entered by our team in the 
                                     RoboSub competition. Matsya 1 was the <em>lightest AUV in RoboSub 2012</em>. -->
 
-                                   </p>
-                               </div>
-                           </a>
-                           <a href="#" class="timeline">
-                               <div class="timeline-icon"><i class="fas fa-trophy"></i></div>
-                               <div class="timeline-content">
-                                   <h3 class="title">2016: Runners up at RoboSub </h3>
-                                   <p class="description">
-                                    From 2015-2020, our team was the best performing Indian AUV team at every RoboSub. Our team were the 
-                                    runners-up at RoboSub 2016 among 46 teams from 9 different countries and the best performing Asian AUV team.
+              </p>
+            </div>
+          </a>
+          <a href="#" class="timeline">
+            <div class="timeline-icon"><i class="fas fa-trophy"></i></div>
+            <div class="timeline-content">
+              <h3 class="title">2016: Runners up at RoboSub </h3>
+              <p class="description">
+                From 2015-2020, our team was the best performing Indian AUV team at every RoboSub. Our team were the
+                runners-up at RoboSub 2016 among 46 teams from 9 different countries and the best performing Asian AUV
+                team.
 
-                                   </p>
-                               </div>
-                           </a>
-                           <a href="#" class="timeline">
-                               <div class="timeline-icon"><i class="fas fa-mars-double"></i></div>
-                               <div class="timeline-content">
-                                   <h3 class="title">2017: First team to take 2 AUVs</h3>
-                                   <p class="description">
-                                       Our team was among the <b>finalists</b> and ranked <b>7th at RoboSub 2017</b>. Our team also became the first-ever to take 2 AUVs
-                                       to one competition.
-                                   </p>
-                               </div>
-                           </a>
-                           <a href="#" class="timeline">
-                               <div class="timeline-icon"><i class="fas fa-medal"></i></div>
-                               <div class="timeline-content">
-                                   <h3 class="title">2017 & 2019: Dominance at NIOT SAVe</h3>
-                                   <p class="description">
-                                    Our team bagged the <b>first position at NIOT SAVe</b> consecutively for 2 years in 2017 & 2019. NIOT Student Autonomous Vehicle is a competition with an aim to develop AUVs for a specified mission. We were also among the semifinalists at Robosub 2019                       
-                                    </p>
-                               </div>
-                           </a>
-                           <a href="#" class="timeline">
-                               <div class="timeline-icon"><i class="fas fa-award"></i></div>
-                               <div class="timeline-content">
-                                   <h3 class="title">2020: A golden year</h3>
-                                   <p class="description">
-                                       Our team ranked overall <b>7th at RoboSub</b> and <b>3rd</b> in the Video category. We were <b>featured in Janes</b> the world's most
-                                       reputed defence journal. Invited to present a research paper in the prestigious <b>International
-                                       Conference INEST India 2020</b>, INS Shivaji, Lonavala before the Chief of Navy and International marine specialists.
-                                   </p>
-                               </div>
-                           </a>
-                           <a href="#" class="timeline">
-                               <div class="timeline-icon"><i class="fas fa-chart-line"></i></div>
-                               <div class="timeline-content">
-                                   <h3 class="title">2021: Young Researcher Award by IEEE OES</h3>
-                                   <p class="description">
-                                    Our team received the <b>Young Researcher Award by IEEE OES</b>. In <b>RoboSub</b>, we won prestigious awards in 3 out of the 4 categories. We secured <b>2nd rank in the Video category</b>, <b>4th rank for TDR</b> and <b>6th rank in the Website category</b>.
-                                   </p>
-                               </div>
-                           </a>
-                           
-                       </div>
-                   </div>
-               </div>
-           </div>
-      <!-- timeline ends -->
-      
-            <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <div class="section-title" id="inc">
-        <h2>Indsutrial Collaborations</h2>
-        <p style="text-align: center;" class="intro" style="align-content:center;" >Here are few of our industrial collaborations</p>
+              </p>
+            </div>
+          </a>
+          <a href="#" class="timeline">
+            <div class="timeline-icon"><i class="fas fa-mars-double"></i></div>
+            <div class="timeline-content">
+              <h3 class="title">2017: First team to take 2 AUVs</h3>
+              <p class="description">
+                Our team was among the <b>finalists</b> and ranked <b>7th at RoboSub 2017</b>. Our team also became the
+                first-ever to take 2 AUVs
+                to one competition.
+              </p>
+            </div>
+          </a>
+          <a href="#" class="timeline">
+            <div class="timeline-icon"><i class="fas fa-medal"></i></div>
+            <div class="timeline-content">
+              <h3 class="title">2017 & 2019: Dominance at NIOT SAVe</h3>
+              <p class="description">
+                Our team bagged the <b>first position at NIOT SAVe</b> consecutively for 2 years in 2017 & 2019. NIOT
+                Student Autonomous Vehicle is a competition with an aim to develop AUVs for a specified mission. We were
+                also among the semifinalists at Robosub 2019
+              </p>
+            </div>
+          </a>
+          <a href="#" class="timeline">
+            <div class="timeline-icon"><i class="fas fa-award"></i></div>
+            <div class="timeline-content">
+              <h3 class="title">2020: A golden year</h3>
+              <p class="description">
+                Our team ranked overall <b>7th at RoboSub</b> and <b>3rd</b> in the Video category. We were <b>featured
+                  in Janes</b> the world's most
+                reputed defence journal. Invited to present a research paper in the prestigious <b>International
+                  Conference INEST India 2020</b>, INS Shivaji, Lonavala before the Chief of Navy and International
+                marine specialists.
+              </p>
+            </div>
+          </a>
+          <a href="#" class="timeline">
+            <div class="timeline-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="timeline-content">
+              <h3 class="title">2021: Young Researcher Award by IEEE OES</h3>
+              <p class="description">
+                Our team received the <b>Young Researcher Award by IEEE OES</b>. In <b>RoboSub</b>, we won prestigious
+                awards in 3 out of the 4 categories. We secured <b>2nd rank in the Video category</b>, <b>4th rank for
+                  TDR</b> and <b>6th rank in the Website category</b>.
+              </p>
+            </div>
+          </a>
+
+        </div>
       </div>
-      <br>
-      <br>
-      <br>
-      <div class="tab-pane" id="tab-3">
-        <div class="row">
-            <div style="margin-bottom:0px ;" class="col-md-5 aos-init aos-animate" data-aos="fade-right"
-                data-aos-delay="100">
-                <img style="margin-top:0px ;" src="images/Achievements/navy.png" class="img-fluid" alt="">
-            </div>
-            <div style="margin-bottom:0px;" class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
-              <h4><b>Indian Naval Services</b></h4>
-                <p class="fst-italic">
-                  We had the privilege of partnering with INS Shivaji on a significant project to develop an Autonomous Unmanned Surface Vehicle (USV). Over the course of a month, our joint effort focused on automating the navigation. We also ensured the mission execution of the USV, enabling it to achieve setpoints and detect and avoid obstacles.
-                </p>
-            </div>
-          <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-            <br>
-            <br>
-            <br>
-            <h4><b>Larsen & Toubro</b></h4>
-            <p class="fst-italic">
-              We have joined hands with Larsen & Toubro to make a Remotely Operated Vehicle (ROV) for defence purposes. Industrial standards of manufacturing are being used for the project. The vehicle with real-world applications can be used in the open sea to accomplish sophisticated tasks.
-            </p>
-        </div>
-        <div style="margin-bottom:0px ;" class="col-lg-6 order-1 order-lg-2 text-center">
-            <img src="images/Achievements/lnt.png" alt="" class="img-fluid">
-        </div>   
-        </div>
-        <div class="row">
-            <div style="margin-bottom:0px ;" class="col-md-5 aos-init aos-animate" data-aos="fade-right"
-                data-aos-delay="100">
-                <img src="images/Achievements/drona.png" class="img-fluid" alt="">
-            </div>
-            <div class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
-                <h4><b>Drona Aviation</b></h4>
-                <p class="fst-italic">
-                  This collaboration aims to design a small and mass-producible Remotely Operated Vehicle (ROV) specifically for educational purposes. This vehicle, which emphasises simplicity, ease of assembly and affordability, is the underwater equivalent of drone kits, providing a hands-on learning experience in underwater robotics. 
-                </p>
-            </div>
-            <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
-                <h4><b>CEOGE</b></h4>
-                <p class="fst-italic">
-                  We are collaborating with ‘The Centre of Excellence in Oil, Gas and Energy’ on a project they received from a consortium of oil companies, led by ONGC, to design a towfish. The primary objectives are to enhance underwater pipeline inspection capabilities by detecting potential faults, such as cracks or leaks, and mapping the sea bed using advanced sonar technology.
-                </p>
-            </div>
-            <div style="margin-bottom:0px ;" class="col-lg-6 order-2 order-lg-2 text-center">
-                <img src="images/Achievements/ongc.jpg" alt="" class="img-fluid">
-            </div>
-        </div>
     </div>
-    <br>
-      <br>
-      <br>
-    <div class="section-title" id="rnd">
-        <h2 >Research & Development</h2>
-        <p style="text-align: center;" class="intro" style="align-content:center;" >Here are few of our research projects</p>
+  </div>
+  <!-- timeline ends -->
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="section-title" id="inc">
+    <h2>Indsutrial Collaborations</h2>
+    <p style="text-align: center;" class="intro" style="align-content:center;">Here are few of our industrial
+      collaborations</p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="tab-pane" id="tab-3">
+    <div class="row">
+      <div style="margin-bottom:0px ;" class="col-md-5 aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
+        <img style="margin-top:0px ;" src="images/Achievements/navy.png" class="img-fluid" alt="">
       </div>
-      <p><b>BMS</b>: We have developed a prototype for a Battery Management System (BMS) with a coulomb counter with probabilistic filters to determine the State Of Charge (SOC), essential protections, Cell balancing and Battery switching. It is estimated that the BMS will help increase the run-time of our current vehicle by 10%, the battery life by 20%, and then add one layer of robust protection. This is a patented technology, and a paper has been published on this, for which we have received IEEE’s Young Researcher of the Year Award in 2021.</p>
-      <br>
-        <p><b>Unity-based SImulator</b>: We have developed a Unity-based simulator designed to replace the Gazebo-ROS simulator. This new simulator seamlessly interfaces with ROS and offers significantly improved physical dynamics, enabling us to conduct simulations of the run and test components of our course with greater accuracy.</p>
+      <div style="margin-bottom:0px;" class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left"
+        data-aos-delay="100">
+        <h4><b>Indian Naval Services</b></h4>
+        <p class="fst-italic">
+          We had the privilege of partnering with INS Shivaji on a significant project to develop an Autonomous Unmanned
+          Surface Vehicle (USV). Over the course of a month, our joint effort focused on automating the navigation. We
+          also ensured the mission execution of the USV, enabling it to achieve setpoints and detect and avoid
+          obstacles.
+        </p>
+      </div>
+      <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
         <br>
-        <p><b>CNN on an FPGA</b>: We are fabricating an in-house data acquisition unit using field programmable gate arrays so that we can tailor the unit to our specific requirements, ensuring optimal performance and seamless integration with our existing systems.</p>
-      <br>
-      <br>
-      <br>
-      
+        <br>
+        <br>
+        <h4><b>Larsen & Toubro</b></h4>
+        <p class="fst-italic">
+          We have joined hands with Larsen & Toubro to make a Remotely Operated Vehicle (ROV) for defence purposes.
+          Industrial standards of manufacturing are being used for the project. The vehicle with real-world applications
+          can be used in the open sea to accomplish sophisticated tasks.
+        </p>
+      </div>
+      <div style="margin-bottom:0px ;" class="col-lg-6 order-1 order-lg-2 text-center">
+        <img src="images/Achievements/lnt.png" alt="" class="img-fluid">
+      </div>
+    </div>
+    <div class="row">
+      <div style="margin-bottom:0px ;" class="col-md-5 aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
+        <img src="images/Achievements/drona.png" class="img-fluid" alt="">
+      </div>
+      <div class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
+        <h4><b>Drona Aviation</b></h4>
+        <p class="fst-italic">
+          This collaboration aims to design a small and mass-producible Remotely Operated Vehicle (ROV) specifically for
+          educational purposes. This vehicle, which emphasises simplicity, ease of assembly and affordability, is the
+          underwater equivalent of drone kits, providing a hands-on learning experience in underwater robotics.
+        </p>
+      </div>
+      <div class="col-lg-6 order-1 order-lg-1 mt-3 mt-lg-0">
+        <h4><b>CEOGE</b></h4>
+        <p class="fst-italic">
+          We are collaborating with ‘The Centre of Excellence in Oil, Gas and Energy’ on a project they received from a
+          consortium of oil companies, led by ONGC, to design a towfish. The primary objectives are to enhance
+          underwater pipeline inspection capabilities by detecting potential faults, such as cracks or leaks, and
+          mapping the sea bed using advanced sonar technology.
+        </p>
+      </div>
+      <div style="margin-bottom:0px ;" class="col-lg-6 order-2 order-lg-2 text-center">
+        <img src="images/Achievements/ongc.jpg" alt="" class="img-fluid">
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="section-title" id="rnd">
+    <h2>Research & Development</h2>
+    <p style="text-align: center;" class="intro" style="align-content:center;">Here are few of our research projects</p>
+  </div>
+  <p><b>BMS</b>: We have developed a prototype for a Battery Management System (BMS) with a coulomb counter with
+    probabilistic filters to determine the State Of Charge (SOC), essential protections, Cell balancing and Battery
+    switching. It is estimated that the BMS will help increase the run-time of our current vehicle by 10%, the battery
+    life by 20%, and then add one layer of robust protection. This is a patented technology, and a paper has been
+    published on this, for which we have received IEEE’s Young Researcher of the Year Award in 2021.</p>
+  <br>
+  <p><b>Unity-based SImulator</b>: We have developed a Unity-based simulator designed to replace the Gazebo-ROS
+    simulator. This new simulator seamlessly interfaces with ROS and offers significantly improved physical dynamics,
+    enabling us to conduct simulations of the run and test components of our course with greater accuracy.</p>
+  <br>
+  <p><b>CNN on an FPGA</b>: We are fabricating an in-house data acquisition unit using field programmable gate arrays so
+    that we can tailor the unit to our specific requirements, ensuring optimal performance and seamless integration with
+    our existing systems.</p>
+  <br>
+  <br>
+  <br>
 
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      
-        <!-- ======= Footer ======= -->
-        <footer id="footer">
 
-          <div class="footer-top">
-            <div class="container">
-              <div class="row">
-    
-                <div class="col-lg-3 col-md-4 footer-contact">
-                  <h3>AUV-<span>IITB</span></h3>
-                  <p>AUV Lab, Aerospace department basement <br>
-                    YP Road,<br>
-                   IIT Area, Powai,<br>
-                   Mumbai Maharashtra- 400076 <br><br>
-                 </p>
-                </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
-                <div class="col-lg-3 col-md-4 footer-contact">
-                  <p class = "teamphone"> <strong>Phone:</strong>
-                  <br>
-                  <table style="color: white;" id = "teamtable">
-                    <tr>  
-                        <td>Kalp Vyas :</td>
-                        <td><a href="tel: +91 9731068620"> +91 9731068620</a></td>
-                        </tr>
-                       
-                        <tr>
-                          
-                          <td>Kaustubh Chourasia :</td>
-                          <td><a href="tel: +91 9082933012">+91 9082933012</a></td>
-                        </tr>
-                        <tr>
-                         
-                          <td>Shivam Ambokar :</td>
-                          <td><a href="tel: +91 8805563317">+91 8805563317</a></td>
-                        </tr>
-                  </table> <br>
-                  <!-- <strong>Phone:</strong> +1 5589 55488 55<br> -->
-                  <strong>Email:</strong> <a href="mailto: contact@auv-iitb.org">contact@auv-iitb.org</a><br>
-                  </p>
-                </div>
-    
-                <div class="col-lg-3 col-md-6 footer-links">
-    
-                  <ul>
-                    <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="about-us.html">About us</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="vehicles.html">Vehicles</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="achievements.html">Achievements</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="robosub.html">Robosub</a></li>
-                  </ul>
-                </div>
-    
-                <div class="col-lg-3 col-md-6 footer-links">
-                  <ul>
-                    <li><i class="bx bx-chevron-right"></i> <a href="team.html">Team</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="Alumni.html">Alumni</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="gallery.html">Gallery</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Media & Blogs</a></li>
-                    <li><i class="bx bx-chevron-right"></i> <a href="index.html#contact">Contact</a></li>
-                  </ul>
-                </div>
-    
-    
-    
-              </div>
-            </div>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-4 footer-contact">
+            <h3>AUV-<span>IITB</span></h3>
+            <p>AUV Lab, Aerospace department basement <br>
+              YP Road,<br>
+              IIT Area, Powai,<br>
+              Mumbai Maharashtra- 400076 <br><br>
+            </p>
           </div>
-    
-          <div class="container d-md-flex py-4">
-    
-            <div class="me-md-auto text-center text-md-start">
-              <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
-                Designed by AUV-IITB
-              </div>
-            </div>
-            <div class="social-links text-center text-md-end pt-3 pt-md-0">
-              <a href="https://twitter.com/auviitb?lang=en" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
-              <a href="https://www.facebook.com/AUVIITB/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-              <a href="https://www.instagram.com/auviitb/?hl=en" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
-              <a href="https://in.linkedin.com/company/auv-iitbombay" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
-            </div>
+
+          <div class="col-lg-3 col-md-4 footer-contact">
+            <p class="teamphone"> <strong>Phone:</strong>
+              <br>
+            <table style="color: white;" id="teamtable">
+              <tr>
+                <td>Kalp Vyas :</td>
+                <td><a href="tel: +91 9731068620"> +91 9731068620</a></td>
+              </tr>
+
+              <tr>
+
+                <td>Kaustubh Chourasia :</td>
+                <td><a href="tel: +91 9082933012">+91 9082933012</a></td>
+              </tr>
+              <tr>
+
+                <td>Shivam Ambokar :</td>
+                <td><a href="tel: +91 8805563317">+91 8805563317</a></td>
+              </tr>
+            </table> <br>
+            <!-- <strong>Phone:</strong> +1 5589 55488 55<br> -->
+            <strong>Email:</strong> <a href="mailto: contact@auv-iitb.org">contact@auv-iitb.org</a><br>
+            </p>
           </div>
-        </footer><!-- End Footer -->
 
-          <!-- Vendor JS Files -->
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/purecounter/purecounter.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+          <div class="col-lg-3 col-md-6 footer-links">
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="about-us.html">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="vehicles.html">Vehicles</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="achievements.html">Achievements</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="robosub.html">Robosub</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="team.html">Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="Alumni.html">Alumni</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="gallery.html">Gallery</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Media & Blogs</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
+          Designed by AUV-IITB
+        </div>
+      </div>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+        <a href="https://twitter.com/auviitb?lang=en" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+        <a href="https://www.facebook.com/AUVIITB/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/auviitb/?hl=en" class="instagram" target="_blank"><i
+            class="bx bxl-instagram"></i></a>
+        <a href="https://in.linkedin.com/company/auv-iitbombay" class="linkedin" target="_blank"><i
+            class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 </body>

@@ -31,7 +31,6 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
-
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -137,6 +136,76 @@ h6 {
     padding: 6px 18px;
   }
 }
+
+/* From Uiverse.io by abuayaan01 */ 
+.button {
+  background-color: #000;
+  border: 0px;
+  outline: 0px;
+  color: #fff;
+  width: 200px;
+  padding: 10px;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.liquid {
+  background-color: #2893eb;
+  width: 200px;
+  height: 70px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  box-shadow: inset 5px -5px 25px #104e81,
+  inset -5px 0px 25px #104e81;
+}
+
+.liquid::after {
+  content: '';
+  width: 450px;
+  height: 400px;
+  background: #000;
+  z-index: 1;
+  position: absolute;
+  left: -110px;
+  top: -380px;
+  border-radius: 45%;
+  animation: animate 5s linear 2s infinite;
+}
+
+.liquid::before {
+  content: '';
+  width: 450px;
+  height: 400px;
+  background-color: rgb(68, 160, 235);
+  z-index: 1;
+  position: absolute;
+  left: -110px;
+  top: -380px;
+  border-radius: 40%;
+  animation: animate 5s linear 1.8s infinite;
+}
+
+.btn-txt {
+  position: relative;
+  z-index: 1;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+@keyframes animate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -1028,7 +1097,7 @@ section {
   width: 350px;
   border-radius: 10px;
   border: 6px solid #fff;
-  float: left;
+  float: center;
   margin: 0 10px 0 0;
 }
 
@@ -1159,6 +1228,152 @@ section {
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #e03a3c;
+}
+
+/*--------------------------------------------------------------
+# Vehicles
+--------------------------------------------------------------*/
+/* .card-vehicle-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+}
+
+.card-vehicle {
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.card-vehicle-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card-vehicle:hover .card-vehicle-inner {
+  transform: rotateY(180deg);
+}
+
+.card-vehicle-front,
+.card-vehicle-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-vehicle-front {
+  background-size: cover;
+  background-position: center;
+}
+
+.card-vehicle-back {
+  background: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  text-align: center;
+  padding: 20px;
+}
+
+.card-vehicle-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-vehicle-text {
+  font-size: 14px;
+} */
+
+
+.grid-container-vehicle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 4vh 5vw;
+  justify-content: center;
+}
+
+.card-vehicle {
+  width: 300px;
+  height: 150px;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-vehicle:hover {
+  transform: scale(1.05);
+  transform: rotateX(-20deg);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  opacity: 0;
+  padding: 20px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card-vehicle:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h2 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.overlay p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.overlay a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.overlay a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 900px) {
+  .grid-container-vehicle {
+      grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container-vehicle {
+      grid-template-columns: repeat(1, 1fr); /* 1 per row */
+  }
 }
 
 /*--------------------------------------------------------------
@@ -2068,6 +2283,68 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Sponsor Animation
+--------------------------------------------------------------*/
+
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 80vw;
+  mask-image: linear-gradient(to right,
+  rgba(0, 0, 0, 0),
+  rgba(0, 0, 0, 1) 20%,
+  rgba(0, 0, 0, 1) 80%,
+  rgba(0, 0, 0, 0)
+  );
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: scroll 12s linear infinite;
+}
+
+.card-clients {
+  width: 200px;
+  height: 150px;
+  background: #fff;
+  border-radius: 10px;
+  overflow-x: hidden;
+  overflow-y: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-clients a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.card-clients img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  
+  
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+
+/*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
 #footer {
@@ -2237,6 +2514,5 @@ section {
   margin: 0em 20em 0em 20em; 
   text-align: justify; }
 }
-
 
 
