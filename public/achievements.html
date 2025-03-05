@@ -283,94 +283,16 @@
   <br>
 
   <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <div id="footer-placeholder"></div>
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-4 footer-contact">
-            <h3>AUV-<span>IITB</span></h3>
-            <p>AUV Lab, Aerospace department basement <br>
-              YP Road,<br>
-              IIT Area, Powai,<br>
-              Mumbai Maharashtra- 400076 <br><br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-4 footer-contact">
-            <p class="teamphone"> <strong>Phone:</strong>
-              <br>
-            <table style="color: white;" id="teamtable">
-              <tr>
-                <td>Kalp Vyas :</td>
-                <td><a href="tel: +91 9731068620"> +91 9731068620</a></td>
-              </tr>
-
-              <tr>
-
-                <td>Kaustubh Chourasia :</td>
-                <td><a href="tel: +91 9082933012">+91 9082933012</a></td>
-              </tr>
-              <tr>
-
-                <td>Shivam Ambokar :</td>
-                <td><a href="tel: +91 8805563317">+91 8805563317</a></td>
-              </tr>
-            </table> <br>
-            <!-- <strong>Phone:</strong> +1 5589 55488 55<br> -->
-            <strong>Email:</strong> <a href="mailto: contact@auv-iitb.org">contact@auv-iitb.org</a><br>
-            </p>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="about-us.html">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="vehicles.html">Vehicles</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="achievements.html">Achievements</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="robosub.html">Robosub</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="team.html">Team</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="Alumni.html">Alumni</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="gallery.html">Gallery</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Media & Blogs</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="index.html#contact">Contact</a></li>
-            </ul>
-          </div>
-
-
-
-        </div>
-      </div>
-    </div>
-
-    <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
-          Designed by AUV-IITB
-        </div>
-      </div>
-      <div class="social-links text-center text-md-end pt-3 pt-md-0">
-        <a href="https://twitter.com/auviitb?lang=en" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
-        <a href="https://www.facebook.com/AUVIITB/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/auviitb/?hl=en" class="instagram" target="_blank"><i
-            class="bx bxl-instagram"></i></a>
-        <a href="https://in.linkedin.com/company/auv-iitbombay" class="linkedin" target="_blank"><i
-            class="bx bxl-linkedin"></i></a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
+    <script>
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer-placeholder').innerHTML = data;
+        })
+        .catch(error => console.error('Error loading navbar:', error));
+    </script><!-- End Footer -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
