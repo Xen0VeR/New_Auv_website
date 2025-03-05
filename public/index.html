@@ -65,9 +65,20 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
+  
+        const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
+        const navbar = document.querySelector("#navbar");
+  
+        if (mobileNavToggle && navbar) {
+          mobileNavToggle.addEventListener("click", function () {
+            navbar.classList.toggle("navbar-mobile");
+            this.classList.toggle("bi-x");
+          });
+        }
       })
       .catch(error => console.error('Error loading navbar:', error));
   </script>
+  
 
   <!-- End Header -->
 
