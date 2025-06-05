@@ -40,7 +40,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <style>
     .myerror-message {
-      background: #ed3c0d;
+      background: rgb(68, 160, 235);
       color: white;
       text-align: left;
       padding: 15px;
@@ -65,10 +65,10 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
-  
+
         const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
         const navbar = document.querySelector("#navbar");
-  
+
         if (mobileNavToggle && navbar) {
           mobileNavToggle.addEventListener("click", function () {
             navbar.classList.toggle("navbar-mobile");
@@ -78,7 +78,7 @@
       })
       .catch(error => console.error('Error loading navbar:', error));
   </script>
-  
+
 
   <!-- End Header -->
 
@@ -100,8 +100,9 @@
             <h2>IIT Bombay</h2>
             <!-- <a href="game/game_runner.html" class="btn-get-started scrollto">Sub-Serge Game</a> -->
             <button class="button">
-              <span class="liquid"></span>  
-              <span class="btn-txt"> <a href="game/game_runner.html" style = "text-decoration: none; color: white;" > Sub-Surge Game </a></span>
+              <span class="liquid"></span>
+              <span class="btn-txt"> <a href="game/game_runner.html" style="text-decoration: none; color: white;">
+                  Sub-Surge Game </a></span>
             </button>
           </div>
         </div>
@@ -172,7 +173,7 @@
                     <h4>Competitions</h4>
                     <p>Our team participates in national and international level underwater robotics competitions, such
                       as
-                      <a href="https://robosub.org/" target="_blank">RoboSub</a>,
+                      <a href="https://robosub.org/" target="_blank" style="color:rgb(68, 160, 235);">RoboSub</a>,
                       <a href="https://www.niot.res.in/niot1/index.php" target="_blank"></a> NIOT-SAVe etc.
                     </p>
                   </div>
@@ -238,59 +239,59 @@
       </section><!-- End Counts Section -->
 
       <!-- ======= Testimonials Section ======= -->
-      
-        <div class="container" data-aos="fade-up">
-          <div class="section-title">
-            <h2>Vehicles</h2>
-            <p>
-              Our team's flagship series of AUVs, the Matsya series, consists of 6 vehicles named Matsya 1 to 6.
-              Matsya 1 was the first AUV developed in 2013, and Matsya 6 is the latest.</p>
+
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Vehicles</h2>
+          <p>
+            Our team's flagship series of AUVs, the Matsya series, consists of 6 vehicles named Matsya 1 to 6.
+            Matsya 1 was the first AUV developed in 2013, and Matsya 6 is the latest.</p>
+        </div>
+        <div class="grid-container-vehicle">
+          <div class="card-vehicle" style="background-image: url('images/vehicles/M1.png');">
+            <div class="overlay">
+              <h2>Matsya 1</h2>
+              <p>2011</p>
+              <a href="vehicles.html">Read More</a>
+            </div>
           </div>
-          <div class="grid-container-vehicle">
-            <div class="card-vehicle" style="background-image: url('images/vehicles/M1.png');">
-              <div class="overlay">
-                <h2>Matsya 1</h2>
-                <p>2011</p>
-                <a href="vehicles.html">Read More</a>
-              </div>
+          <div class="card-vehicle" style="background-image: url('images/vehicles/M2.png');">
+            <div class="overlay">
+              <h2>Matsya 2</h2>
+              <p>2012</p>
+              <a href="vehicles.html">Read More</a>
             </div>
-            <div class="card-vehicle" style="background-image: url('images/vehicles/M2.png');">
-              <div class="overlay">
-                <h2>Matsya 2</h2>
-                <p>2012</p>
-                <a href="vehicles.html">Read More</a>
-              </div>
+          </div>
+          <div class="card-vehicle" style="background-image: url('images/vehicles/M3.png');">
+            <div class="overlay">
+              <h2>Matsya 3</h2>
+              <p>2013</p>
+              <a href="vehicles.html">Read More</a>
             </div>
-            <div class="card-vehicle" style="background-image: url('images/vehicles/M3.png');">
-              <div class="overlay">
-                <h2>Matsya 3</h2>
-                <p>2013</p>
-                <a href="vehicles.html">Read More</a>
-              </div>
+          </div>
+          <div class="card-vehicle" style="background-image: url('images/vehicles/M4.png');">
+            <div class="overlay">
+              <h2>Matsya 4</h2>
+              <p>2015</p>
+              <a href="vehicles.html">Read More</a>
             </div>
-            <div class="card-vehicle" style="background-image: url('images/vehicles/M4.png');">
-              <div class="overlay">
-                <h2>Matsya 4</h2>
-                <p>2015</p>
-                <a href="vehicles.html">Read More</a>
-              </div>
+          </div>
+          <div class="card-vehicle" style="background-image: url('images/vehicles/M5.png');">
+            <div class="overlay">
+              <h2>Matsya 5</h2>
+              <p>2020</p>
+              <a href="vehicles.html">Read More</a>
             </div>
-            <div class="card-vehicle" style="background-image: url('images/vehicles/M5.png');">
-              <div class="overlay">
-                <h2>Matsya 5</h2>
-                <p>2020</p>
-                <a href="vehicles.html">Read More</a>
-              </div>
-            </div>
-            <div class="card-vehicle" style="background-image: url('images/vehicles/M6.png');">
-              <div class="overlay">
-                <h2>Matsya 6</h2>
-                <p>2022</p>
-                <a href="vehicles.html">Read More</a>
-              </div>
+          </div>
+          <div class="card-vehicle" style="background-image: url('images/vehicles/M6.png');">
+            <div class="overlay">
+              <h2>Matsya 6</h2>
+              <p>2022</p>
+              <a href="vehicles.html">Read More</a>
             </div>
           </div>
         </div>
+      </div>
 
 
       <!-- End Testimonials Section -->
@@ -348,13 +349,48 @@
       </section><!-- End About Section -->
       <!--Media Section-->
       <!--End Media Section-->
-      <!-- ======= Clients Section ======= -->
-      <section id="clients" class="clients">
+      <!-- ======= Clients + Gallery Section ======= -->
+      
+        <div class="container" data-aos="zoom-in">
+          <div class="section-title">
+            <h2>Gallery</h2>
+            <h5 style="text-align: center;"><a href="gallery.html">See More...</a></h5> 
+          </div>
+          <div style="margin-top: 15%; margin-bottom: 8%;">
+            <div class="gallery" style="display:grid; place-items:center;">
+              <span style="--i:1">
+                <img src="images/gallery/a13.jpg" alt="" />
+              </span>
+              <span style="--i:2">
+                <img src="images/gallery/trs2.png" alt="" />
+              </span>
+              <span style="--i:3">
+                <img src="images/gallery/t2324.JPG" alt="" />
+              </span>
+              <span style="--i:4">
+                <img src="images/gallery/AMT_0819.JPG" alt="" />
+              </span>
+              <span style="--i:5">
+                <img src="images/gallery/a2.png" alt="" />
+              </span>
+              <span style="--i:6">
+                <img src="images/gallery/autocad.jpg" alt="" />
+              </span>
+              <span style="--i:7">
+                <img src="images/gallery/wen.jpg" alt="" />
+              </span>
+              <span style="--i:8">
+                <img src="images/gallery/a14.jpg" alt="" />
+              </span>
+            </div>
+          </div>
+        </div>
+        <br>
         <div class="container" data-aos="zoom-in">
           <div class="section-title">
             <h2>Sponsors</h2>
           </div>
-
+          <section id="clients" class="clients">
           <div class="carousel">
             <div class="carousel-track">
               <div class="card-clients"><a href="https://www.drdo.gov.in/" target="_blank"><img
@@ -453,7 +489,7 @@
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
               <div class="member" data-aos="fade-up" data-aos-delay="300">
                 <div class="member-img">
-                  <img src="images/Team/freshies/Sameer.png" class="img-fluid" alt="">
+                  <img src="images/Team/RS2024 Website Photo/SameerMa.png" class="img-fluid" alt="">
                   <div class="social">
                     <a href="https://www.instagram.com/sameer_mannava/" target="_blank"><i
                         class="bi bi-instagram"></i></a>
