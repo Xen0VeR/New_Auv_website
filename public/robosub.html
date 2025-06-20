@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,9 +12,12 @@
   <!-- Favicons -->
   <link href="images/logo.jfif" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -33,11 +35,12 @@
   <link rel="stylesheet" href="robosub.css">
 
   <!-- Font awesome stylesheet -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 
   <style>
     @media (minwidth: 1000px) {
-      iframe{
+      iframe {
         margin-top: -2em;
       }
     }
@@ -61,28 +64,54 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
-  
+
         const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
         const navbar = document.querySelector("#navbar");
-  
+
         if (mobileNavToggle && navbar) {
           mobileNavToggle.addEventListener("click", function () {
             navbar.classList.toggle("navbar-mobile");
             this.classList.toggle("bi-x");
           });
         }
+        // Search handler function
+        window.handleSearch = function (event) {
+          event.preventDefault(); // prevent form from submitting
+
+          const query = document.getElementById("searchInput").value.toLowerCase().trim();
+
+          const redirects = {
+            "home": "index.html",
+            "about": "about-us.html",
+            "vehicles": "vehicles.html",
+            "team": "team.html",
+            "robosub": "robosub.html",
+            "achievements": "achievements.html",
+            "gallery": "gallery.html",
+            "alumni": "alumni.html",
+            "blog": "blog.html",
+            "contact": "index.html#contact",
+            "sponsor": "index.html#sponsors",
+          };
+
+          if (redirects[query]) {
+            window.location.href = redirects[query];
+          } else {
+            alert("No page found for: " + query);
+          }
+        };
       })
       .catch(error => console.error('Error loading navbar:', error));
   </script>
   <!-- End Header -->
 
- <!--Robosub Image-->
+  <!--Robosub Image-->
 
   <section id="robosub" class="d-flex align-items-center">
     <div class="container" data-aos="zoom-out" data-aos-delay="100">
       <div class="row">
         <div class="col-xl-6">
-          
+
         </div>
       </div>
     </div>
@@ -92,17 +121,22 @@
   <section id="description">
     <div class="content1">
       <div class="row">
-        <h1 style="text-align:center" >About RoboSub</h1>
+        <h1 style="text-align:center">About RoboSub</h1>
         <br> </br>
         <br>
-        <p>Launched in 1997, RoboSub is an international level competiton that is held annually in San Diego . College and high schools teams from across the globe build their own Autonomous Underwater Vehicles (AUV) and compete in various categories.
+        <p>Launched in 1997, RoboSub is an international level competiton that is held annually in San Diego . College
+          and high schools teams from across the globe build their own Autonomous Underwater Vehicles (AUV) and compete
+          in various categories.
 
-            The goal of this competition is to further the research in the field of AUVs with the help of the new generation.
-            
-            The tasks assigned to the vehicles mimic real world situations and give students a chance to find innovative way of working through these situations.
-            <br> </br>
-            <p style="text-align:center"> <a href="https://robosub.org/" class="btn-get-started scrollto">Click here to know more about RoboSub</a> </p>
-        </p> 
+          The goal of this competition is to further the research in the field of AUVs with the help of the new
+          generation.
+
+          The tasks assigned to the vehicles mimic real world situations and give students a chance to find innovative
+          way of working through these situations.
+          <br> </br>
+        <p style="text-align:center"> <a href="https://robosub.org/" class="btn-get-started scrollto">Click here to know
+            more about RoboSub</a> </p>
+        </p>
       </div>
     </div>
   </section>
@@ -111,53 +145,243 @@
     <div class="content2">
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12">
-          <h2>RoboSub 2024 Submission</h2>
-          <p> Matsya 6D is AUV-IITB's entry for this year's RoboSub. It is more modular, compact and reliable than it's predecessors. A simpler frame was implemented in the vehicle to reduce drag. 
-              The software stack has been made on top of ROS making it generic and keeping the software stack modular. The main electrical stack of Matsya 6D is equipped with many features that offer controlled redundancy and debug capabilities to mitigate in-run failures.
+          <h2>RoboSub 2025 Submission</h2>
+          <p> Matsya 7, our vehicle for RoboSub 2025, brings together a refined monohull design, smarter electronics,
+            and enhanced autonomy. With improved accessibility and thermal management, our new hull design enables
+            faster assembly and better component integration. We've transitioned to a single-board RPi Pico stack for
+            streamlined control, real-time power monitoring, and safer actuator operation. A robust carbon fibre frame
+            and custom mounts improve handling and protection. On the software front, the OakD stereo camera powers
+            depth perception and onboard YOLO inference, while our custom GUI accelerates debugging. Matsya 7 is faster,
+            safer, and built to perform.
           </p> <br>
         </div>
-        
+
         <div class="col-lg-6 col-md-6 col-sm-12">
-          <iframe width="560" height="305" src="https://www.youtube.com/embed/3WjeCINRMRI" title="YouTube video player" frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="margin-top: -2em; @media (maxwidth: 800px) {
+          <br><br>
+          <iframe width="560" height="305" src="https://www.youtube.com/embed/3WjeCINRMRI" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen style="margin-top: -2em; @media (maxwidth: 800px) {
         margin-top: 0em;
       }"></iframe>
         </div>
-      
-    </div>
 
-   </div> 
+      </div>
+
+    </div>
+    <!-- <div class="cards-container"> 
+    <ul class="cards" style="--items: 26;">
+        <li style="--i: 0;">
+            <input type="radio" id="item-0" name="gallery-item" checked>
+            <label for="item-0">2000</label>
+            <h2>2000</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 1;">
+            <input type="radio" id="item-1" name="gallery-item">
+            <label for="item-1">2001</label>
+            <h2>2001</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 2;">
+            <input type="radio" id="item-2" name="gallery-item">
+            <label for="item-2">2002</label>
+            <h2>2002</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 3;">
+            <input type="radio" id="item-3" name="gallery-item">
+            <label for="item-3">2003</label>
+            <h2>2003</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 4;">
+            <input type="radio" id="item-4" name="gallery-item">
+            <label for="item-4">2004</label>
+            <h2>2004</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        <li style="--i: 5;">
+            <input type="radio" id="item-5" name="gallery-item">
+            <label for="item-5">2005</label>
+            <h2>2005</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        <li style="--i: 6;">
+            <input type="radio" id="item-6" name="gallery-item">
+            <label for="item-6">2006</label>
+            <h2>2006</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        <li style="--i: 7;">
+            <input type="radio" id="item-7" name="gallery-item">
+            <label for="item-7">2007</label>
+            <h2>2007</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 8;">
+            <input type="radio" id="item-8" name="gallery-item">
+            <label for="item-8">2008</label>
+            <h2>2008</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        <li style="--i: 9;">
+            <input type="radio" id="item-9" name="gallery-item">
+            <label for="item-9">2009</label>
+            <h2>2009</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 10;">
+            <input type="radio" id="item-10" name="gallery-item">
+            <label for="item-10">2010</label>
+            <h2>2010</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        <li style="--i: 11;">
+            <input type="radio" id="item-11" name="gallery-item">
+            <label for="item-11">2011</label>
+            <h2>2011</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 12;">
+            <input type="radio" id="item-12" name="gallery-item">
+            <label for="item-12">2012</label>
+            <h2>2012</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 13;">
+            <input type="radio" id="item-13" name="gallery-item">
+            <label for="item-13">2013</label>
+            <h2>2013</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 14;">
+            <input type="radio" id="item-14" name="gallery-item">
+            <label for="item-14">2014</label>
+            <h2>2014</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 15;">
+            <input type="radio" id="item-15" name="gallery-item">
+            <label for="item-15">2015</label>
+            <h2>2015</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 16;">
+            <input type="radio" id="item-16" name="gallery-item">
+            <label for="item-16">2016</label>
+            <h2>2016</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 17;">
+            <input type="radio" id="item-17" name="gallery-item">
+            <label for="item-17">2017</label>
+            <h2>2017</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 18;">
+            <input type="radio" id="item-18" name="gallery-item">
+            <label for="item-18">2018</label>
+            <h2>2018</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 19;">
+            <input type="radio" id="item-19" name="gallery-item">
+            <label for="item-19">2019</label>
+            <h2>2019</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 20;">
+            <input type="radio" id="item-20" name="gallery-item">
+            <label for="item-20">2020</label>
+            <h2>2020</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 21;">
+            <input type="radio" id="item-21" name="gallery-item">
+            <label for="item-21">2021</label>
+            <h2>2021</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 22;">
+            <input type="radio" id="item-22" name="gallery-item">
+            <label for="item-22">2022</label>
+            <h2>2022</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 23;">
+            <input type="radio" id="item-23" name="gallery-item">
+            <label for="item-23">2023</label>
+            <h2>2023</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 24;">
+            <input type="radio" id="item-24" name="gallery-item">
+            <label for="item-24">2024</label>
+            <h2>2024</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+        <li style="--i: 25;">
+            <input type="radio" id="item-25" name="gallery-item">
+            <label for="item-25">2025</label>
+            <h2>2025</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias, perspiciatis dicta? In nihil quidem
+                sunt omnis facilis quas corporis at, officia itaque!</p>
+        </li>
+    </ul>
+</div> -->
   </section>
   <br>
   <br>
   <!--Content ends-->
 
-    <!-- ======= Footer ======= -->
-    <div id="footer-placeholder"></div>
+  <!-- ======= Footer ======= -->
+  <div id="footer-placeholder"></div>
 
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading navbar:', error));
-</script><!-- End Footer -->
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script><!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-    class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
-<!-- Vendor JS Files -->
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-<script src="assets/vendor/purecounter/purecounter.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>

@@ -12,6 +12,8 @@
     <!-- Favicons -->
     <link href="images/logo.jfif" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
     <!-- Google Fonts -->
     <link
@@ -44,12 +46,16 @@
             }
         } */
 
+        /* <meta http-equiv="Content-Security-Policy" content="frame-src https://www.youtube.com https://www.youtube-nocookie.com;"> */
+
+
         @media (max-width: 800px) {
             .responsive-iframe {
                 margin-top: 0em !important;
             }
         }
     </style>
+
 
     <!-- =======================================================
   * Template Name: Presento - v3.3.0
@@ -69,6 +75,8 @@
             .then(data => {
                 document.getElementById('navbar-placeholder').innerHTML = data;
 
+
+
                 const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
                 const navbar = document.querySelector("#navbar");
 
@@ -78,22 +86,50 @@
                         this.classList.toggle("bi-x");
                     });
                 }
+                // Search handler function
+                window.handleSearch = function (event) {
+                    event.preventDefault(); // prevent form from submitting
+
+                    const query = document.getElementById("searchInput").value.toLowerCase().trim();
+
+                    const redirects = {
+                        "home": "index.html",
+                        "about": "about-us.html",
+                        "vehicles": "vehicles.html",
+                        "team": "team.html",
+                        "robosub": "robosub.html",
+                        "achievements": "achievements.html",
+                        "gallery": "gallery.html",
+                        "alumni": "alumni.html",
+                        "blog": "blog.html",
+                        "contact": "index.html#contact",
+                        "sponsor": "index.html#sponsor",
+                    };
+
+                    if (redirects[query]) {
+                        window.location.href = redirects[query];
+                    } else {
+                        alert("No page found for: " + query);
+                    }
+                };
+
             })
             .catch(error => console.error('Error loading navbar:', error));
     </script>
 
     <!-- End Header -->
 
-    <section id="about-us" class="d-flex align-items-center">
+    <section id="about-us" class="d-flex align-items-center"
+        style="background-image: url('images/Team/Team24-25.JPG'); background-position: center;">
         <div class="container" data-aos="zoom-out" data-aos-delay="100">
             <div class="row">
                 <div class="col-xl-6">
                     <h1>About Us</h1>
-                    <button class="button">
+                    <!-- <button class="button">
                         <a href="#description" style="text-decoration: none; color: white;">
                             <span class="liquid"></span>
                             <span class="btn-txt"> Dive In</a></span>
-                    </button>
+                    </button> -->
                 </div>
 
             </div>
@@ -126,12 +162,14 @@
                     </iframe>
                 </div> -->
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Kr68oZ-BFoU?si=z1pCOFB2iZqmBLWZ"
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Kr68oZ-BFoU"
                         title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
                     </iframe>
+
                 </div>
+
             </div>
             <!-- content ends -->
         </div>
@@ -145,303 +183,356 @@
 
     <!--subdivision-->
     <!-- ======= Tabs Section ======= -->
-    <section id="tabs" class="tabs">
-        <div class="container" data-aos="fade-up">
+    <section id="sub-divisions">
+        <section id="tabs" class="tabs">
+            <div class="container" data-aos="fade-up">
 
-            <ul class="nav nav-tabs row d-flex">
-                <li class="nav-item col-3">
-                    <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-                        <i class="bx bx-wrench"></i>
-                        <h4 class="d-none d-lg-block">Mechanical</h4>
-                    </a>
-                </li>
-                <li class="nav-item col-3">
-                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                        <i class="bx bx-bulb"></i>
-                        <h4 class="d-none d-lg-block">Electrical</h4>
-                    </a>
-                </li>
-                <li class="nav-item col-3">
-                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-                        <i class="bx bx-bot"></i>
-                        <h4 class="d-none d-lg-block">Software</h4>
-                    </a>
-                </li>
-                <li class="nav-item col-3">
-                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-                        <i class="bx bx-bar-chart-square"></i>
-                        <h4 class="d-none d-lg-block">Business</h4>
-                    </a>
-                </li>
-            </ul>
+                <ul class="nav nav-tabs row d-flex">
+                    <li class="nav-item col-3">
+                        <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+                            <i class="bx bx-wrench"></i>
+                            <h4 class="d-none d-lg-block">Mechanical</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item col-3">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+                            <i class="bx bx-bulb"></i>
+                            <h4 class="d-none d-lg-block">Electrical</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item col-3">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                            <i class="bx bx-bot"></i>
+                            <h4 class="d-none d-lg-block">Software</h4>
+                        </a>
+                    </li>
+                    <li class="nav-item col-3">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+                            <i class="bx bx-bar-chart-square"></i>
+                            <h4 class="d-none d-lg-block">Business</h4>
+                        </a>
+                    </li>
+                </ul>
 
-            <div class="tab-content">
-                <div class="tab-pane active show" id="tab-1">
-                    <div class="row">
-                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <div class="tab-content">
+                    <div class="tab-pane active show" id="tab-1">
+                        <div class="row">
+                            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                                <p>
+                                    The <b>Mechanical Subdivision</b> works tirelessly to bring in every possible
+                                    physical
+                                    advancement in the vehicle. The main interests of the subdivision include planning,
+                                    building and testing different parts, as well as designing, fabricating and
+                                    waterproofing the entire vehicle.
+                                </p>
+                                <h4 style="padding-top:20px ;"><b>Designing, Testing and Manufacturing</b></h4>
+                                <p class="fst-italic">
+                                    Different parts, ranging in complexity from simple hooks to complicated actuators,
+                                    undergo a rigorous process of Critical Design Reviews and are optimized to best suit
+                                    our
+                                    requirements.
+                                    These designs are then tested via simulation software like ANSYS, to check the
+                                    maximum
+                                    temperature in hulls, static structural strength and drag estimations. After
+                                    successfully passing all the design checkpoints, the part is manufactured using
+                                    suitable
+                                    techniques like laser cutting acrylic and 5 axis CNC for complicated parts like
+                                    flanges,
+                                    etc.
+
+                                </p>
+                            </div>
+                            <div style="padding-left:100px ;" class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0"
+                                data-aos="fade-up" data-aos-delay="100">
+                                <img src="assets/img/Main_hull.jpg" class="img-fluid" alt="">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div style="margin-bottom:50px ;" class="col-md-5 aos-init aos-animate"
+                                data-aos="fade-right" data-aos-delay="100">
+                                <img style="margin-top:30px ;" src="assets/img/Mechanical1.png" class="img-fluid"
+                                    alt="">
+                            </div>
+                            <div class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
+                                <h4><b>Research and Development</b></h4>
+                                <p class="fst-italic">
+                                    The mechanical subdivision also explores new and untouched domains to find better
+                                    technologies to implement in the vehicle. The subdivision is currently pursuing
+                                    research
+                                    in topics involving hydrodynamic analysis, thermal management in closed hulls and
+                                    multifunctional arms, amongst others.
+                                <ul>
+                                    <li><i class="ri-check-double-line"></i>In thermal management, we have created a
+                                        solution to increase contact with hull walls
+                                        and thus transfer more heat via conduction to the surrounding water at a
+                                        comparatively
+                                        lower temperature. We have also isolated major heat-generating components into a
+                                        separate hull to prevent damage to other parts of the vehicle.</li>
+                                    <li><i class="ri-check-double-line"></i>This year, we decided to make a universal
+                                        arm
+                                        that can be used for any task with the
+                                        minimum number of improvements. This arm is aimed at being completely
+                                        autonomous,
+                                        having
+                                        3 DoF and gripping feedback.</li>
+                                    <li><i class="ri-check-double-line"></i> We also plan to have a replaceable end
+                                        effector
+                                        that can be designed explicitly for the
+                                        task involved.</li>
+                                </ul>
+                                Lastly, we are exploring topology optimization, which can help solve structures with
+                                minimum material and sufficient strength.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-2">
+                        <div class="row">
                             <p>
-                                The <b>Mechanical Subdivision</b> works tirelessly to bring in every possible physical
-                                advancement in the vehicle. The main interests of the subdivision include planning,
-                                building and testing different parts, as well as designing, fabricating and
-                                waterproofing the entire vehicle.
+                                The <b>Electrical Subdivision</b> is the link between the mechanical and software
+                                subdivisions,
+                                responsible for designing, manufacturing and managing the power requirements and
+                                controlling
+                                the thrusters and actuator systems with the help of customized PCBs.
                             </p>
-                            <h4 style="padding-top:20px ;"><b>Designing, Testing and Manufacturing</b></h4>
-                            <p class="fst-italic">
-                                Different parts, ranging in complexity from simple hooks to complicated actuators,
-                                undergo a rigorous process of Critical Design Reviews and are optimized to best suit our
-                                requirements.
-                                These designs are then tested via simulation software like ANSYS, to check the maximum
-                                temperature in hulls, static structural strength and drag estimations. After
-                                successfully passing all the design checkpoints, the part is manufactured using suitable
-                                techniques like laser cutting acrylic and 5 axis CNC for complicated parts like flanges,
-                                etc.
-
-                            </p>
+                            <div style="padding-top:20px ;" class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                                <h4><b>Designing and Manufacturing</b></h4>
+                                <p class="fst-italic">
+                                    A schematic of the board is prepared from the pre-designed circuit diagram, after
+                                    which
+                                    the designing of the PCB layout is done. The design review of these boards is
+                                    carried
+                                    out multiple times to ensure the correctness and to avoid any minor mistakes before
+                                    proceeding to manufacture.
+                                    These custom boards are then soldered to fit the components. The microcontrollers in
+                                    the
+                                    PCBs are accoutred with codes developed to command them, implementation of which
+                                    allows
+                                    the microcontroller to incorporate I/O functions, servo control, data acquisition
+                                    and
+                                    transmission. Once we have all the electrical hardware components, they are verified
+                                    for
+                                    their functioning by testing them without being placed in Matsya. After ensuring
+                                    their
+                                    regular operation, different parts are connected inside the respective hulls with
+                                    the
+                                    help of connectors and penetrators, where the Microcontrollers are loaded with their
+                                    working algorithms.
+                                </p>
+                            </div>
+                            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up"
+                                data-aos-delay="100">
+                                <img src="assets/img/elec1.png" class="img-fluid" alt="">
+                            </div>
                         </div>
-                        <div style="padding-left:100px ;" class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0"
-                            data-aos="fade-up" data-aos-delay="100">
-                            <img src="assets/img/Main_hull.jpg" class="img-fluid" alt="">
+                        <div class="row">
+                            <div style="padding-top:50px ;" class="col-md-5 aos-init aos-animate" data-aos="fade-right"
+                                data-aos-delay="100">
+                                <img src="assets/img/elec2.png" class="img-fluid" alt="">
+                            </div>
+                            <div style="margin-top:60px ;" class="col-md-7 pt-4 aos-init aos-animate"
+                                data-aos="fade-left" data-aos-delay="100">
+                                <h4 style="padding-left:50px;"><b>Task and Testing</b></h4>
+                                <p style="padding-left:50px;" class="fst-italic">
+                                    During the run, the dropping of markers and torpedo shooting is accomplished by us.
+                                    With
+                                    the help of communication protocols, we interface the codes of drivers and sensors
+                                    with
+                                    the vehicle and its milieu. The fully equipped Matsya is deployed in the swimming
+                                    pool,
+                                    where a check of significant activities like waterproofing, electrical stack
+                                    working,
+                                    data-logging, etc., is done. There have been instances of water leakage inside hulls
+                                    which led to replacing the total electrical stack with new components resulting in
+                                    numerous night-outs solving the issues, which engulfed us in a lot of fun
+                                    activities,
+                                    mid-night snacks, treats and created lifelong memories.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-3">
+                        <div class="row">
+                            <div style="margin-bottom:50px ;" class="col-md-5 aos-init aos-animate"
+                                data-aos="fade-right" data-aos-delay="100">
+                                <img style="margin-top:40px ;" src="assets/img/soft2.png" class="img-fluid" alt="">
+                            </div>
+                            <div style="margin-bottom:50px;" class="col-md-7 pt-4 aos-init aos-animate"
+                                data-aos="fade-left" data-aos-delay="100">
+                                <p class="fst-italic">
+                                    The <b>Software Subdivision</b> is responsible for making Matsya Autonomous! The
+                                    software stack
+                                    is written majorly in C,
+                                    C++ and Python. The main packages in the software stack include drivers,
+                                    localisation,
+                                    controller, navigator, simulator,
+                                    state machine, mission planner, vision and acoustics, all of which have been written
+                                    from scratch with the help of
+                                    libraries such as <b>Robot Operating System</b> (ROS) for inter-process
+                                    communication
+                                    and OpenCV for image processing.
+                                    All these packages combined provide autonomous capabilities to the vehicle, making
+                                    it
+                                    capable of taking its own decisions. The overall architecture of the stack is
+                                    <b>highly
+                                        object-oriented</b> and majorly <b>independent of the vehicles</b>. The code
+                                    conforms to the LLVM standard and PEP 8 style guide, supported by inbuilt tests and
+                                    extensive documentation. The tasks and environment are simulated in <b>Gazebo</b> to
+                                    test any code we write. Post testing in the simulator, another important task for
+                                    the
+                                    subdivision is real-life testing, where the code is physically tested on the vehicle
+                                    in-water. Thus, the main aim of the software subdivision is to write software that
+                                    is
+                                    generic and error-free, in order to get the vehicles working at their full
+                                    potential.
+                                </p>
+                            </div>
+                            <div style="padding-top:20px ;" class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                                <h4><b>Controller and Navigator</b></h4>
+                                <p class="fst-italic">
+                                    This module is responsible for autonomous control of the vehicle's motion. The
+                                    Controller is responsible for the vehicle achieving
+                                    given positions and velocities in all <b>6 Degrees Of Freedom</b> using feedback
+                                    from
+                                    localization. The controller uses a <b>PID</b>
+                                    Controller (Proportional-Integral-Derivative) and an allocator which divides the
+                                    forces
+                                    among our thrusters. We are currently working
+                                    on more advanced Optimal Control Laws and Improved Modelling of Vehicle’s Dynamics.
+                                    The Navigator helps our vehicle traverse the pool via complex paths. It features an
+                                    <b>Artificial Potential Fields</b> Based Obstacle
+                                    Avoidance and Trajectory Following Algorithms. It is responsible for commanding the
+                                    required positions and velocities from the controller.
+                                    This module allows our vehicle to navigate complex underwater environments.
+                                </p>
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2 text-center"
+                                class="embed-responsive embed-responsive-1by1">
+                                <iframe style="margin-bottom:50px;" style="margin-top:50px;" width="450" height="315"
+                                    src="https://www.youtube.com/embed/YcIayyNmwTc">
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div style="margin-bottom:50px ;" class="col-md-5 aos-init aos-animate"
+                                data-aos="fade-right" data-aos-delay="100">
+                                <img src="assets/img/features-1.png" class="img-fluid" alt="">
+                            </div>
+                            <div class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
+                                <h4><b>Localization And Perception</b></h4>
+                                <p class="fst-italic">
+                                    Our vehicle relies heavily on knowledge of its current location to be able to
+                                    control
+                                    itself , find underwater tasks and make autonomous
+                                    decisions. The Localization module achieves this by combining data from our sensors
+                                    to
+                                    get a good estimate of localization. We are currently
+                                    working on <b>sensor fusion</b> algorithms that can combine sensor data with our
+                                    knowledge of the vehicle's dynamics for better estimation.
+                                    Vehicle Autonomy requires that the vehicle is able to see and hear its environment
+                                    and
+                                    use that information to identify and locate key objects
+                                    and tasks. We use both ML based <b>Yolo V3</b> and classical Computer Vision
+                                    techniques
+                                    to identify objects in the environment.
+                                    A Time Difference Of Arrival (TDOA) based algorithm is applied on hydrophone data to
+                                    locate underwater pingers.
+                                </p>
+                            </div>
+                            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                                <h4><b>Sensors</b></h4>
+                                <p class="fst-italic">
+                                    This module handles all communication with our sensors, namely the IMU, DVL,
+                                    Pressure
+                                    Sensors, Camera and Hydrophones. The main task of
+                                    our custom serial and socket drivers is to read sensor data and pass it on to the
+                                    localization and perception module. We have also developed
+                                    an <b>in-house calibration software</b> for the IMU, so the drivers also
+                                    occasionally
+                                    write the calibration matrices to the sensors.
+                                    After the force outputs to the 8 thrusters are calculated in the controller, they
+                                    need
+                                    to be sent to the thrusters. For this, they are
+                                    first converted to Pulse-Width Modulation (PWM) Values, using a mapping calculated
+                                    from
+                                    the thruster manufacturer’s data. These PWM Values
+                                    are then written onto the CAN Bus, which carries the signals to the individual
+                                    thrusters. The CAN Bus also carries the actuation signal for
+                                    the arm, sent directly by the mission planner.
+                                </p>
+                            </div>
+                            <div style="margin-bottom:50px ;" class="col-lg-6 order-1 order-lg-2 text-center">
+                                <img src="assets/img/features-2.png" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div style="margin-bottom:50px ;" class="col-md-5 aos-init aos-animate"
+                                data-aos="fade-right" data-aos-delay="100">
+                                <img src="assets/img/features-1.png" class="img-fluid" alt="">
+                            </div>
+                            <div style="margin-top:50px;" class="col-md-7 pt-4 aos-init aos-animate"
+                                data-aos="fade-left" data-aos-delay="100">
+                                <h4><b>State and Mission Planner</b></h4>
+                                <p class="fst-italic">
+                                    State and Mission Planner collectively act as the brain of our vehicle. After
+                                    receiving
+                                    the current location of matsya from the localization
+                                    package, State sends the data to the mission planner which decides the next task to
+                                    do.
+                                    This data is then sent back to State, which in conjunction
+                                    with the Navigator, goes through the <b>4 sub-states</b> (Scan, Transition,
+                                    Execution
+                                    and Post-Execution), returning back to a previous state in
+                                    case of a failure at any particular sub-state. Task completion and success checks
+                                    are
+                                    performed in the post-execution state.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div style="margin-bottom:50px ;" class="col-md-5 aos-init aos-animate" data-aos="fade-right"
-                            data-aos-delay="100">
-                            <img style="margin-top:30px ;" src="assets/img/Mechanical1.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
-                            <h4><b>Research and Development</b></h4>
-                            <p class="fst-italic">
-                                The mechanical subdivision also explores new and untouched domains to find better
-                                technologies to implement in the vehicle. The subdivision is currently pursuing research
-                                in topics involving hydrodynamic analysis, thermal management in closed hulls and
-                                multifunctional arms, amongst others.
-                            <ul>
-                                <li><i class="ri-check-double-line"></i>In thermal management, we have created a
-                                    solution to increase contact with hull walls
-                                    and thus transfer more heat via conduction to the surrounding water at a
-                                    comparatively
-                                    lower temperature. We have also isolated major heat-generating components into a
-                                    separate hull to prevent damage to other parts of the vehicle.</li>
-                                <li><i class="ri-check-double-line"></i>This year, we decided to make a universal arm
-                                    that can be used for any task with the
-                                    minimum number of improvements. This arm is aimed at being completely autonomous,
-                                    having
-                                    3 DoF and gripping feedback.</li>
-                                <li><i class="ri-check-double-line"></i> We also plan to have a replaceable end effector
-                                    that can be designed explicitly for the
-                                    task involved.</li>
-                            </ul>
-                            Lastly, we are exploring topology optimization, which can help solve structures with
-                            minimum material and sufficient strength.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane" id="tab-2">
-                    <div class="row">
-                        <p>
-                            The <b>Electrical Subdivision</b> is the link between the mechanical and software
-                            subdivisions,
-                            responsible for designing, manufacturing and managing the power requirements and controlling
-                            the thrusters and actuator systems with the help of customized PCBs.
-                        </p>
-                        <div style="padding-top:20px ;" class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                            <h4><b>Designing and Manufacturing</b></h4>
-                            <p class="fst-italic">
-                                A schematic of the board is prepared from the pre-designed circuit diagram, after which
-                                the designing of the PCB layout is done. The design review of these boards is carried
-                                out multiple times to ensure the correctness and to avoid any minor mistakes before
-                                proceeding to manufacture.
-                                These custom boards are then soldered to fit the components. The microcontrollers in the
-                                PCBs are accoutred with codes developed to command them, implementation of which allows
-                                the microcontroller to incorporate I/O functions, servo control, data acquisition and
-                                transmission. Once we have all the electrical hardware components, they are verified for
-                                their functioning by testing them without being placed in Matsya. After ensuring their
-                                regular operation, different parts are connected inside the respective hulls with the
-                                help of connectors and penetrators, where the Microcontrollers are loaded with their
-                                working algorithms.
-                            </p>
-                        </div>
-                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
-                            <img src="assets/img/elec1.png" class="img-fluid" alt="">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div style="padding-top:50px ;" class="col-md-5 aos-init aos-animate" data-aos="fade-right"
-                            data-aos-delay="100">
-                            <img src="assets/img/elec2.png" class="img-fluid" alt="">
-                        </div>
-                        <div style="margin-top:60px ;" class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left"
-                            data-aos-delay="100">
-                            <h4 style="padding-left:50px;"><b>Task and Testing</b></h4>
-                            <p style="padding-left:50px;" class="fst-italic">
-                                During the run, the dropping of markers and torpedo shooting is accomplished by us. With
-                                the help of communication protocols, we interface the codes of drivers and sensors with
-                                the vehicle and its milieu. The fully equipped Matsya is deployed in the swimming pool,
-                                where a check of significant activities like waterproofing, electrical stack working,
-                                data-logging, etc., is done. There have been instances of water leakage inside hulls
-                                which led to replacing the total electrical stack with new components resulting in
-                                numerous night-outs solving the issues, which engulfed us in a lot of fun activities,
-                                mid-night snacks, treats and created lifelong memories.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tab-pane" id="tab-3">
-                    <div class="row">
-                        <div style="margin-bottom:50px ;" class="col-md-5 aos-init aos-animate" data-aos="fade-right"
-                            data-aos-delay="100">
-                            <img style="margin-top:40px ;" src="assets/img/soft2.png" class="img-fluid" alt="">
-                        </div>
-                        <div style="margin-bottom:50px;" class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left"
-                            data-aos-delay="100">
-                            <p class="fst-italic">
-                                The <b>Software Subdivision</b> is responsible for making Matsya Autonomous! The
-                                software stack
-                                is written majorly in C,
-                                C++ and Python. The main packages in the software stack include drivers, localisation,
-                                controller, navigator, simulator,
-                                state machine, mission planner, vision and acoustics, all of which have been written
-                                from scratch with the help of
-                                libraries such as <b>Robot Operating System</b> (ROS) for inter-process communication
-                                and OpenCV for image processing.
-                                All these packages combined provide autonomous capabilities to the vehicle, making it
-                                capable of taking its own decisions. The overall architecture of the stack is <b>highly
-                                    object-oriented</b> and majorly <b>independent of the vehicles</b>. The code
-                                conforms to the LLVM standard and PEP 8 style guide, supported by inbuilt tests and
-                                extensive documentation. The tasks and environment are simulated in <b>Gazebo</b> to
-                                test any code we write. Post testing in the simulator, another important task for the
-                                subdivision is real-life testing, where the code is physically tested on the vehicle
-                                in-water. Thus, the main aim of the software subdivision is to write software that is
-                                generic and error-free, in order to get the vehicles working at their full potential.
-                            </p>
-                        </div>
-                        <div style="padding-top:20px ;" class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                            <h4><b>Controller and Navigator</b></h4>
-                            <p class="fst-italic">
-                                This module is responsible for autonomous control of the vehicle's motion. The
-                                Controller is responsible for the vehicle achieving
-                                given positions and velocities in all <b>6 Degrees Of Freedom</b> using feedback from
-                                localization. The controller uses a <b>PID</b>
-                                Controller (Proportional-Integral-Derivative) and an allocator which divides the forces
-                                among our thrusters. We are currently working
-                                on more advanced Optimal Control Laws and Improved Modelling of Vehicle’s Dynamics.
-                                The Navigator helps our vehicle traverse the pool via complex paths. It features an
-                                <b>Artificial Potential Fields</b> Based Obstacle
-                                Avoidance and Trajectory Following Algorithms. It is responsible for commanding the
-                                required positions and velocities from the controller.
-                                This module allows our vehicle to navigate complex underwater environments.
-                            </p>
-                        </div>
-                        <div class="col-lg-6 order-1 order-lg-2 text-center"
-                            class="embed-responsive embed-responsive-1by1">
-                            <iframe style="margin-bottom:50px;" style="margin-top:50px;" width="450" height="315"
-                                src="https://www.youtube.com/embed/YcIayyNmwTc">
-                            </iframe>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div style="margin-bottom:50px ;" class="col-md-5 aos-init aos-animate" data-aos="fade-right"
-                            data-aos-delay="100">
-                            <img src="assets/img/features-1.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
-                            <h4><b>Localization And Perception</b></h4>
-                            <p class="fst-italic">
-                                Our vehicle relies heavily on knowledge of its current location to be able to control
-                                itself , find underwater tasks and make autonomous
-                                decisions. The Localization module achieves this by combining data from our sensors to
-                                get a good estimate of localization. We are currently
-                                working on <b>sensor fusion</b> algorithms that can combine sensor data with our
-                                knowledge of the vehicle's dynamics for better estimation.
-                                Vehicle Autonomy requires that the vehicle is able to see and hear its environment and
-                                use that information to identify and locate key objects
-                                and tasks. We use both ML based <b>Yolo V3</b> and classical Computer Vision techniques
-                                to identify objects in the environment.
-                                A Time Difference Of Arrival (TDOA) based algorithm is applied on hydrophone data to
-                                locate underwater pingers.
-                            </p>
-                        </div>
-                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                            <h4><b>Sensors</b></h4>
-                            <p class="fst-italic">
-                                This module handles all communication with our sensors, namely the IMU, DVL, Pressure
-                                Sensors, Camera and Hydrophones. The main task of
-                                our custom serial and socket drivers is to read sensor data and pass it on to the
-                                localization and perception module. We have also developed
-                                an <b>in-house calibration software</b> for the IMU, so the drivers also occasionally
-                                write the calibration matrices to the sensors.
-                                After the force outputs to the 8 thrusters are calculated in the controller, they need
-                                to be sent to the thrusters. For this, they are
-                                first converted to Pulse-Width Modulation (PWM) Values, using a mapping calculated from
-                                the thruster manufacturer’s data. These PWM Values
-                                are then written onto the CAN Bus, which carries the signals to the individual
-                                thrusters. The CAN Bus also carries the actuation signal for
-                                the arm, sent directly by the mission planner.
-                            </p>
-                        </div>
-                        <div style="margin-bottom:50px ;" class="col-lg-6 order-1 order-lg-2 text-center">
-                            <img src="assets/img/features-2.png" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div style="margin-bottom:50px ;" class="col-md-5 aos-init aos-animate" data-aos="fade-right"
-                            data-aos-delay="100">
-                            <img src="assets/img/features-1.png" class="img-fluid" alt="">
-                        </div>
-                        <div style="margin-top:50px;" class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left"
-                            data-aos-delay="100">
-                            <h4><b>State and Mission Planner</b></h4>
-                            <p class="fst-italic">
-                                State and Mission Planner collectively act as the brain of our vehicle. After receiving
-                                the current location of matsya from the localization
-                                package, State sends the data to the mission planner which decides the next task to do.
-                                This data is then sent back to State, which in conjunction
-                                with the Navigator, goes through the <b>4 sub-states</b> (Scan, Transition, Execution
-                                and Post-Execution), returning back to a previous state in
-                                case of a failure at any particular sub-state. Task completion and success checks are
-                                performed in the post-execution state.
-                            </p>
+                    <div class="tab-pane" id="tab-4">
+                        <div class="row">
+                            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                                <p class="fst-italic">
+                                    The <b>Business Subdivision</b> is the public face of the team, involved in aspects
+                                    of
+                                    marketing, media, PR, web development, event management and design.
+                                    With an aim to publicize AUV amongst prospective customers, investors, partners and
+                                    stakeholders, we establish and maintain the team’s corporate relations.<br>
+                                    Our responsibilities include:
+
+                                <ul>
+                                    <li><i class="ri-check-double-line"></i>Working with the press for various news
+                                        releases
+                                    </li>
+                                    <li><i class="ri-check-double-line"></i>Ideating content to promote the team through
+                                        its
+                                        social media handles</li>
+                                    <li><i class="ri-check-double-line"></i>Arranging interviews with company
+                                        spokespeople
+                                    </li>
+                                    <li><i class="ri-check-double-line"></i>Maintaining and advancing the team’s website
+                                    </li>
+                                    <li><i class="ri-check-double-line"></i>Internal and external communication
+                                    </li>
+                                </ul>
+                                and ultimately formally presenting the team on various public platforms in the most
+                                favourable and effective manner.
+                                </p>
+                            </div>
+                            <div class="col-lg-6 order-1 order-lg-2 text-center">
+                                <img src="assets/img/4380.jpg" alt="" class="img-fluid">
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="tab-pane" id="tab-4">
-                    <div class="row">
-                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                            <p class="fst-italic">
-                                The <b>Business Subdivision</b> is the public face of the team, involved in aspects of
-                                marketing, media, PR, web development, event management and design.
-                                With an aim to publicize AUV amongst prospective customers, investors, partners and
-                                stakeholders, we establish and maintain the team’s corporate relations.<br>
-                                Our responsibilities include:
-
-                            <ul>
-                                <li><i class="ri-check-double-line"></i>Working with the press for various news releases
-                                </li>
-                                <li><i class="ri-check-double-line"></i>Ideating content to promote the team through its
-                                    social media handles</li>
-                                <li><i class="ri-check-double-line"></i>Arranging interviews with company spokespeople
-                                </li>
-                                <li><i class="ri-check-double-line"></i>Maintaining and advancing the team’s website
-                                </li>
-                                <li><i class="ri-check-double-line"></i>Internal and external communication
-                                </li>
-                            </ul>
-                            and ultimately formally presenting the team on various public platforms in the most
-                            favourable and effective manner.
-                            </p>
-                        </div>
-                        <div class="col-lg-6 order-1 order-lg-2 text-center">
-                            <img src="assets/img/4380.jpg" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
             </div>
-
-        </div>
-    </section><!-- End Tabs Section -->
+        </section>
+    </section>
+    <!-- End Tabs Section -->
     <!--end of subdivision-->
     <!-- Timeline -->
 

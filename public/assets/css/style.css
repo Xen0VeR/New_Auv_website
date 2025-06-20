@@ -31,6 +31,7 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -106,7 +107,7 @@ h6 {
 
 #header .logo img {
   max-height: 40px;
-  
+
 }
 
 /*--------------------------------------------------------------
@@ -137,7 +138,7 @@ h6 {
   }
 }
 
-/* From Uiverse.io by abuayaan01 */ 
+/* From Uiverse.io by abuayaan01 */
 .button {
   background-color: #000;
   border: 0px;
@@ -160,7 +161,7 @@ h6 {
   bottom: 0;
   left: 0;
   box-shadow: inset 5px -5px 25px #104e81,
-  inset -5px 0px 25px #104e81;
+    inset -5px 0px 25px #104e81;
 }
 
 .liquid::after {
@@ -253,7 +254,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover > a {
+.navbar li:hover>a {
   color: rgb(68, 160, 235);
 }
 
@@ -287,11 +288,11 @@ h6 {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover > a {
+.navbar .dropdown ul li:hover>a {
   color: rgb(68, 160, 235);
 }
 
-.navbar .dropdown:hover > ul {
+.navbar .dropdown:hover>ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -303,7 +304,7 @@ h6 {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover > ul {
+.navbar .dropdown .dropdown:hover>ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -314,8 +315,72 @@ h6 {
   .navbar .dropdown .dropdown ul {
     left: -90%;
   }
-  .navbar .dropdown .dropdown:hover > ul {
+
+  .navbar .dropdown .dropdown:hover>ul {
     left: -100%;
+  }
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #1e1e1e;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 1px solid #444;
+  height: 35px;
+  margin-left: 20px;
+}
+
+.search-box input[type="text"] {
+  background: transparent;
+  border: none;
+  padding: 6px 14px;
+  font-size: 14px;
+  color: white;
+  width: 140px;
+  outline: none;
+}
+
+.search-box input::placeholder {
+  color: #aaa;
+}
+
+.search-box button {
+  background-color: transparent;
+  border: none;
+  padding: 0 14px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.search-box button:hover {
+  color: rgb(68, 160, 235);
+  /* your theme blue */
+}
+
+@media (max-width: 991px) {
+  .search-box {
+    background-color: white !important;
+    border: 1px solid #ccc;
+  }
+
+  .search-box input[type="text"] {
+    color: #000;
+  }
+
+  .search-box input::placeholder {
+    color: #666;
+  }
+
+  .search-box button {
+    color: #000;
+  }
+
+  .search-box button:hover {
+    color: rgb(68, 160, 235);
   }
 }
 
@@ -323,7 +388,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #FFFFFF ;
+  color: #FFFFFF;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -340,6 +405,7 @@ h6 {
   .mobile-nav-toggle {
     display: block;
   }
+
   .navbar ul {
     display: none;
   }
@@ -379,12 +445,12 @@ h6 {
 .navbar-mobile a {
   padding: 10px 20px;
   font-size: 15px;
-  color: black ;
+  color: black;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover > a {
+.navbar-mobile li:hover>a {
   color: rgb(68, 160, 235);
 }
 
@@ -418,11 +484,11 @@ h6 {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover > a {
+.navbar-mobile .dropdown ul li:hover>a {
   color: rgb(68, 160, 235);
 }
 
-.navbar-mobile .dropdown > .dropdown-active {
+.navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
 
@@ -432,7 +498,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/landing.jpg") top center no-repeat;
+  background: url("../img/trs2.png") top center no-repeat;
   background-size: cover;
   position: relative;
   padding-top: 82px;
@@ -489,9 +555,11 @@ h6 {
     /*background: url("../img/landing.png") top center no-repeat;*/
     width: 100%;
   }
+
   #hero h1 {
     font-size: 28px;
   }
+
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
@@ -593,11 +661,11 @@ section {
   transition: 0.3s;
 }
 
-.breadcrumbs ol li + li {
+.breadcrumbs ol li+li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li + li::before {
+.breadcrumbs ol li+li::before {
   display: inline-block;
   padding-right: 10px;
   color: rgb(68, 160, 235);
@@ -771,7 +839,7 @@ section {
 
 .tabs .nav-link {
   border: 1px solid #b9b9b9;
-  padding: 15px;
+  padding: 7px;
   transition: 0.3s;
   color: #111111;
   border-radius: 0;
@@ -786,7 +854,7 @@ section {
   font-size: 48px;
 }
 
-.tabs .nav-link h4 {
+.tabs .nav-link h3 {
   font-size: 18px;
   font-weight: 600;
   margin: 0;
@@ -814,6 +882,7 @@ section {
   .tabs .nav-link {
     padding: 15px;
   }
+
   .tabs .nav-link i {
     font-size: 24px;
   }
@@ -1040,10 +1109,7 @@ section {
   position: relative;
 }
 
-.portfolio-details
-  .portfolio-details-slider
-  .swiper-pagination
-  .swiper-pagination-bullet {
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -1051,10 +1117,7 @@ section {
   border: 1px solid rgb(68, 160, 235);
 }
 
-.portfolio-details
-  .portfolio-details-slider
-  .swiper-pagination
-  .swiper-pagination-bullet-active {
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: rgb(68, 160, 235);
 }
 
@@ -1077,7 +1140,7 @@ section {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li + li {
+.portfolio-details .portfolio-info ul li+li {
   margin-top: 10px;
 }
 
@@ -1094,6 +1157,7 @@ section {
 .portfolio-details .portfolio-description p {
   padding: 0;
 }
+
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
@@ -1173,6 +1237,7 @@ section {
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: rgb(68, 160, 235);
 }
+
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
@@ -1317,7 +1382,8 @@ section {
 
 .grid-container-vehicle {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns */
   gap: 4vh 5vw;
   justify-content: center;
 }
@@ -1385,13 +1451,15 @@ section {
 /* Responsive design for smaller screens */
 @media (max-width: 900px) {
   .grid-container-vehicle {
-      grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 per row */
   }
 }
 
 @media (max-width: 600px) {
   .grid-container-vehicle {
-      grid-template-columns: repeat(1, 1fr); /* 1 per row */
+    grid-template-columns: repeat(1, 1fr);
+    /* 1 per row */
   }
 }
 
@@ -1591,6 +1659,7 @@ section {
   background: rgb(68, 160, 235);
   background: rgb(68, 160, 235);
 }
+
 .team .member .social a {
   transition: color 0.3s;
   color: #111111;
@@ -1693,7 +1762,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
+.contact .php-email-form .error-message br+br {
   margin-top: 25px;
 }
 
@@ -1767,6 +1836,7 @@ section {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -1776,6 +1846,7 @@ section {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -1842,7 +1913,7 @@ section {
   margin: 0;
 }
 
-.blog .entry .entry-meta ul li + li {
+.blog .entry .entry-meta ul li+li {
   padding-left: 20px;
 }
 
@@ -1959,7 +2030,7 @@ section {
   display: inline-block;
 }
 
-.blog .entry .entry-footer .tags li + li::before {
+.blog .entry .entry-footer .tags li+li::before {
   padding-right: 6px;
   color: #6c757d;
   content: ",";
@@ -2215,7 +2286,7 @@ section {
   padding: 0;
 }
 
-.blog .sidebar .categories ul li + li {
+.blog .sidebar .categories ul li+li {
   padding-top: 10px;
 }
 
@@ -2234,7 +2305,7 @@ section {
   font-size: 14px;
 }
 
-.blog .sidebar .recent-posts .post-item + .post-item {
+.blog .sidebar .recent-posts .post-item+.post-item {
   margin-top: 15px;
 }
 
@@ -2312,11 +2383,10 @@ section {
   position: relative;
   width: 80vw;
   mask-image: linear-gradient(to right,
-  rgba(0, 0, 0, 0),
-  rgba(0, 0, 0, 1) 20%,
-  rgba(0, 0, 0, 1) 80%,
-  rgba(0, 0, 0, 0)
-  );
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0));
 }
 
 .carousel-track {
@@ -2349,18 +2419,24 @@ section {
   width: 100%;
   height: 100%;
   object-fit: contain;
-  
-  
+
+
 }
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .carousel:hover .carousel-track {
   animation-play-state: paused;
 }
+
 /*--------------------------------------------------------------
 # Gallery
 --------------------------------------------------------------*/
@@ -2380,6 +2456,7 @@ section {
   from {
     transform: translate(-50%, -50%) perspective(1200px) rotateY(0deg);
   }
+
   to {
     transform: translate(-50%, -50%) perspective(1200px) rotateY(360deg);
   }
@@ -2568,8 +2645,312 @@ section {
   text-decoration: none;
 }
 
-@media screen and (min-width: 820px) { .intro {
-  margin: 0em 20em 0em 20em; 
-  text-align: justify; }
+@media screen and (min-width: 820px) {
+  .intro {
+    margin: 0em 20em 0em 20em;
+    text-align: justify;
+  }
 }
 
+@import "https://codepen.io/cbolson/pen/rNEdgKo.css" layer(template);
+@layer template, demo;
+
+@layer demo {
+
+  /* Hide radio buttons */
+  input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .cards-container {
+    --base-rotation: 0deg;
+    --full-circle: 360deg;
+    --radius: 40vw;
+    --duration: 200ms;
+
+    --cards-container-size: calc(var(--radius) * 2);
+    --cards-container-padding: 2rem;
+
+    --border-color: transparent;
+
+    --label-offset: calc(var(--radius) * -0.97);
+    --label-size: 30px;
+    --label-color: #666;
+    --label-color-hover: steelblue;
+    --label-line-h: 0;
+    --label-line-h-current: 2rem;
+    --label-dot-size: 10px;
+    
+
+    --title-top: 1.5rem;
+    --title-offset-y: 30px;
+
+    --info-top: 5rem;
+    --info-width: min(70%, 500px);
+    --info-offset-y: 30px;
+
+    box-sizing: content-box;
+    position: relative;
+    inset: 0;
+    margin: 5rem auto;
+    width: var(--cards-container-size);
+    height: var(--cards-container-size);
+    padding: var(--cards-container-padding);
+
+
+    @media (width > 600px) {
+      clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    }
+
+    @media (min-width: 800px) {
+      --radius: 40vw;
+      --label-size: 40px;
+      --label-dot-size: 15px;
+      --label-line-h-current: 4rem;
+      --title-top: 4rem;
+      --info-top: 8rem;
+    }
+
+    /* @media (min-width: 1200px) {
+                --label-size: 50px;
+                --border-color: var(--label-color);
+            } */
+  }
+
+}
+
+.cards {
+  position: absolute;
+  inset: var(--cards-container-padding);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease-in-out var(--duration);
+  list-style: none;
+}
+
+
+
+.cards li {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 0;
+  transform-origin: center;
+  display: grid;
+  place-content: center;
+  transform: rotate(calc(var(--i) * 360deg / var(--items)));
+  pointer-events: none;
+}
+
+.cards li>label {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  transform: translateY(var(--label-offset));
+  width: var(--label-size);
+  height: var(--label-size);
+  cursor: pointer;
+  pointer-events: initial;
+  text-align: center;
+  color: var(--label-color);
+  font-size: clamp(.8rem, 2.5vw + .04rem, 1rem);
+  transition: var(--duration) ease-in-out;
+
+}
+
+.cards li>label::before {
+  content: '';
+  position: absolute;
+  top: var(--cards-container-padding);
+  left: 50%;
+  translate: -50% 0;
+  width: var(--label-dot-size);
+  height: var(--label-dot-size);
+  aspect-ratio: 50%;
+  border-radius: 50%;
+  background-color: var(--label-color);
+  transition: background-color var(--duration) ease-in-out;
+}
+
+.cards li>label::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  translate: -50% 5px;
+  width: 2px;
+  height: var(--label-line-h);
+  background-color: steelblue;
+  transition: height 300ms ease-in-out var(--label-line-delay, 0ms);
+}
+
+.cards li>label:hover {
+  --label-color: var(--label-color-hover);
+}
+
+.cards>li>h2,
+.cards>li>p {
+  position: absolute;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, 0);
+  transform-origin: center;
+}
+
+.cards>li>h2 {
+  top: var(--title-top);
+  opacity: var(--title-opacity, 0);
+  translate: 0 var(--title-offset-y);
+  transition: var(--duration) ease-in-out var(--title-delay, 0ms);
+}
+
+.cards>li>p {
+  top: var(--info-top);
+  margin: 0 auto;
+  width: var(--info-width);
+  z-index: 2;
+  font-size: clamp(.8rem, 2.5vw + 0.05rem, .9rem);
+  text-align: left;
+  text-wrap: pretty;
+  opacity: var(--info-opacity, 0);
+  /*translate: 0 var( --info-offset-y);*/
+  transition: var(--duration) ease-in-out var(--info-delay, 0ms);
+}
+
+/* update custom properties for checked item */
+li:has(input:checked) {
+  --label-opacity: 1;
+  --label-color: var(--label-color-hover);
+  --label-line-h: var(--label-line-h-current);
+  --label-line-delay: calc(var(--duration) * 2);
+
+  --title-opacity: 1;
+  --title-offset-y: 0;
+  --title-delay: calc(var(--duration) * 3);
+
+  --info-opacity: 1;
+  --info-offset-y: 0;
+  --info-delay: calc(var(--duration) * 4);
+  /*outline: 1px dashed red;*/
+}
+
+/* rotate container based on checked radio */
+.cards:has(input:checked) {
+  transform: rotate(calc(var(--base-rotation) - (var(--index) * var(--full-circle) / var(--items))));
+}
+
+/*
+  this would be so much simpler if we could use counter values as custom property values
+  */
+.cards:has(li:nth-child(1)>input:checked) {
+  --index: 0;
+}
+
+.cards:has(li:nth-child(2)>input:checked) {
+  --index: 1;
+}
+
+.cards:has(li:nth-child(3)>input:checked) {
+  --index: 2;
+}
+
+.cards:has(li:nth-child(4)>input:checked) {
+  --index: 3;
+}
+
+.cards:has(li:nth-child(5)>input:checked) {
+  --index: 4;
+}
+
+.cards:has(li:nth-child(6)>input:checked) {
+  --index: 5;
+}
+
+.cards:has(li:nth-child(7)>input:checked) {
+  --index: 6;
+}
+
+.cards:has(li:nth-child(8)>input:checked) {
+  --index: 7;
+}
+
+.cards:has(li:nth-child(9)>input:checked) {
+  --index: 8;
+}
+
+.cards:has(li:nth-child(10)>input:checked) {
+  --index: 9;
+}
+
+.cards:has(li:nth-child(11)>input:checked) {
+  --index: 10;
+}
+
+.cards:has(li:nth-child(12)>input:checked) {
+  --index: 11;
+}
+
+.cards:has(li:nth-child(13)>input:checked) {
+  --index: 12;
+}
+
+.cards:has(li:nth-child(14)>input:checked) {
+  --index: 13;
+}
+
+.cards:has(li:nth-child(15)>input:checked) {
+  --index: 14;
+}
+
+.cards:has(li:nth-child(16)>input:checked) {
+  --index: 15;
+}
+
+.cards:has(li:nth-child(17)>input:checked) {
+  --index: 16;
+}
+
+.cards:has(li:nth-child(18)>input:checked) {
+  --index: 17;
+}
+
+.cards:has(li:nth-child(19)>input:checked) {
+  --index: 18;
+}
+
+.cards:has(li:nth-child(20)>input:checked) {
+  --index: 19;
+}
+
+.cards:has(li:nth-child(21)>input:checked) {
+  --index: 20;
+}
+
+.cards:has(li:nth-child(22)>input:checked) {
+  --index: 21;
+}
+
+.cards:has(li:nth-child(23)>input:checked) {
+  --index: 22;
+}
+
+.cards:has(li:nth-child(24)>input:checked) {
+  --index: 23;
+}
+
+.cards:has(li:nth-child(25)>input:checked) {
+  --index: 24;
+}
+
+.cards:has(li:nth-child(26)>input:checked) {
+  --index: 25;
+}

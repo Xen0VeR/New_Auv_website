@@ -12,6 +12,7 @@
   <!-- Favicons -->
   <link href="images/logo.jfif" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Google Fonts -->
   <link
@@ -48,7 +49,6 @@
       margin-left: 20%;
       margin-right: 20%;
     }
-    
   </style>
 
   <!-- =======================================================
@@ -69,20 +69,46 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
-  
+
         const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
         const navbar = document.querySelector("#navbar");
-  
+
         if (mobileNavToggle && navbar) {
           mobileNavToggle.addEventListener("click", function () {
             navbar.classList.toggle("navbar-mobile");
             this.classList.toggle("bi-x");
           });
         }
+        // Search handler function
+        window.handleSearch = function (event) {
+          event.preventDefault(); // prevent form from submitting
+
+          const query = document.getElementById("searchInput").value.toLowerCase().trim();
+
+          const redirects = {
+            "home": "index.html",
+            "about": "about-us.html",
+            "vehicles": "vehicles.html",
+            "team": "team.html",
+            "robosub": "robosub.html",
+            "achievements": "achievements.html",
+            "gallery": "gallery.html",
+            "alumni": "alumni.html",
+            "blog": "blog.html",
+            "contact": "index.html#contact",
+            "sponsor": "index.html#sponsors",
+          };
+
+          if (redirects[query]) {
+            window.location.href = redirects[query];
+          } else {
+            alert("No page found for: " + query);
+          }
+        };
       })
       .catch(error => console.error('Error loading navbar:', error));
   </script>
-  
+
   <!-- End Header -->
   <br>
   <br>
@@ -107,11 +133,11 @@
             <div class="timeline-icon"> <i class="fas fa-play-circle"></i> </div>
             <div class="timeline-content">
               <h3 class="title">2011: Inception</h3>
-              <p class="description">
-                Team AUV-IITB was born in 2011 out of the efforts of a group of highly enthusiastic students
-                who were passionate to explore the field of underwater robotics and autonomous systems.
+                <p class="description">
+                  Team AUV-IITB was born in 2011 out of the efforts of a group of highly enthusiastic students
+                  who were passionate to explore the field of underwater robotics and autonomous systems.
 
-              </p>
+                </p>
             </div>
           </a>
           <a href="#" class="timeline">
@@ -152,7 +178,7 @@
             </div>
           </a>
           <a href="#" class="timeline">
-            <div class="timeline-icon" ><i class="fas fa-medal"></i></div>
+            <div class="timeline-icon"><i class="fas fa-medal"></i></div>
             <div class="timeline-content">
               <h3 class="title">2017 & 2019: Dominance at NIOT SAVe</h3>
               <p class="description">
@@ -183,6 +209,33 @@
                 Our team received the <b>Young Researcher Award by IEEE OES</b>. In <b>RoboSub</b>, we won prestigious
                 awards in 3 out of the 4 categories. We secured <b>2nd rank in the Video category</b>, <b>4th rank for
                   TDR</b> and <b>6th rank in the Website category</b>.
+              </p>
+            </div>
+          </a>
+          <a href="#" class="timeline">
+            <div class="timeline-icon"><i class="fa-solid fa-gears"></i></div>
+            <div class="timeline-content">
+              <h3 class="title">2022 & 2023: Best Wildcard Entry</h3>
+              <p class="description">
+                At <b>Robosub 2022</b>, the team secured <b>7th place </b> overall and was awarded the <b>Best Wildcard
+                  Entry</b>, along with
+                achieving <b>3rd place</b> in the Video Presentation category for effectively showcasing the design and
+                mission
+                strategy. Building on that success, the team advanced to the finals at <b>Robosub 2023</b>, finishing
+                <b>10th
+                  overall</b>, reflecting consistent global performance and continued technical innovation.
+              </p>
+            </div>
+          </a>
+          <a href="#" class="timeline">
+            <div class="timeline-icon"><i class="fa-solid fa-ranking-star"></i></div>
+            <div class="timeline-content">
+              <h3 class="title">2024: Best performance</h3>
+              <p class="description">
+                At <b>Robosub 2024</b>, the team delivered one of its <b>strongest performances</b> yet, with a
+                remarkable <b>4th place </b> finish
+                in the finals, showcasing the AUV’s robust real-world task execution, autonomous stability, and mission
+                strategy. Additionally, the team secured <b>1st place in the Technical Design Report (TDR)</b>.
               </p>
             </div>
           </a>
@@ -298,14 +351,14 @@
   <!-- ======= Footer ======= -->
   <div id="footer-placeholder"></div>
 
-    <script>
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(data => {
-          document.getElementById('footer-placeholder').innerHTML = data;
-        })
-        .catch(error => console.error('Error loading navbar:', error));
-    </script><!-- End Footer -->
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script><!-- End Footer -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>

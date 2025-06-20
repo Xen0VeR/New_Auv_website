@@ -12,6 +12,8 @@
   <!-- Favicons -->
   <link href="images/logo.jfif" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
   <!-- Google Fonts -->
   <link
@@ -75,6 +77,33 @@
             this.classList.toggle("bi-x");
           });
         }
+        // Search handler function
+        window.handleSearch = function (event) {
+          event.preventDefault(); // prevent form from submitting
+
+          const query = document.getElementById("searchInput").value.toLowerCase().trim();
+
+          const redirects = {
+            "home": "index.html",
+            "about": "about-us.html",
+            "vehicles": "vehicles.html",
+            "team": "team.html",
+            "robosub": "robosub.html",
+            "achievements": "achievements.html",
+            "gallery": "gallery.html",
+            "alumni": "alumni.html",
+            "blog": "blog.html",
+            "contact": "index.html#contact",
+            "sponsor": "index.html#sponsors",
+          };
+
+          if (redirects[query]) {
+            window.location.href = redirects[query];
+          } else {
+            alert("No page found for: " + query);
+          }
+        };
+
       })
       .catch(error => console.error('Error loading navbar:', error));
   </script>
@@ -244,8 +273,8 @@
         <div class="section-title">
           <h2>Vehicles</h2>
           <p>
-            Our team's flagship series of AUVs, the Matsya series, consists of 6 vehicles named Matsya 1 to 6.
-            Matsya 1 was the first AUV developed in 2013, and Matsya 6 is the latest.</p>
+            Our team's flagship series of AUVs, the Matsya series, consists of 6 vehicles named Matsya 1 to 7.
+            Matsya 1 was the first AUV developed in 2013, and Matsya 7 is the latest.</p>
         </div>
         <div class="grid-container-vehicle">
           <div class="card-vehicle" style="background-image: url('images/vehicles/M1.png');">
@@ -290,6 +319,14 @@
               <a href="vehicles.html">Read More</a>
             </div>
           </div>
+          <div></div>
+          <div class="card-vehicle" style="background-image: url('images/vehicles/M7.png'); ">
+            <div class="overlay">
+              <h2>Matsya 7</h2>
+              <p>2025</p>
+              <a href="vehicles.html">Read More</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -309,7 +346,7 @@
                 <p>
                   Our team consists of four Sub-divisions, namely: Mechanical, Electrical, Software & Business.
                 </p>
-                <a href="subdivision.html" class="about-btn"><span>Sub-Divisions</span> <i
+                <a href="about-us.html#sub-divisions" class="about-btn"><span>Sub-Divisions</span> <i
                     class="bx bx-chevron-right"></i></a>
               </div>
             </div>
@@ -350,95 +387,101 @@
       <!--Media Section-->
       <!--End Media Section-->
       <!-- ======= Clients + Gallery Section ======= -->
-      
-        <div class="container" data-aos="zoom-in">
-          <div class="section-title">
-            <h2>Gallery</h2>
-            <h5 style="text-align: center;"><a href="gallery.html">See More...</a></h5> 
-          </div>
-          <div style="margin-top: 15%; margin-bottom: 8%;">
-            <div class="gallery" style="display:grid; place-items:center;">
-              <span style="--i:1">
-                <img src="images/gallery/a13.jpg" alt="" />
-              </span>
-              <span style="--i:2">
-                <img src="images/gallery/trs2.png" alt="" />
-              </span>
-              <span style="--i:3">
-                <img src="images/gallery/t2324.JPG" alt="" />
-              </span>
-              <span style="--i:4">
-                <img src="images/gallery/AMT_0819.JPG" alt="" />
-              </span>
-              <span style="--i:5">
-                <img src="images/gallery/a2.png" alt="" />
-              </span>
-              <span style="--i:6">
-                <img src="images/gallery/autocad.jpg" alt="" />
-              </span>
-              <span style="--i:7">
-                <img src="images/gallery/wen.jpg" alt="" />
-              </span>
-              <span style="--i:8">
-                <img src="images/gallery/a14.jpg" alt="" />
-              </span>
-            </div>
+
+      <div class="container" data-aos="zoom-in">
+        <div class="section-title">
+          <h2>Gallery</h2>
+          <h5 style="text-align: center;"><a href="gallery.html">See More...</a></h5>
+        </div>
+        <div style="margin-top: 15%; margin-bottom: 8%;">
+          <div class="gallery" style="display:grid; place-items:center;">
+            <span style="--i:1">
+              <img src="images/gallery/a13.jpg" alt="" />
+            </span>
+            <span style="--i:2">
+              <img src="images/gallery/trs2.png" alt="" />
+            </span>
+            <span style="--i:3">
+              <img src="images/gallery/t2324.JPG" alt="" />
+            </span>
+            <span style="--i:4">
+              <img src="images/gallery/AMT_0819.JPG" alt="" />
+            </span>
+            <span style="--i:5">
+              <img src="images/gallery/a2.png" alt="" />
+            </span>
+            <span style="--i:6">
+              <img src="images/gallery/autocad.jpg" alt="" />
+            </span>
+            <span style="--i:7">
+              <img src="images/gallery/wen.jpg" alt="" />
+            </span>
+            <span style="--i:8">
+              <img src="images/gallery/a14.jpg" alt="" />
+            </span>
           </div>
         </div>
-        <br>
+      </div>
+      <section id=sponsors>
+      <br>      
         <div class="container" data-aos="zoom-in">
           <div class="section-title">
             <h2>Sponsors</h2>
           </div>
           <section id="clients" class="clients">
-          <div class="carousel">
-            <div class="carousel-track">
-              <div class="card-clients"><a href="https://www.drdo.gov.in/" target="_blank"><img
-                    src="images/Sponsers/drdo.png" alt="DRDO"></a></div>
-              <div class="card-clients"><a href="http://www.iitb.ac.in/" target="_blank"><img
-                    src="images/Sponsers/iitb.png" alt="IITB"></a></div>
-              <div class="card-clients"><a href="https://www.ansys.com/en-in" target="_blank"><img
-                    src="images/Sponsers/ansys.png" alt="Ansys"></a></div>
-              <div class="card-clients"><a href="https://bluerobotics.com/" target="_blank"><img
-                    src="images/Sponsers/blue robotics.png" alt="Blue Robotics"></a></div>
-              <div class="card-clients"><a href="https://in.miko.ai/" target="_blank"><img
-                    src="images/Sponsers/miko3.png" alt="Miko 3"></a></div>
-              <div class="card-clients"><a href="https://www.teachmint.com/" target="_blank"><img
-                    src="images/Sponsers/teachmintLogo.png" alt="Teachmint"></a></div>
-              <div class="card-clients"><a href="https://www.parker.com/us/en/divisions/lord-division.html"
-                  target="_blank"><img src="images/Sponsers/parkerlord.png" alt="Parker Lord"></a></div>
-              <div class="card-clients"><a href="https://www.larsentoubro.com" target="_blank"><img
-                    src="images/Sponsers/Lnt.png" alt="L&T"></a></div>
-              <div class="card-clients"><a href="https://waterlinked.com" target="_blank"><img
-                    src="images/Sponsers/waterlinked-11.png" alt="Waterlinked"></a></div>
-              <div class="card-clients"><a href="https://www.idc.iitb.ac.in" target="_blank"><img
-                    src="images/Sponsers/idciitb.png" alt="IDC IITB"></a></div>
+            <div class="carousel">
+              <div class="carousel-track">
+                <div class="card-clients"><a href="https://www.drdo.gov.in/" target="_blank"><img
+                      src="images/Sponsers/drdo.png" alt="DRDO"></a></div>
+                <div class="card-clients"><a href="http://www.iitb.ac.in/" target="_blank"><img
+                      src="images/Sponsers/iitb.png" alt="IITB"></a></div>
+                <div class="card-clients"><a href="https://www.ansys.com/en-in" target="_blank"><img
+                      src="images/Sponsers/ansys.png" alt="Ansys"></a></div>
+                <div class="card-clients"><a href="https://bluerobotics.com/" target="_blank"><img
+                      src="images/Sponsers/blue robotics.png" alt="Blue Robotics"></a></div>
+                <div class="card-clients"><a href="https://in.miko.ai/" target="_blank"><img
+                      src="images/Sponsers/miko3.png" alt="Miko 3"></a></div>
+                <div class="card-clients"><a href="https://www.teachmint.com/" target="_blank"><img
+                      src="images/Sponsers/teachmintLogo.png" alt="Teachmint"></a></div>
+                <div class="card-clients"><a href="https://www.parker.com/us/en/divisions/lord-division.html"
+                    target="_blank"><img src="images/Sponsers/parkerlord.png" alt="Parker Lord"></a></div>
+                <div class="card-clients"><a href="https://www.larsentoubro.com" target="_blank"><img
+                      src="images/Sponsers/Lnt.png" alt="L&T"></a></div>
+                <div class="card-clients"><a href="https://waterlinked.com" target="_blank"><img
+                      src="images/Sponsers/waterlinked-11.png" alt="Waterlinked"></a></div>
+                <div class="card-clients"><a href="https://www.idc.iitb.ac.in" target="_blank"><img
+                      src="images/Sponsers/idciitb.png" alt="IDC IITB"></a></div>
+                <div class="card-clients"><a href="https://www.autodesk.com/in" target="_blank"><img
+                      src="images/Sponsers/Autodesk.png" alt="Autodesk"></a></div>
 
-              <!-- Duplicate for seamless effect -->
-              <div class="card-clients"><a href="https://www.drdo.gov.in/" target="_blank"><img
-                    src="images/Sponsers/drdo.png" alt="DRDO"></a></div>
-              <div class="card-clients"><a href="http://www.iitb.ac.in/" target="_blank"><img
-                    src="images/Sponsers/iitb.png" alt="IITB"></a></div>
-              <div class="card-clients"><a href="https://www.ansys.com/en-in" target="_blank"><img
-                    src="images/Sponsers/ansys.png" alt="Ansys"></a></div>
-              <div class="card-clients"><a href="https://bluerobotics.com/" target="_blank"><img
-                    src="images/Sponsers/blue robotics.png" alt="Blue Robotics"></a></div>
-              <div class="card-clients"><a href="https://in.miko.ai/" target="_blank"><img
-                    src="images/Sponsers/miko3.png" alt="Miko 3"></a></div>
-              <div class="card-clients"><a href="https://www.teachmint.com/" target="_blank"><img
-                    src="images/Sponsers/teachmintLogo.png" alt="Teachmint"></a></div>
-              <div class="card-clients"><a href="https://www.parker.com/us/en/divisions/lord-division.html"
-                  target="_blank"><img src="images/Sponsers/parkerlord.png" alt="Parker Lord"></a></div>
-              <div class="card-clients"><a href="https://www.larsentoubro.com" target="_blank"><img
-                    src="images/Sponsers/Lnt.png" alt="L&T"></a></div>
-              <div class="card-clients"><a href="https://waterlinked.com" target="_blank"><img
-                    src="images/Sponsers/waterlinked-11.png" alt="Waterlinked"></a></div>
-              <div class="card-clients"><a href="https://www.idc.iitb.ac.in" target="_blank"><img
-                    src="images/Sponsers/idciitb.png" alt="IDC IITB"></a></div>
+                <!-- Duplicate for seamless effect -->
+                <div class="card-clients"><a href="https://www.drdo.gov.in/" target="_blank"><img
+                      src="images/Sponsers/drdo.png" alt="DRDO"></a></div>
+                <div class="card-clients"><a href="http://www.iitb.ac.in/" target="_blank"><img
+                      src="images/Sponsers/iitb.png" alt="IITB"></a></div>
+                <div class="card-clients"><a href="https://www.ansys.com/en-in" target="_blank"><img
+                      src="images/Sponsers/ansys.png" alt="Ansys"></a></div>
+                <div class="card-clients"><a href="https://bluerobotics.com/" target="_blank"><img
+                      src="images/Sponsers/blue robotics.png" alt="Blue Robotics"></a></div>
+                <div class="card-clients"><a href="https://in.miko.ai/" target="_blank"><img
+                      src="images/Sponsers/miko3.png" alt="Miko 3"></a></div>
+                <div class="card-clients"><a href="https://www.teachmint.com/" target="_blank"><img
+                      src="images/Sponsers/teachmintLogo.png" alt="Teachmint"></a></div>
+                <div class="card-clients"><a href="https://www.parker.com/us/en/divisions/lord-division.html"
+                    target="_blank"><img src="images/Sponsers/parkerlord.png" alt="Parker Lord"></a></div>
+                <div class="card-clients"><a href="https://www.larsentoubro.com" target="_blank"><img
+                      src="images/Sponsers/Lnt.png" alt="L&T"></a></div>
+                <div class="card-clients"><a href="https://waterlinked.com" target="_blank"><img
+                      src="images/Sponsers/waterlinked-11.png" alt="Waterlinked"></a></div>
+                <div class="card-clients"><a href="https://www.idc.iitb.ac.in" target="_blank"><img
+                      src="images/Sponsers/idciitb.png" alt="IDC IITB"></a></div>
+                <div class="card-clients"><a href="https://www.autodesk.com/in" target="_blank"><img
+                      src="images/Sponsers/Autodesk.png" alt="Autodesk"></a></div>
+              </div>
             </div>
-          </div>
 
         </div>
+      </section>
       </section><!-- End Clients Section -->
       <!-- ======= Team Section ======= -->
       <section id="team" class="team section-bg">
@@ -454,7 +497,7 @@
             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
               <div class="member" data-aos="fade-up" data-aos-delay="100">
                 <div class="member-img">
-                  <img src="images/Team/RS2024 Website Photo/Archit Swamy.jpg"" class=" img-fluid" alt="">
+                  <img src="images/Team/Archit Swamy.png" class=" img-fluid" alt="">
                   <div class="social">
                     <a href="https://www.instagram.com/ar_x_is" target="_blank"><i class="bi bi-instagram"></i></a>
                     <a href="https://www.linkedin.com/in/archit-swamy-78765a24b/" target="_blank"><i
@@ -520,7 +563,7 @@
 
           <div class="row" data-aos="fade-up" data-aos-delay="100">
 
-            <div class="col-lg-6">
+            <!-- <div class="col-lg-6"> -->
 
               <div class="row">
                 <div class="col-md-12">
@@ -568,12 +611,12 @@
                 </div>
               </div>
 
-            </div>
+            <!-- </div> -->
 
-            <div class="col-lg-6">
+            <!-- <div class="col-lg-6"> -->
 
               <!--<form action="forms/contact.php" method="post" role="form" class="php-email-form">-->
-              <form id="auv-contact" class="php-email-form" action="https://formspree.io/f/xayzjywj" method="POST">
+              <!-- <form id="auv-contact" class="php-email-form" action="https://formspree.io/f/xayzjywj" method="POST">
                 <div class="row"><br><br><br>
                   <div class="col form-group">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -590,14 +633,12 @@
                     required></textarea><br><br>
                 </div>
                 <div class="my-3">
-                  <!--<div id ="myloading" class="loading">Loading</div>-->
-                  <!--<div class="error-message" id = "error-display"></div>-->
                   <div class="sent-message">Your message has been sent. Thank you!</div>
                   <div class="myerror-message">Oops! There seems to be an issue. Please mail us</div>
                 </div>
                 <div class="text-center"><button type="submit">Send Message</button></div><br><br><br>
               </form>
-            </div>
+            </div> -->
 
           </div>
 

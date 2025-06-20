@@ -12,6 +12,7 @@
   <!-- Favicons -->
   <link href="images/logo.jfif" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Google Fonts -->
   <link
@@ -76,6 +77,32 @@
             this.classList.toggle("bi-x");
           });
         }
+        // Search handler function
+        window.handleSearch = function (event) {
+          event.preventDefault(); // prevent form from submitting
+
+          const query = document.getElementById("searchInput").value.toLowerCase().trim();
+
+          const redirects = {
+            "home": "index.html",
+            "about": "about-us.html",
+            "vehicles": "vehicles.html",
+            "team": "team.html",
+            "robosub": "robosub.html",
+            "achievements": "achievements.html",
+            "gallery": "gallery.html",
+            "alumni": "alumni.html",
+            "blog": "blog.html",
+            "contact": "index.html#contact",
+            "sponsor": "index.html#sponsors",
+          };
+
+          if (redirects[query]) {
+            window.location.href = redirects[query];
+          } else {
+            alert("No page found for: " + query);
+          }
+        };
       })
       .catch(error => console.error('Error loading navbar:', error));
   </script>

@@ -12,6 +12,7 @@
   <!-- Favicons -->
   <link href="images/logo.jfif" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- Google Fonts -->
   <link
@@ -76,6 +77,32 @@
             this.classList.toggle("bi-x");
           });
         }
+        // Search handler function
+        window.handleSearch = function (event) {
+          event.preventDefault(); // prevent form from submitting
+
+          const query = document.getElementById("searchInput").value.toLowerCase().trim();
+
+          const redirects = {
+            "home": "index.html",
+            "about": "about-us.html",
+            "vehicles": "vehicles.html",
+            "team": "team.html",
+            "robosub": "robosub.html",
+            "achievements": "achievements.html",
+            "gallery": "gallery.html",
+            "alumni": "alumni.html",
+            "blog": "blog.html",
+            "contact": "index.html#contact",
+            "sponsor": "index.html#sponsors",
+          };
+
+          if (redirects[query]) {
+            window.location.href = redirects[query];
+          } else {
+            alert("No page found for: " + query);
+          }
+        };
       })
       .catch(error => console.error('Error loading navbar:', error));
   </script>
@@ -99,6 +126,97 @@
     <!--</section>-->
     <!-- End Breadcrumbs -->
 
+    <!-- ======= BLog Section ======= -->
+    <div class="section-title">
+      <h2>Blogs</h2>
+      <p>This blog section highlights our outreach efforts aimed at growing the underwater robotics community.</p>
+      <p>Through these initiatives, we hope to inspire innovation, encourage learning, and foster collaboration within
+        and beyond campus.</p>
+    </div>
+
+    <section id="blog" class="blog" class="row1">
+      <div class="container" data-aos="fade-up">
+        <div class="row" style="align-items: center; justify-content: center;">
+
+          <article class="entry">
+
+            <div class="entry-img">
+              <img src="images/gallery/autocad.jpg" alt="" class="img-fluid">
+            </div>
+
+            <h2 class="entry-title">
+              <a href="https://www.linkedin.com/posts/auv-iitb_india-viksitbharat-collaboration-activity-7264192772956413952-jcUf?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEj6YfsBP80Dd6M45AaArFD0cwhZWlvOn9w"
+                target="_blank">AutoDesk Collaboration</a>
+            </h2>
+
+            <div class="entry-meta">
+              <ul>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
+                    href="https://www.linkedin.com/in/andrewanagnost/" target="_blank">Andrew Anagnost</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
+                    href="https://www.linkedin.com/in/andrewanagnost/" target="_blank"><time
+                      datetime="2020-09-11">November
+                      14, 2024</time></a></li>
+
+              </ul>
+            </div>
+
+            <div class="entry-content">
+              <p>
+                We had the pleasure of presenting Matsya 6 to the CEO of Autodesk. Prior to
+                decommissioning Matysa 6, we did a study on the design of the handles using Autodesk's Generative
+                Design tool, optimising the weight and making it more ergonomic for easier handling.
+              </p>
+            </div>
+
+          </article><!-- End blog entry -->
+
+          <article class="entry">
+
+            <div class="entry-img">
+              <img src="images/gallery/Wise25.jpg" alt="" class="img-fluid">
+            </div>
+
+            <h2 class="entry-title">
+              <a href="https://wiseapp.in/" target="_blank"> WiSE: Women in Science and Engineering</a>
+            </h2>
+
+            <div class="entry-meta">
+              <ul>
+                <!-- <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
+                    href="https://www.linkedin.com/in/andrewanagnost/" target="_blank">Andrew Anagnost</a></li> -->
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
+                    href="https://wiseapp.in/2k25/activities/matsya/" target="_blank"><time datetime="2020-09-11">May
+                      27, 2025</time></a></li>
+
+              </ul>
+            </div>
+
+            <div class="entry-content">
+              <p>
+                The WiSE program invites 200 high school girls to IIT Bombay’s campus
+                for a few days of immersive exposure to cutting-edge technology and scientific exploration. As part of
+                this initiative, AUV-IITB had the pleasure of presenting our AUV to these aspiring young scientists.
+                Through WISE, we’re proud to play a role in inspiring and empowering the next generation of female
+                innovators.
+
+              </p>
+            </div>
+
+          </article><!-- End blog entry -->
+
+        </div><!-- End blog entries list -->
+
+
+      </div><!--End blog sidebar -- -->
+
+      </div>
+
+      </div>
+    </section>
+
+    <!-- ======= Media Section ======= -->
+
     <div class="section-title">
       <h2>News Articles</h2>
       <p>Our team is honored to have received accolades from prominent magazines, news websites showcasing our
@@ -111,7 +229,7 @@
     </div>
 
 
-    <!-- ======= Blog Section ======= -->
+
 
 
     <!-- <div class="section-title">
@@ -202,219 +320,219 @@
 
           </article><!-- End blog entry -->
 
-        </div>
+          <!-- </div>
         <div class="row" style="align-items: center; justify-content: center;">
 
           <div class="container" data-aos="fade-up">
-            <div class="row">
+            <div class="row"> -->
 
-              <article class="entry">
+          <article class="entry">
 
-                <div class="entry-img">
-                  <!-- <img src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/09/06/Pictures/_5e37b1e8-f011-11ea-970b-cd9b3c0381e8.png" alt="" class="img-fluid"> -->
-                  <img src="images/Blog/hindustantimes.png" alt="" class="img-fluid">
-                </div>
-
-                <h2 class="entry-title">
-                  <a href="https://www.hindustantimes.com/science/iit-bombay-s-robotic-submarine-matsya-6-finishes-third-in-robosub-competition/story-MQFRNXOk7ZpWzWJlaKpAAM.html"
-                    target="_blank">IIT Bombay’s robotic submarine Matsya 6 finishes third in RoboSub competition</a>
-                </h2>
-
-                <div class="entry-meta">
-                  <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
-                        href="https://www.hindustantimes.com/science/iit-bombay-s-robotic-submarine-matsya-6-finishes-third-in-robosub-competition/story-MQFRNXOk7ZpWzWJlaKpAAM.html"
-                        target="_blank">Priyanka Sahoo</a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                        href="https://www.hindustantimes.com/science/iit-bombay-s-robotic-submarine-matsya-6-finishes-third-in-robosub-competition/story-MQFRNXOk7ZpWzWJlaKpAAM.html"
-                        target="_blank"><time datetime="2020-09-11">Sept 10, 2020</time></a></li>
-
-                  </ul>
-                </div>
-
-                <div class="entry-content">
-                  <p>
-                    Matsya 6 is the latest in the series of autonomous underwater vehicles (AUV) developed by students
-                    of IIT Bombay. A robotic submarine - Matsya 6 - designed by students of the Indian Institute of
-                    Technology (IIT), Bombay,
-                    won the third position in presentation at the global RoboSub competition held in California in
-                    August.
-                  </p>
-                  <div class="read-more">
-                    <a href="https://www.hindustantimes.com/science/iit-bombay-s-robotic-submarine-matsya-6-finishes-third-in-robosub-competition/story-MQFRNXOk7ZpWzWJlaKpAAM.html"
-                      target="_blank">Read More</a>
-                  </div>
-                </div>
-
-              </article><!-- End blog entry -->
-
-              <article class="entry">
-
-                <div class="entry-img">
-                  <img src="images/Blog/quartz.png" alt="" class="img-fluid">
-                </div>
-
-                <h2 class="entry-title">
-                  <a href="https://qz.com/india/889388/iit-students-may-give-the-indian-navy-its-next-big-thing-an-intelligent-unmanned-submarine/"
-                    target="_blank">IIT students may give the Indian Navy its next big thing: an intelligent unmanned
-                    submarine</a>
-                </h2>
-
-                <div class="entry-meta">
-                  <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
-                        href="https://qz.com/india/889388/iit-students-may-give-the-indian-navy-its-next-big-thing-an-intelligent-unmanned-submarine/"
-                        target="_blank">Ananya Bhattacharya</a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                        href="https://qz.com/india/889388/iit-students-may-give-the-indian-navy-its-next-big-thing-an-intelligent-unmanned-submarine/"
-                        target="_blank"><time datetime="2017-01-23">Jan 23, 2017</time></a></li>
-                  </ul>
-                </div>
-
-                <div class="entry-content">
-                  <p>
-                    Since December 2011, students at the Indian Institute of Technology-Bombay have been working on
-                    Matsya, an autonomous
-                    underwater vehicle (AUV) that can control its own movements and execute specific tasks without human
-                    intervention.
-                    The project, if successful, can change the future of defence in India by
-                  </p>
-                  <div class="read-more">
-                    <a href="https://qz.com/india/889388/iit-students-may-give-the-indian-navy-its-next-big-thing-an-intelligent-unmanned-submarine/"
-                      target="_blank">Read More</a>
-                  </div>
-                </div>
-
-              </article><!-- End blog entry -->
-
-            </div>
-            <div class="row" style="align-items: center; justify-content: center;">
-
-
-              <article class="entry">
-
-                <div class="entry-img">
-                  <img src="images/Blog/freepress.png" alt="" class="img-fluid">
-                </div>
-
-                <h2 class="entry-title">
-                  <a href="https://www.freepressjournal.in/cmcm/iit-bs-matsya-5-0-is-all-set-for-international-competition"
-                    target="_blank">IIT-B’s Matsya 5.0 is all set for international competition</a>
-                </h2>
-
-                <div class="entry-meta">
-                  <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
-                        href="https://www.freepressjournal.in/cmcm/iit-bs-matsya-5-0-is-all-set-for-international-competition"
-                        target="_blank"></a>Ronak Mastakar</li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                        href="https://www.freepressjournal.in/cmcm/iit-bs-matsya-5-0-is-all-set-for-international-competition"
-                        target="_blank"><time datetime="2019-05-30">May 30, 2019</time></a></li>
-                  </ul>
-                </div>
-
-                <div class="entry-content">
-                  <p>
-                    The winning team of National Institute of Ocean Technology’s (NIOT), the AUV IIT-Bombay is on cloud
-                    9.
-                    The team is in full spirits and has announced to start work on their fifth Autonomous Underwater
-                    Vehicle (AUV)
-                    named Matsya 5.0 for international competition.
-                  </p>
-                  <br>
-                  <br>
-                  <div class="read-more">
-                    <a href="https://www.freepressjournal.in/cmcm/iit-bs-matsya-5-0-is-all-set-for-international-competition"
-                      target="_blank">Read More</a>
-                  </div>
-                </div>
-
-              </article><!-- End blog entry -->
-
-              <article class="entry">
-
-                <div class="entry-img">
-                  <img src="images/Blog/EconomicTimes.png"" alt="" class=" img-fluid">
-                </div>
-
-                <h2 class="entry-title">
-                  <a href="https://economictimes.indiatimes.com/magazines/panache/iit-bombays-underwater-vehicle-matsya-comes-second-in-the-auvsi-robosub-2016/articleshow/53597525.cms"
-                    target="_blank">IIT Bombay's underwater vehicle 'Matsya' comes second in the AUVSI Robosub 2016</a>
-                </h2>
-
-                <div class="entry-meta">
-                  <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
-                        href="https://economictimes.indiatimes.com/magazines/panache/iit-bombays-underwater-vehicle-matsya-comes-second-in-the-auvsi-robosub-2016/articleshow/53597525.cms"
-                        target="_blank"></a>Prachi Verma</li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                        href="https://economictimes.indiatimes.com/magazines/panache/iit-bombays-underwater-vehicle-matsya-comes-second-in-the-auvsi-robosub-2016/articleshow/53597525.cms"
-                        target="_blank"><time datetime="2016-08-08">August 8, 2016</time></a></li>
-                  </ul>
-                </div>
-
-                <div class="entry-content">
-                  <p>
-                    NEW DELHI: IIT Bombay's autonomous underwater vehicle (AUV) 'Matsya' has secured the second position
-                    in AUVSI Robosub 2016.
-                    It was adjudged the best performance by an Asian team. The team beat six-time winner Cornell
-                    University
-                  </p>
-                  <br>
-                  <div class="read-more">
-                    <a href="https://economictimes.indiatimes.com/magazines/panache/iit-bombays-underwater-vehicle-matsya-comes-second-in-the-auvsi-robosub-2016/articleshow/53597525.cms"
-                      target="_blank">Read More</a>
-                  </div>
-                </div>
-
-              </article><!-- End blog entry -->
-
-            </div>
-            <div class="row" style="align-items: center; justify-content: center;">
-
-
-              <article class="entry">
-
-                <div class="entry-img">
-                  <img src="images/Blog/DNA.png"" class=" img-fluid">
-                </div>
-
-                <h2 class="entry-title">
-                  <a href="https://www.dnaindia.com/mumbai/report-indian-institute-of-technology-bombay-unveils-autonomous-underwater-vehiclematsya-30-1976480"
-                    target="_blank">Indian Institute of Technology-Bombay unveils autonomous underwater vehicle, Matsya
-                    3.0</a>
-                </h2>
-
-                <div class="entry-meta">
-                  <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
-                        href="https://www.dnaindia.com/mumbai/report-indian-institute-of-technology-bombay-unveils-autonomous-underwater-vehiclematsya-30-1976480"
-                        target="_blank"></a>DNA Correspondent</li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                        href="https://www.dnaindia.com/mumbai/report-indian-institute-of-technology-bombay-unveils-autonomous-underwater-vehiclematsya-30-1976480 target="
-                        _blank"><time datetime="2016-08-08">April 09, 2014</time></a></li>
-                  </ul>
-                </div>
-
-                <div class="entry-content">
-                  <p>
-                    The third prototype of the Autonomous Underwater Vehicle (AUV) Matsya 3.0 was unveiled by the team
-                    of students and faculty of the Indian Institute of Technology-Bombay on Tuesday. The AUV has been
-                    developed by a 30-member team from the institute, which has worked on it since 2011.
-                  </p>
-                  <div class="read-more">
-                    <a href="https://www.dnaindia.com/mumbai/report-indian-institute-of-technology-bombay-unveils-autonomous-underwater-vehiclematsya-30-1976480"
-                      target="_blank">Read More</a>
-                  </div>
-                </div>
-
-              </article><!-- End blog entry -->
+            <div class="entry-img">
+              <!-- <img src="https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/09/06/Pictures/_5e37b1e8-f011-11ea-970b-cd9b3c0381e8.png" alt="" class="img-fluid"> -->
+              <img src="images/Blog/hindustantimes.png" alt="" class="img-fluid">
             </div>
 
+            <h2 class="entry-title">
+              <a href="https://www.hindustantimes.com/science/iit-bombay-s-robotic-submarine-matsya-6-finishes-third-in-robosub-competition/story-MQFRNXOk7ZpWzWJlaKpAAM.html"
+                target="_blank">IIT Bombay’s robotic submarine Matsya 6 finishes third in RoboSub competition</a>
+            </h2>
+
+            <div class="entry-meta">
+              <ul>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
+                    href="https://www.hindustantimes.com/science/iit-bombay-s-robotic-submarine-matsya-6-finishes-third-in-robosub-competition/story-MQFRNXOk7ZpWzWJlaKpAAM.html"
+                    target="_blank">Priyanka Sahoo</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
+                    href="https://www.hindustantimes.com/science/iit-bombay-s-robotic-submarine-matsya-6-finishes-third-in-robosub-competition/story-MQFRNXOk7ZpWzWJlaKpAAM.html"
+                    target="_blank"><time datetime="2020-09-11">Sept 10, 2020</time></a></li>
+
+              </ul>
+            </div>
+
+            <div class="entry-content">
+              <p>
+                Matsya 6 is the latest in the series of autonomous underwater vehicles (AUV) developed by students
+                of IIT Bombay. A robotic submarine - Matsya 6 - designed by students of the Indian Institute of
+                Technology (IIT), Bombay,
+                won the third position in presentation at the global RoboSub competition held in California in
+                August.
+              </p>
+              <div class="read-more">
+                <a href="https://www.hindustantimes.com/science/iit-bombay-s-robotic-submarine-matsya-6-finishes-third-in-robosub-competition/story-MQFRNXOk7ZpWzWJlaKpAAM.html"
+                  target="_blank">Read More</a>
+              </div>
+            </div>
+
+          </article><!-- End blog entry -->
+
+          <article class="entry">
+
+            <div class="entry-img">
+              <img src="images/Blog/quartz.png" alt="" class="img-fluid">
+            </div>
+
+            <h2 class="entry-title">
+              <a href="https://qz.com/india/889388/iit-students-may-give-the-indian-navy-its-next-big-thing-an-intelligent-unmanned-submarine/"
+                target="_blank">IIT students may give the Indian Navy its next big thing: an intelligent unmanned
+                submarine</a>
+            </h2>
+
+            <div class="entry-meta">
+              <ul>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
+                    href="https://qz.com/india/889388/iit-students-may-give-the-indian-navy-its-next-big-thing-an-intelligent-unmanned-submarine/"
+                    target="_blank">Ananya Bhattacharya</a></li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
+                    href="https://qz.com/india/889388/iit-students-may-give-the-indian-navy-its-next-big-thing-an-intelligent-unmanned-submarine/"
+                    target="_blank"><time datetime="2017-01-23">Jan 23, 2017</time></a></li>
+              </ul>
+            </div>
+
+            <div class="entry-content">
+              <p>
+                Since December 2011, students at the Indian Institute of Technology-Bombay have been working on
+                Matsya, an autonomous
+                underwater vehicle (AUV) that can control its own movements and execute specific tasks without human
+                intervention.
+                The project, if successful, can change the future of defence in India by
+              </p>
+              <div class="read-more">
+                <a href="https://qz.com/india/889388/iit-students-may-give-the-indian-navy-its-next-big-thing-an-intelligent-unmanned-submarine/"
+                  target="_blank">Read More</a>
+              </div>
+            </div>
+
+          </article><!-- End blog entry -->
+
+          <!-- </div>
+            <div class="row" style="align-items: center; justify-content: center;"> -->
+
+
+          <article class="entry">
+
+            <div class="entry-img">
+              <img src="images/Blog/freepress.png" alt="" class="img-fluid">
+            </div>
+
+            <h2 class="entry-title">
+              <a href="https://www.freepressjournal.in/cmcm/iit-bs-matsya-5-0-is-all-set-for-international-competition"
+                target="_blank">IIT-B’s Matsya 5.0 is all set for international competition</a>
+            </h2>
+
+            <div class="entry-meta">
+              <ul>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
+                    href="https://www.freepressjournal.in/cmcm/iit-bs-matsya-5-0-is-all-set-for-international-competition"
+                    target="_blank"></a>Ronak Mastakar</li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
+                    href="https://www.freepressjournal.in/cmcm/iit-bs-matsya-5-0-is-all-set-for-international-competition"
+                    target="_blank"><time datetime="2019-05-30">May 30, 2019</time></a></li>
+              </ul>
+            </div>
+
+            <div class="entry-content">
+              <p>
+                The winning team of National Institute of Ocean Technology’s (NIOT), the AUV IIT-Bombay is on cloud
+                9.
+                The team is in full spirits and has announced to start work on their fifth Autonomous Underwater
+                Vehicle (AUV)
+                named Matsya 5.0 for international competition.
+              </p>
+              <br>
+              <br>
+              <div class="read-more">
+                <a href="https://www.freepressjournal.in/cmcm/iit-bs-matsya-5-0-is-all-set-for-international-competition"
+                  target="_blank">Read More</a>
+              </div>
+            </div>
+
+          </article><!-- End blog entry -->
+
+          <article class="entry">
+
+            <div class="entry-img">
+              <img src="images/Blog/EconomicTimes.png"" alt="" class=" img-fluid">
+            </div>
+
+            <h2 class="entry-title">
+              <a href="https://economictimes.indiatimes.com/magazines/panache/iit-bombays-underwater-vehicle-matsya-comes-second-in-the-auvsi-robosub-2016/articleshow/53597525.cms"
+                target="_blank">IIT Bombay's underwater vehicle 'Matsya' comes second in the AUVSI Robosub 2016</a>
+            </h2>
+
+            <div class="entry-meta">
+              <ul>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
+                    href="https://economictimes.indiatimes.com/magazines/panache/iit-bombays-underwater-vehicle-matsya-comes-second-in-the-auvsi-robosub-2016/articleshow/53597525.cms"
+                    target="_blank"></a>Prachi Verma</li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
+                    href="https://economictimes.indiatimes.com/magazines/panache/iit-bombays-underwater-vehicle-matsya-comes-second-in-the-auvsi-robosub-2016/articleshow/53597525.cms"
+                    target="_blank"><time datetime="2016-08-08">August 8, 2016</time></a></li>
+              </ul>
+            </div>
+
+            <div class="entry-content">
+              <p>
+                NEW DELHI: IIT Bombay's autonomous underwater vehicle (AUV) 'Matsya' has secured the second position
+                in AUVSI Robosub 2016.
+                It was adjudged the best performance by an Asian team. The team beat six-time winner Cornell
+                University
+              </p>
+              <br>
+              <div class="read-more">
+                <a href="https://economictimes.indiatimes.com/magazines/panache/iit-bombays-underwater-vehicle-matsya-comes-second-in-the-auvsi-robosub-2016/articleshow/53597525.cms"
+                  target="_blank">Read More</a>
+              </div>
+            </div>
+
+          </article><!-- End blog entry -->
+
+          <!-- </div> -->
+          <!-- <div class="row" style="align-items: center; justify-content: center;"> -->
+
+
+          <article class="entry">
+
+            <div class="entry-img">
+              <img src="images/Blog/DNA.png"" class=" img-fluid">
+            </div>
+
+            <h2 class="entry-title">
+              <a href="https://www.dnaindia.com/mumbai/report-indian-institute-of-technology-bombay-unveils-autonomous-underwater-vehiclematsya-30-1976480"
+                target="_blank">Indian Institute of Technology-Bombay unveils autonomous underwater vehicle, Matsya
+                3.0</a>
+            </h2>
+
+            <div class="entry-meta">
+              <ul>
+                <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
+                    href="https://www.dnaindia.com/mumbai/report-indian-institute-of-technology-bombay-unveils-autonomous-underwater-vehiclematsya-30-1976480"
+                    target="_blank"></a>DNA Correspondent</li>
+                <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
+                    href="https://www.dnaindia.com/mumbai/report-indian-institute-of-technology-bombay-unveils-autonomous-underwater-vehiclematsya-30-1976480 target="
+                    _blank"><time datetime="2016-08-08">April 09, 2014</time></a></li>
+              </ul>
+            </div>
+
+            <div class="entry-content">
+              <p>
+                The third prototype of the Autonomous Underwater Vehicle (AUV) Matsya 3.0 was unveiled by the team
+                of students and faculty of the Indian Institute of Technology-Bombay on Tuesday. The AUV has been
+                developed by a 30-member team from the institute, which has worked on it since 2011.
+              </p>
+              <div class="read-more">
+                <a href="https://www.dnaindia.com/mumbai/report-indian-institute-of-technology-bombay-unveils-autonomous-underwater-vehiclematsya-30-1976480"
+                  target="_blank">Read More</a>
+              </div>
+            </div>
+
+          </article><!-- End blog entry -->
+          <!-- </div> -->
 
 
 
-            <!-- <section id="blog" class="blog" >
+
+          <!-- <section id="blog" class="blog" >
       <div class="container" data-aos="fade-up">
 
         <div class="row" >
@@ -422,7 +540,7 @@
           <div class="col-lg-8 entries">
              -->
 
-            <!-- <div class="blog-pagination">
+          <!-- <div class="blog-pagination">
               <ul class="justify-content-center">
                 <li><a href="#">1</a></li>
                 <li class="active"><a href="#">2</a></li>
@@ -430,11 +548,11 @@
               </ul>
             </div> -->
 
-          </div><!-- End blog entries list -->
+        </div><!-- End blog entries list -->
 
-          <div class="col-lg-4">
+        <div class="col-lg-4">
 
-            <!-- <div class="sidebar">
+          <!-- <div class="sidebar">
 
               <h3 class="sidebar-title">Search</h3>
               <div class="sidebar-item search-form">
@@ -490,7 +608,7 @@
 
               </div><!- End sidebar recent posts-->
 
-            <!-- <h3 class="sidebar-title">Tags</h3>
+          <!-- <h3 class="sidebar-title">Tags</h3>
               <div class="sidebar-item tags">
                 <ul>
                   <li><a href="#">App</a></li>
@@ -507,9 +625,9 @@
                 </ul>
               </div> End sidebar tags-->
 
-          </div><!-- End sidebar -->
+        </div><!-- End sidebar -->
 
-        </div><!--End blog sidebar -- -->
+      </div><!--End blog sidebar -- -->
 
       </div>
 

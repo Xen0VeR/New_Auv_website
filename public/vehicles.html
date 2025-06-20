@@ -12,6 +12,7 @@
     <!-- Favicons -->
     <link href="images/logo.jfif" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Google Fonts -->
     <link
@@ -35,8 +36,7 @@
         /*td {*/
         #customers,
         #customers th,
-        #customers td 
-            {
+        #customers td {
             border: 1px solid #ddd;
             padding: 8px;
             font-size: 13.4px;
@@ -44,8 +44,7 @@
             background-color: white;
             color: black;
             text-align: center;
-            }
-        
+        }
     </style>
     <!-- =======================================================
   * Template Name: Presento - v3.3.0
@@ -62,1255 +61,1699 @@
 
     <script>
         fetch('navbar.html')
-          .then(response => response.text())
-          .then(data => {
-            document.getElementById('navbar-placeholder').innerHTML = data;
-      
-            const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
-            const navbar = document.querySelector("#navbar");
-      
-            if (mobileNavToggle && navbar) {
-              mobileNavToggle.addEventListener("click", function () {
-                navbar.classList.toggle("navbar-mobile");
-                this.classList.toggle("bi-x");
-              });
-            }
-          })
-          .catch(error => console.error('Error loading navbar:', error));
-      </script>
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
+                const navbar = document.querySelector("#navbar");
+
+                if (mobileNavToggle && navbar) {
+                    mobileNavToggle.addEventListener("click", function () {
+                        navbar.classList.toggle("navbar-mobile");
+                        this.classList.toggle("bi-x");
+                    });
+                }
+                // Search handler function
+                window.handleSearch = function (event) {
+                    event.preventDefault(); // prevent form from submitting
+
+                    const query = document.getElementById("searchInput").value.toLowerCase().trim();
+
+                    const redirects = {
+                        "home": "index.html",
+                        "about": "about-us.html",
+                        "vehicles": "vehicles.html",
+                        "team": "team.html",
+                        "robosub": "robosub.html",
+                        "achievements": "achievements.html",
+                        "gallery": "gallery.html",
+                        "alumni": "alumni.html",
+                        "blog": "blog.html",
+                        "contact": "index.html#contact",
+                        "sponsor": "index.html#sponsors",
+                    };
+
+                    if (redirects[query]) {
+                        window.location.href = redirects[query];
+                    } else {
+                        alert("No page found for: " + query);
+                    }
+                };
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
     <!-- End Header -->
 
-    
-<br>
-<br>
-        <!-- ======= Tabs Section ======= -->
-        <section id="tabs" class="tabs">
-            <div class="container" data-aos="fade-up">
 
-                <ul class="nav nav-tabs row d-flex">
-                    <li class="nav-item col-2">
-                        <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-6" id="Matsya6">
-                            <h3 class="d-xl-none">M6</h3>
-                            <h3 class="d-none d-lg-block">Matsya 6</h3>
-                        </a>
-                    </li>
-                    <li class="nav-item col-2">
-                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5" id="Matsya5">
-                            <h3 class="d-xl-none">M5</h3>
-                            <h3 class="d-none d-lg-block">Matsya 5</h3>
-                        </a>
-                    </li>
-                    <li class="nav-item col-2">
-                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-                            <h3 class="d-xl-none">M4</h3>
-                            <h3 class="d-none d-lg-block">Matsya 4</h3>
-                        </a>
-                    </li>
-                    <li class="nav-item col-2">
-                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-                            <h3 class="d-xl-none">M3</h3>
-                            <h3 class="d-none d-lg-block">Matsya 3</h3>
-                        </a>
-                    </li>
-                    <li class="nav-item col-2">
-                        <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                            <h3 class="d-xl-none">M2</h3>
-                            <h3 class="d-none d-lg-block">Matsya 2</h3>
-                        </a>
-                    </li>
-                    <li class="nav-item col-2">
-                        <a class="nav-link " data-bs-toggle="tab" data-bs-target="#tab-1">
-                            <h3 class="d-xl-none">M1</h3>
-                            <h3 class="d-none d-lg-block">Matsya 1
-                            </h3>
-                        </a>
-                    </li>
-                    
-                    
-                    
-                    
-                </ul>
+    <br>
+    <br>
+    <!-- ======= Tabs Section ======= -->
+    <style>
+        #tabs .nav-tabs .nav-item {
+            flex: 1;
+        }
+    </style>
+    <section id="tabs" class="tabs">
+        <div class="container" data-aos="fade-up">
 
-                <div class="tab-content">
-                    <div class="tab-pane" id="tab-1">
-                        <div class="row">
-                            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up"
-                                data-aos-delay="100">
-                                <h3>Matsya 1</h3>
-                                <p class="fst-italic">
-                                    Matsya 1 was the very first AUV designed by the team back in 2011, with a goal to develop a state of the art AUV that
-                                    could localize itself in an underwater environment and complete some predefined real life tasks for the Robosub 2012
-                                    competition.
-                                </p>
-                                <table id ="customers">
-                                    <tr>
-                                        <th style="background-color: rgb(68, 160, 235); color: white;"><b>Specifications</b> </th>
-                                        <th style="background-color: rgb(68, 160, 235); color: white;"> <b>Vehicle Details</b> </th>
-                                
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>DoF</td>
-                                        <td>5 (Roll, Pitch, Yaw, Surge, Heave)</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Weight </td>
-                                        <td>20 kgs</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Dimensions </td>
-                                        <td>1000mm x 531mm x 337mm</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Endurance </td>
-                                        <td>60 Minutes</td>
-                                
-                                    <tr>
-                                        <td>Depth Rating </td>
-                                        <td>40 feet</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Pressure Vessels </td>
-                                        <td>One Hull for Electronics, Batteries and Camera.</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Actuation System</td>
-                                        <td>Assembly of Five thrusters</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Power </td>
-                                        <td>Lithium Polymer Batteries</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Feedback Control </td>
-                                        <td>Visual, Inertial, Pressure.</td>
-                                
-                                    </tr>
-                                
-                                
-                                </table>
-                            </div>
-                            <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up"
-                                data-aos-delay="200">
-                                <div class="sketchfab-embed-wrapper"> <iframe title="Matsya 4" frameborder="0" allowfullscreen mozallowfullscreen="true"
-                                        webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
-                                        execution-while-out-of-viewport execution-while-not-rendered web-share width="100%" height="480px"
-                                        src="https://sketchfab.com/models/34685b6af2c54a68962393e8320ba64d/embed"> </iframe>
-                                    <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
-                                            href="https://sketchfab.com/3d-models/matsya-4-7e5789625a32456aa68a3e61902f1ceb?utm_medium=embed&utm_campaign=share-popup&utm_content=7e5789625a32456aa68a3e61902f1ceb"
-                                            target="_blank" style="font-weight: bold; color: #1CAAD9;"></a> <a
-                                            href="https://sketchfab.com/s.aditya6316?utm_medium=embed&utm_campaign=share-popup&utm_content=7e5789625a32456aa68a3e61902f1ceb"
-                                            target="_blank" style="font-weight: bold; color: #1CAAD9;">  </a> <a
-                                            href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=7e5789625a32456aa68a3e61902f1ceb"
-                                            target="_blank" style="font-weight: bold; color: #1CAAD9;"></a></p>
-                                            <a href="images/TDRs/Matsya1.pdf" class="get-started-btn" target="_blank">Technical Design Report</a>
-                                </div>
+            <ul class="nav nav-tabs row d-flex">
+                <li class="nav-item col-2">
+                    <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-7" id="Matsya7">
+                        <h3 class="d-xl-none">M7</h3>
+                        <h3 class="d-none d-lg-block">Matsya 7 </h3>
+                    </a>
+                </li>
+                <li class="nav-item col-2">
+                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-6" id="Matsya6">
+                        <h3 class="d-xl-none">M6</h3>
+                        <h3 class="d-none d-lg-block">Matsya 6</h3>
+                    </a>
+                </li>
+                <li class="nav-item col-2">
+                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5" id="Matsya5">
+                        <h3 class="d-xl-none">M5</h3>
+                        <h3 class="d-none d-lg-block">Matsya 5</h3>
+                    </a>
+                </li>
+                <li class="nav-item col-2">
+                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+                        <h3 class="d-xl-none">M4</h3>
+                        <h3 class="d-none d-lg-block">Matsya 4</h3>
+                    </a>
+                </li>
+                <li class="nav-item col-2">
+                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                        <h3 class="d-xl-none">M3</h3>
+                        <h3 class="d-none d-lg-block">Matsya 3</h3>
+                    </a>
+                </li>
+                <li class="nav-item col-2">
+                    <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+                        <h3 class="d-xl-none">M2</h3>
+                        <h3 class="d-none d-lg-block">Matsya 2</h3>
+                    </a>
+                </li>
+                <li class="nav-item col-2">
+                    <a class="nav-link " data-bs-toggle="tab" data-bs-target="#tab-1">
+                        <h3 class="d-xl-none">M1</h3>
+                        <h3 class="d-none d-lg-block">Matsya 1
+                        </h3>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane" id="tab-1">
+                    <div class="row">
+                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                            <h3>Matsya 1</h3>
+                            <p class="fst-italic">
+                                Matsya 1 was the very first AUV designed by the team back in 2011, with a goal to
+                                develop a state of the art AUV that
+                                could localize itself in an underwater environment and complete some predefined real
+                                life tasks for the Robosub 2012
+                                competition.
+                            </p>
+                            <table id="customers">
+                                <tr>
+                                    <th style="background-color: rgb(68, 160, 235); color: white;"><b>Specifications</b>
+                                    </th>
+                                    <th style="background-color: rgb(68, 160, 235); color: white;"> <b>Vehicle
+                                            Details</b> </th>
+
+
+                                </tr>
+                                <tr>
+                                    <td>DoF</td>
+                                    <td>5 (Roll, Pitch, Yaw, Surge, Heave)</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Weight </td>
+                                    <td>20 kgs</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Dimensions </td>
+                                    <td>1000mm x 531mm x 337mm</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Endurance </td>
+                                    <td>60 Minutes</td>
+
+                                <tr>
+                                    <td>Depth Rating </td>
+                                    <td>40 feet</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Pressure Vessels </td>
+                                    <td>One Hull for Electronics, Batteries and Camera.</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Actuation System</td>
+                                    <td>Assembly of Five thrusters</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Power </td>
+                                    <td>Lithium Polymer Batteries</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Feedback Control </td>
+                                    <td>Visual, Inertial, Pressure.</td>
+
+                                </tr>
+
+
+                            </table>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                            <div class="sketchfab-embed-wrapper"> <iframe title="Matsya 4" frameborder="0"
+                                    allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                                    allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                                    execution-while-out-of-viewport execution-while-not-rendered web-share width="100%"
+                                    height="480px"
+                                    src="https://sketchfab.com/models/34685b6af2c54a68962393e8320ba64d/embed"> </iframe>
+                                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                                        href="https://sketchfab.com/3d-models/matsya-4-7e5789625a32456aa68a3e61902f1ceb?utm_medium=embed&utm_campaign=share-popup&utm_content=7e5789625a32456aa68a3e61902f1ceb"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"></a> <a
+                                        href="https://sketchfab.com/s.aditya6316?utm_medium=embed&utm_campaign=share-popup&utm_content=7e5789625a32456aa68a3e61902f1ceb"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> </a> <a
+                                        href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=7e5789625a32456aa68a3e61902f1ceb"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"></a></p>
+                                <a href="images/TDRs/Matsya1.pdf" class="get-started-btn" target="_blank">Technical
+                                    Design Report</a>
                             </div>
                         </div>
-                        <section id="faq" class="faq">
-                            <div class="container" data-aos="fade-up">
-                        
-                                <div class="section-title">
-                                    <h2>SPECS</h2>
-                                </div>
-                        
-                                <ul class="faq-list accordion" data-aos="fade-up">
-                        
-                                    <li>
-                                        <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">HULLS <i class="bx bx-chevron-down icon-show"></i><i
-                                                class="bx bx-x icon-close"></i></a>
-                                        <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                                            <p><ol style="list-style-type:disc; line-height:30% ;"> 
-                                                <li>A Single Cylindrical Acrylic Hull with Aluminium End-cap to house all Electronics, Batteries and Camera</li>
-                                                <li> The cylindrical design was conceived to minimise drag and Aluminium was chosen for the rear end cap to vent the heat
+                    </div>
+                    <section id="faq" class="faq">
+                        <div class="container" data-aos="fade-up">
+
+                            <div class="section-title">
+                                <h2>SPECS</h2>
+                            </div>
+
+                            <ul class="faq-list accordion" data-aos="fade-up">
+
+                                <li>
+                                    <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">HULLS <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc; line-height:30% ;">
+                                            <li>A Single Cylindrical Acrylic Hull with Aluminium End-cap to house all
+                                                Electronics, Batteries and Camera</li>
+                                            <li> The cylindrical design was conceived to minimise drag and Aluminium was
+                                                chosen for the rear end cap to vent the heat
                                                 through conduction.</li>
-                                                <li> Keeping in mind modularity, static and dynamic performance,the frame was made using Al 8020</li>
-                                                </ol>
-                                            </p>
-                                        </div>
-                                    </li>
-                        
-                                    <li>
-                                        <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">THRUSTERS <i class="bx bx-chevron-down icon-show"></i><i
-                                                class="bx bx-x icon-close"></i></a>
-                                        <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                                            <p><ol style="list-style-type:disc;">
-                                            <li> The vehicle has five thrusters which give it 5 degrees of freedom, namely heave, surge, yaw, pitch and roll.</li>
-                                            <li>The vehicle takes feedback from on-board Inertial Measurement Unit (IMU) which functions as an Attitude and Heading
-                                            Reference System (AHRS), cameras and pressure sensors.</li>
-                                                </ol>
-                                            </p>
-                                        </div>
-                                    </li>
-                        
-                                    <li>
-                                        <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">VELOCITY AND WEIGHT <i class="bx bx-chevron-down icon-show"></i><i
-                                                class="bx bx-x icon-close"></i></a>
-                                        <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                                            <p>The vehicle can operate at a maximum velocity of 0.6m/s and weighs only 20kgs which made it the lightest vehicle to
-                                            participate in Robosub 2012.
-                                            </p>
-                                        </div>
-                                    </li>
-                        
-                                    <li>
-                                        <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">HARDWARE ARCHITECTURE <i class="bx bx-chevron-down icon-show"></i><i
-                                                class="bx bx-x icon-close"></i></a>
-                                        <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                                            <p><ol style="list-style-type:disc;">
-                                                <li> The processing platforms are chosen based on the basic needs of vision processing, controls and power
-                                                    management, and
-                                                    are designed with an emphasis on modularity and scalability in the future.
-                                                </li>
-                                                <li>There are three main boards in the electrical stack:
-                                                    <ol>
-                                                        <li>Power Board, which is an 8-bit microcontroller (Atmega 2560) that ensures the power management of the
-                                                            vehicle by aiding
-                                                            in battery management, temperature control, Water seepage Detection, Kill switches and Power
-                                                            Distribution.</li>
-                                                        <li>PandaBoardES is used for vision processing and communication to on-board processors serially and to
-                                                            off-board processors
-                                                            via Ethernet. </li>
-                                                        <li> The motion controller of the vehicle takes feedback from the inertial sensors, the pressure sensor, the
-                                                            SBC and controls the thrusters.</li>
-                                                    </ol>
-                                                </li>
-                                            </ol>
-                                            </p>
-                                        </div>
-                                    </li>
-                        
-                                    <li>
-                                        <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">SENSORS AND ACTUATORS <i class="bx bx-chevron-down icon-show"></i><i
-                                                class="bx bx-x icon-close"></i></a>
-                                        <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                                            <p>
-                                            The final part of the electronics division are the sensors and actuators which consist of Pressure Sensor, Attitude
-                                            Heading Reference System (AHRS), Cameras, Current Sensors, Actuators and driver.
-                                            </p>
-                                        </div>
-                                    </li>
-                        
-                                    <li>
-                                        <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">SOFTWARE STACK<i
-                                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-                                        <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-                                            <p>
-                                                <ol style="list-style-type:disc;">
-                                                    <li>The software stack in Matsya 1 was responsible for mission planning, image processing, and handling the communication
-                                                    between the hardware modules, power board and motion controller board.
-                                                    </li>
-                                                    <li>We implemented Underwater Image Enhancement in Vision, which was built on Intel’s OpenCV library, and also implemented
-                                                    Color Contrast Stretching and Gate Pass Detection.</li>
-                                                    <li>The debugging platform of Matsya 1 was implemented using C, JavaScript and AJAX. Two cameras were used, a front camera
-                                                    for localization and a bottom camera for getting the orientation of the vehicle.</li>
-                                                </ol>
-                                            </p>
-                                        </div>
-                                    </li>
-                        
-                                </ul>
-                        
-                            </div>
-                        </section>
-                    </div>
-                    <div class="tab-pane" id="tab-2">
-                        <div class="row">
-                            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                                    <h3>Matsya 2</h3>
-                                <p class="fst-italic">
-                                    The second iteration of Matsya is complete and more modular than its predecessor, with separate enclosures for
-                                    electronics, batteries, cameras, and torpedo shooting actuators. The design aimed to ensure robust waterproofing, ease
-                                    of assembly, and efficient heat sinking.
-                                </p>
-                                    <table id = "customers">
-                                        <tr>
-                                            <th style="background-color: rgb(68, 160, 235); color: white;"><b>Specifications</b> </th>
-                                            <th style="background-color: rgb(68, 160, 235); color: white;"> <b>Vehicle Details</b> </th>
-                                
-                                
-                                        </tr>
-                                        <tr>
-                                            <td>DoF</td>
-                                            <td>5 (Roll, Pitch, Yaw, Surge, Heave)</td>
-                                
-                                        </tr>
-                                        <tr>
-                                            <td>Weight </td>
-                                            <td>24 kgs</td>
-                                
-                                        </tr>
-                                        <tr>
-                                            <td>Dimensions </td>
-                                            <td>930mm x 410mm x 650mm</td>
-                                
-                                        </tr>
-                                        <tr>
-                                            <td>Endurance </td>
-                                            <td>90 Minutes</td>
-                                
-                                        <tr>
-                                            <td>Depth Rating </td>
-                                            <td>100 feet</td>
-                                
-                                        </tr>
-                                        <tr>
-                                            <td>Pressure Vessels </td>
-                                            <td>Separate hulls for Electronics, Batteries, Camera and Hydrophones.</td>
-                                
-                                        </tr>
-                                        <tr>
-                                            <td>Actuation System</td>
-                                            <td>Assembly of Six thrusters, Markers</td>
-                                
-                                        </tr>
-                                        <tr>
-                                            <td>Power </td>
-                                            <td>Lithium Polymer Batteries</td>
-                                
-                                        </tr>
-                                        <tr>
-                                            <td>Feedback Control </td>
-                                            <td>Visual, Inertial, Pressure</td>
-                                
-                                        </tr>
-                                
-                                
-                                    </table>
-                                </div>
-                                <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                                    <img src="images/vehicles/M2.png" alt="" class="img-fluid"><br><br>
-                                    <a href="images/TDRs/Matsya2.pdf" class="get-started-btn" target="_blank">Technical Design Report</a>
-                                </div>
-                                </div>
-                                <section id="faq" class="faq">
-                                    <div class="container" data-aos="fade-up">
-                                
-                                        <div class="section-title">
-                                            <h2>SPECS</h2>
-                                        </div>
-                                
-                                        <ul class="faq-list accordion" data-aos="fade-up">
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">DOF AND HULLS<i
-                                                        class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-                                                <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                                                    <p>
-                                                        <ol style="list-style-type:disc;">
-                                                            <li>Matsya 2.0 has five degrees of freedom, with sway being a new addition.
-                                                            </li>
-                                                            <li>A cuboidal main hull with peripherals for better space optimization.</li>
-                                                            <li>The main hull houses the electronics of the vehicle, which are mounted on an acrylic rack. Al 6061 is used for the hull
-                                                            body due to its thermal conductivity, high strength, and non-corrosiveness.</li>
-                                                            <li>An acrylic end cap seals the hull using a latch mechanism, which uses an E-clip and O-ring.</li>
-                                                        </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">FRAME <i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li>The frame acts as a mount for many peripherals.
-                                                        </li>
-                                                        <li>It has a bottom-heavy, open-frame design that exhibits high symmetry, modularity, and, most of all, stability.</li>
-                                                        
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">ADDITIONAL FEATURES<i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                                                    <p>The vehicle has a gripper, marker dropper, and torpedo shooter, all of which are actuated pneumatically.
-                                                    
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">MICROCONTROLLERS<i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li>All the microcontrollers on the system have been separated out of the main electronics board using microcontroller caps.
-                                                        This approach provides the ease of microcontroller replaceability, off-board microcontroller programming and
-                                                        accumulating the same number of components in much less area.
-                                                        </li>
-                                                        <li>The dual-core 1.2GHz Arm cortex-A9 CPU, 384 MHz GPU, 1GB RAM PandaBoard ES SBC used in Matsya 1 was replaced by
-                                                        Axiomtek's SBC86860 Mini ITX motherboard with an Intel Core 2 Duo Processor clocked at 3.0 GHz and 4GB of RAM.
-                                                        </li>
-                                                        <li>Serial interface for a separate LCD has also been facilitated for debugging the algorithms running on Motion Controller.
-                                                        A separate pneumatic system has been developed in Matsya 2.0 for facilitating a separate path to allow large currents to
-                                                        be drawn from the battery when switching the six pneumatic valves separately.
-                                                        </li>
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">ACOUSTIC LOCALIZATION<i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li>The Acoustic Localization Unit was introduced in Matsya 2.0, using hydrophones in the Ultra Short Base Line arrangement.
-                                                        </li>
-                                                        <li>This Is useful for the system to detect pingers at different frequencies. Atmel's 8 bit AT90CAN64 microcontroller has
-                                                        been used for power management replacing the 8 bit Atmega 2560.
-                                                        </li>
-                                                        <li>Additional features include RGB LEDs for battery status, extra power lines for scalability and JTAG interface from
-                                                        debugging perspective. We used VectorNav’s VN200 as IMU replacing the VN100 used in Matsya 1.0.
-                                                        </li>
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">SOFTWARE<i
-                                                        class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-                                                <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li>A new codebase was designed to implement ROS, introducing several new features to the software stack.
-                                                        </li>
-                                                        <li>A Gazebo simulator was also implemented for simulation and testing of Matsya.
-                                                        </li>
-                                                        <li>Implementation of Mission Planner allowed us to plan our task execution resulting in better performance during
-                                                        competitions. The mission planner consisted of a finite state machine implementation along with the four nodes -
-                                                        Planner, Transition State, Scan State and Execution State.
-                                                        </li>
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                        </ul>
-                                
-                                    </div>
-                                </section>
-                    </div>
-                    <div class="tab-pane" id="tab-3">
-                        <div class="row">
-                            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                                    <h3>Matsya 3</h3>
-                                <p class="fst-italic">
-                                    Matsya 3 was the third vehicle built by the team in 2013. Matsya-3 has a modular design and weighs 42 kg. It is highly
-                                    optimised for strength and buoyancy.
-                                </p>
-                                <table id="customers">
-                                    <tr>
-                                        <th style="background-color: rgb(68, 160, 235); color: white;"><b>Specifications</b> </th>
-                                        <th style="background-color: rgb(68, 160, 235); color: white;"> <b>Vehicle Details</b> </th>
-                                
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>DoF</td>
-                                        <td>5 (Roll, Pitch, Yaw, Surge, Heave)</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Weight </td>
-                                        <td>44 kgs</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Dimensions </td>
-                                        <td>NA</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Endurance </td>
-                                        <td>120 Minutes</td>
-                                
-                                    <tr>
-                                        <td>Depth Rating </td>
-                                        <td>150 feet</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Pressure Vessels </td>
-                                        <td>Separate hulls for Electronics, Batteries, IMU and <br> Cameras.</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Actuation System</td>
-                                        <td>Assembly of Six thrusters, Markers and Torpedos.</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Power </td>
-                                        <td>Lithium Polymer Batteries</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Feedback Control </td>
-                                        <td>Visual, Inertial, Pressure and Acoustic
-                                        </td>
-                                
-                                    </tr>
-                                
-                                
-                                </table>
-                            </div>
-                            <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                                <img src="images/vehicles/M3.png" alt="" class="img-fluid"><br><br>
-                                <a href="images/TDRs/Matsya3.pdf" class="get-started-btn" target="_blank">Technical Design Report</a>
-                            </div>
-                        </div>
-                        <section id="faq" class="faq">
-                            <div class="container" data-aos="fade-up">
-                    
-                                <div class="section-title">
-                                    <h2>SPECS</h2>
-                                </div>
-                    
-                                <ul class="faq-list accordion" data-aos="fade-up">
-                    
-                                    <li>
-                                        <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">DOPPLER VELOCITY LOG <i
-                                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-                                        <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                                            <p><ol style="list-style-type:disc;">
-                                                <li>This version of Matsya saw the integration of a DVL (Doppler Velocity Log), which greatly improved the accuracy and
-                                                flexibility in localisation.
-                                                </li>
-                                                <li>A major addition to the vehicle, separate enclosures were designed for DVL, Battery and IMU to provide modularity to the
-                                                system.
-                                                </li>
-                                                <li>The new enclosure for IMU was made from acrylic to cut off electrical noise due to other Electrical components of the
-                                                vehicle.
-                                                </li>
-                                            </ol>
-                                            </p>
-                                        </div>
-                                    </li>
-                    
-                                    <li>
-                                        <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">GRIPPERS AND CONNECTORS <i class="bx bx-chevron-down icon-show"></i><i
-                                                class="bx bx-x icon-close"></i></a>
-                                        <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                                            <p><ol style="list-style-type:disc;">
-                                                <li>A total of four grippers, and improved gripper design.
-                                                </li>
-                                                <li>Newly developed underwater connectors for connecting different hulls and thrusters.
-                                                </li>
-                                                <li>These connectors were cheap to manufacture and convenient to use.
-                                                </li>
-                                            <ol style="list-style-type:disc;">
-                                            </p>
-                                        </div>
-                                    </li>
-                    
-                                    <li>
-                                        <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">THRUSTERS <i class="bx bx-chevron-down icon-show"></i><i
-                                                class="bx bx-x icon-close"></i></a>
-                                        <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                                            <p><ol style="list-style-type:disc;">
-                                                <li> Matsya-3 has 6 thrusters capable of producing a total of 2.2 kgf of continuous thrust and a peak thrust of 2.9 kgf.</li>
-                                                <li> The thruster mounts are designed in such a way that the thrusters do not produce any skin friction drag on the side
-                                                frame of the vehicle.</li>
-                                                <li> Due to this Maysta-3 has a maximum speed of 0.5 m/s and is capable of navigation along five degrees of freedom.</li>
-                                                </ol>
-                                            </p>
-                                        </div>
-                                    </li>
-                    
-                                    <li>
-                                        <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">INERTIAL MEASUREMENT UNIT <i class="bx bx-chevron-down icon-show"></i><i
-                                                class="bx bx-x icon-close"></i></a>
-                                        <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                                            <p><ol style="list-style-type:disc;">
-                                                <li> Inertial Measurement Unit: The IMU used in Matsya 2.0 was VectorNav's VN 200 but this was replaced by 3DM-GX3-25
-                                                Attitude Heading Reference System (AHRS) from Lord Microstrain Sensing Systems in Matsya 3.0 due to its low-drift and
-                                                precise orientation measurement.</li>
-                                                <li> The new enclosure for IMU was made from acrylic to cut off electrical noise due to other Electrical components of the
-                                                vehicle.</li>
-                                            </ol>
-
-                                            </p>
-                                        </div>
-                                    </li>
-                    
-                                    <li>
-                                        <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">SOFTWARE<i class="bx bx-chevron-down icon-show"></i><i
-                                                class="bx bx-x icon-close"></i></a>
-                                        <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                                            <p>
-                                                <ol style="list-style-type:disc;">
-                                                    <li> A new ethernet based inter-board communication, and a new Navigator package to help bridge the gap between the Mission
-                                                    Planner and Controller.</li>
-                                                    <li> It provides a common platform where all task-executors can launch commands.</li>
-                                                    <li> The navigator is what steers the vehicle from point to point using feedback from localization.</li>
-                                                </ol>
-                                            </p>
-                                        </div>
-                                    </li>
-                    
-                                    <li>
-                                        <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">VISION <i
-                                                class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-                                        <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-                                            <p>
-                                                <ol style="list-style-type:disc;">
-                                                    <li> In vision, we implemented a new framework with OpenCV as a single C++ library with a single ROS Node to handle
-                                                    communication between Vision and the rest of the software stack.</li>
-                                                    <li> There was also an ML based object detection module consisting of a sliding window detector, feature vector extractors
-                                                    and classifiers.</li>
-                                                </ol>
-                                            </p>
-                                        </div>
-                                    </li>
-
-                                    <li>
-                                                                            <a data-bs-toggle="collapse" data-bs-target="#faq7" class="collapsed">INERTIAL MEASUREMENT UNIT <i
-                                                                                    class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-                                                                            <div id="faq7" class="collapse" data-bs-parent=".faq-list">
-                                                                                <p>
-                                                                                <ol style="list-style-type:disc;">
-                                                                                    <li> The new inertial measurement unit offers low drift and precise orientation measurement, and was enhanced with an acrylic
-                                                                                    enclosure to cut off disturbances from other electrical components in the system.</li>
-                                                                                    <li>Two additional grippers and an improved gripper design ensured greater functionality of the vehicle, along with newly
-                                                                                    manufactured, convenient and more cost efficient connectors for the different hulls and thrusters.</li>
-                                                                                    <li>Powered with six thrusters to produce a total of 2.2 kgf and a peak of 2.9kgf thrust, Matsya-3 was enabled with
-                                                                                    navigation along five degrees of freedom and could attain a maximum speed of 0.5m/s.</li>
-                                                                                </ol>
-                                                                                </p>
-                                                                            </div>
-                                                                        </li>
-                    
-                                </ul>
-                    
-                            </div>
-                        </section>
-                    </div>
-                    <div class="tab-pane" id="tab-4">
-                        <div class="row">
-                            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                                <h3>Matsya 4</h3>
-                                <p class="fst-italic">
-                                    Matsya 4 is the fourth AUV in the Matsya series. Although it has a similar design philosophy to Matsya 3, it has majorly improved in terms of weight
-                                    optimization, reliability, endurance, speed, aesthetics, and cognition.
-                                </p>
-                                <table id="customers">
-                                    <tr>
-                                        <th style="background-color: rgb(68, 160, 235); color: white;"><b>Specifications</b> </th>
-                                        <th style="background-color: rgb(68, 160, 235); color: white;"> <b>Vehicle Details</b> </th>
-                                
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>DoF</td>
-                                        <td>5 (Sway, Pitch, Yaw, Surge, Heave)</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Weight </td>
-                                        <td>41.4 kgs</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Dimensions </td>
-                                        <td>1070mm x 770mm x 550mm</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Endurance </td>
-                                        <td>240 Minutes</td>
-                                
-                                    <tr>
-                                        <td>Depth Rating </td>
-                                        <td>150 feet</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Pressure Vessels </td>
-                                        <td>Separate hulls for Electronics, Batteries, Cameras, IMU and DVL.</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Actuation System</td>
-                                        <td>Assembly of eight thrusters, Markers, Gripper and Torpedos</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Power </td>
-                                        <td>Lithium Polymer Batteries</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Feedback Control </td>
-                                        <td>Visual, Inertial, Pressure, DVL and Acoustic</td>
-                                
-                                    </tr>
-                                
-                                
-                                </table>
-                                </div>
-                                <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                                    <div class="sketchfab-embed-wrapper"> <iframe title="Matsya 4" frameborder="0" allowfullscreen mozallowfullscreen="true"
-                                            webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
-                                            execution-while-out-of-viewport execution-while-not-rendered web-share width="100%" height="480px"
-                                            src="https://sketchfab.com/models/7e5789625a32456aa68a3e61902f1ceb/embed"> </iframe>
-                                        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
-                                                href="https://sketchfab.com/3d-models/matsya-4-7e5789625a32456aa68a3e61902f1ceb?utm_medium=embed&utm_campaign=share-popup&utm_content=7e5789625a32456aa68a3e61902f1ceb"
-                                                target="_blank" style="font-weight: bold; color: #1CAAD9;">  </a> <a
-                                                href="https://sketchfab.com/s.aditya6316?utm_medium=embed&utm_campaign=share-popup&utm_content=7e5789625a32456aa68a3e61902f1ceb"
-                                                target="_blank" style="font-weight: bold; color: #1CAAD9;">  </a> <a
-                                                href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=7e5789625a32456aa68a3e61902f1ceb"
-                                                target="_blank" style="font-weight: bold; color: #1CAAD9;"></a></p>
-                                                <a href="images/TDRs/Matsya4.pdf" class="get-started-btn" target="_blank">Technical Design Report</a>
-                                    </div>
-                                </div>
-                                </div>
-                                <section id="faq" class="faq">
-                                    <div class="container" data-aos="fade-up">
-                                
-                                        <div class="section-title">
-                                            <h2>SPECS</h2>
-                                        </div>
-                                
-                                        <ul class="faq-list accordion" data-aos="fade-up">
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">HULLS <i
-                                                        class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-                                                <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li> Two battery hulls which increased the vehicle's Endurance Time to 240 minutes.</li>
-                                                        <li> Separate hulls for Electronics, Batteries, Cameras, IMU and newly designed DVL hulls are used.</li>
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">THRUSTERS AND DOFs <i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li> High voltage (30V) rated thrusters were chosen for surge direction in order to provide a higher surge speed.</li>
-                                                        <li> The outdated intel core 2 was replaced with the latest i7 processor.</li>
-                                                        <li> The vehicle also got a redesigned control system to provide 5 degrees of freedom (surge, sway, heave, pitch and yaw).</li>
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">OPTIMIZATION <i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li> The optimization process has been divided into two parts: Unit optimization and integrated optimization.</li>
-                                                        <li> In unit
-                                                        optimization, only the sub-assembly was optimized on the basis of weight, strength, impact resistance, and space.</li>
-                                                        <li> While
-                                                        in the integrated optimization, the entire assembly of Matsya was optimized.
-                                                        </li>
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">HARDWARE <i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li> The camera was upgraded to a newer version, the number of hydrophones were increased from 2 to 4.</li>
-                                                        <li> Based on power requirements the initial 2x 6.6Ah 4 cell was changed to 2x 16Ah 5 cell.</li>
-                                                        <li> The signal sampling device was upgraded to a more robust NI9223.
-                                                        </li>
-                                                        <li> The pressure sensing and motion controlling board were incorporated into a single GPIO board.
-                                                        </li>
-                                                        <li> DVL and Acoustic Localization systems were incorporated into the navigation framework.
-                                                        </li>
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">CONTROLS <i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li> A cascaded control architecture consisting of a kinematic and a dynamic controller was developed.</li>
-                                                        <li> This kinematic-dynamic controller pair achieved both global position and velocity control using reference tracking.</li>
-                                                        <li> A 3D motion simulation tool was used to test motion planning, navigation, and performance of the motion controller.
-                                                        </li>
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            
-                                
-                                        </ul>
-                                
-                                    </div>
-                                </section>
-                    </div>
-                    <div class="tab-pane" id="tab-5">
-                        <div class="row">
-                            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                                <h3>Matsya 5</h3>
-                                <p class="fst-italic">
-                                    Matsya 5 is the fifth AUV in the Matsya series. To permit easier access to the components of the vehicle, the surface was split into 6 parts, each of which was
-                                    detachable.
-                                </p>
-                                <table id="customers">
-                                    <tr>
-                                        <th style="background-color: rgb(68, 160, 235); color: white;"><b>Specifications</b> </th>
-                                        <th style="background-color: rgb(68, 160, 235); color: white;"> <b>Vehicle Details</b> </th>
-                                
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>DoF</td>
-                                        <td>6 (Roll, Pitch, Yaw, Surge, Sway, Heave)</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Weight </td>
-                                        <td>47 kgs</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Dimensions </td>
-                                        <td>1750mm x 780mm x 640mm</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Endurance </td>
-                                        <td>240 Minutes</td>
-                                
-                                    <tr>
-                                        <td>Depth Rating </td>
-                                        <td>150 feet</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Pressure Vessels </td>
-                                        <td>Separate hulls for Electronics, Batteries, Cameras, IMU and DVL.</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Actuation System</td>
-                                        <td>Assembly of eight thrusters, Markers, Gripper and Torpedos</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Power </td>
-                                        <td>Lithium Polymer Batteries</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Feedback Control </td>
-                                        <td>Visual, Inertial, Pressure, DVL and Acoustic</td>
-                                
-                                    </tr>
-                                
-                                
-                                </table>
-                                </div>
-                                <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                                    <div class="sketchfab-embed-wrapper"> <iframe title="Matsya 5" frameborder="0" allowfullscreen mozallowfullscreen="true"
-                                            webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
-                                            execution-while-out-of-viewport execution-while-not-rendered web-share width="100%" height="480px"
-                                            src="https://sketchfab.com/models/bc4506692fe74c53866ca0cde16b67df/embed"> </iframe>
-                                        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
-                                                href="https://sketchfab.com/3d-models/matsya-5-bc4506692fe74c53866ca0cde16b67df?utm_medium=embed&utm_campaign=share-popup&utm_content=bc4506692fe74c53866ca0cde16b67df"
-                                                target="_blank" style="font-weight: bold; color: #1CAAD9;">  </a> <a
-                                                href="https://sketchfab.com/s.aditya6316?utm_medium=embed&utm_campaign=share-popup&utm_content=bc4506692fe74c53866ca0cde16b67df"
-                                                target="_blank" style="font-weight: bold; color: #1CAAD9;">  </a> <a
-                                                href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=bc4506692fe74c53866ca0cde16b67df"
-                                                target="_blank" style="font-weight: bold; color: #1CAAD9;"></a></p>
-                                                <a href="images/TDRs/Matsya5.pdf" class="get-started-btn" target="_blank">Technical Design Report</a>
-                                    </div>
-                                </div>
-                                </div>
-                                <section id="faq" class="faq">
-                                    <div class="container" data-aos="fade-up">
-                                
-                                        <div class="section-title">
-                                            <h2>SPECS</h2>
-                                        </div>
-                                
-                                        <ul class="faq-list accordion" data-aos="fade-up">
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">THRUSTERS <i
-                                                        class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-                                                <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                                                    <p>
-                                                        <ol style="list-style-type:disc;">
-                                                            <li> A total of 8 thrusters have been used in Matsya 5 as compared to Matsya 4 in which 6 thrusters were only used . </li>
-                                                            <li> These 8
-                                                            thrusters provide all possible 6 degrees of freedom to the vehicle.</li>
-                                                            <li> The centroid of the isosceles triangle of heave
-                                                            thrusters, the midpoint of the sway thrusters and the Centre of Gravity (CG) of the vehicle have been made collinear for
-                                                            maximum overall stability. 
-                                                            </li>
-                                                        </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">GRIPPERS<i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li> Matsya 5 has only one gripper mounted on the right side of the frame. Matsya 4 had two grippers, one on each side of the
-                                                        frame.
-
-                                                        </li>
-                                                        <li> Matsya 5 has two marker droppers and the actuation system has been optimized to use only one pneumatic piston as
-                                                        opposed to two in Matsya 4A.</li>
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">MISSION PLANNING <i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li> A Dynamic Mission Planner was implemented that is capable of switching tasks in between based on the feedback from
-                                                        vision.
-                                                    
-                                                        </li>
-                                                        <li> The Mission Planner design was also changed to provide more layers of abstractions, thereby creating a more
-                                                        modular structure that made writing tasks easier and less error-prone.</li>
-                                                        <li> The modular structure was achieved by grouping
-                                                        all tasks related to one physical object as subtasks of one parent task.
-                                                        </li>
-                                                        <li> Whenever the parent task is executed, the
-                                                        vehicle scans for the corresponding physical object. When the object is found, the vehicle executes each of the subtasks
-                                                        one by one.
-                                                        </li>
-                                                        <li> The state machine was shifted to a probabilistic model, where the decisions are based on the probability of
-                                                        pose detection from vision.
-                                                        </li>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">NEW FEATURES <i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li> Added CAN communication system for more robustness.  In the motor driving board, we used 8 BlueESC from BlueRobotics.
-
-                                                        </li>
-                                                        <li> Instead of Beagle-Bone Black (ARM Cortex-A8 processor), we used
-                                                        Atmega328p on the GPIO board.</li>
-                                                        <li> We built our transmission and receiver system on UART for communicating between two vehicles.
-                                                        </li>
-                                                        <li> In addition, safety features such as reverse battery voltage protection, over-current protection and soft kill for
-                                                        thrusters are also added.
-                                                        </li>
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">NAVIGATION <i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li> The Navigator module’s algorithms were improved to break down set points to minimize the time taken in transition from
-                                                        one point to another with an auto timeout being implemented by estimating the time for transition.
-
-                                                    
-                                                        </li>
-                                                        <li> The DAQ system used
-                                                        to collect acoustics data from the hydrophones was earlier run on a virtual machine running Windows (as that is the only
-                                                        OS supported by the manufacturer).</li>
-                                                        <li> It was reverse engineered in Matsya 5 to enable us to run it natively on Ubuntu, thus
-                                                        improving speed and eliminating the stability issues arising from VM.
-                                                        </li>
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            
-                                
-                                        </ul>
-                                
-                                    </div>
-                                </section>
-                    </div>
-                    <div class="tab-pane active show" id="tab-6">
-                        <div class="row">
-                            <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
-                                <h3>Matsya 6</h3>
-                                <p class="fst-italic">
-                                    The sixth variant of Matsya saw major design changes to address pressing issues such as heating leading
-                                    to multiple
-                                    electrical failures and reducing the size of the vehicle in general for better control.
-                                </p>
-                                <table id="customers">
-                                    <tr>
-                                        <th style="background-color: rgb(68, 160, 235); color: white;"><b>Specifications</b> </th>
-                                        <th style="background-color: rgb(68, 160, 235); color: white;"> <b>Vehicle Details</b> </th>
-                                
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>DoF</td>
-                                        <td>6 (Roll, Pitch, Yaw, Surge, Sway, Heave)</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Weight </td>
-                                        <td>37 kgs</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Dimensions </td>
-                                        <td>1051mm x 442mm x 609mm</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Endurance </td>
-                                        <td>240 Minutes</td>
-                                
-                                    <tr>
-                                        <td>Depth Rating </td>
-                                        <td>150 feet</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Pressure Vessels </td>
-                                        <td>Separate hulls for Electronics, Batteries, Cameras, IMU and DVL.</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Actuation System</td>
-                                        <td>Assembly of eight thrusters, Markers, Gripper and Torpedos</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Power </td>
-                                        <td>Lithium Polymer Batteries</td>
-                                
-                                    </tr>
-                                    <tr>
-                                        <td>Feedback Control </td>
-                                        <td>Visual, Inertial, Pressure, DVL and Acoustic</td>
-                                
-                                    </tr>
-                                
-                                
-                                </table>
-                                </div>
-                                <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
-                                    <div class="sketchfab-embed-wrapper">
-                                        <iframe title="coloured" frameborder="0" allowfullscreen 
-                                            mozallowfullscreen="true"
-                                            webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
-                                            execution-while-out-of-viewport execution-while-not-rendered web-share width="100%" height="480px"
-                                            src="https://sketchfab.com/models/0886f5da859c4cd0893dcab9a1e50ab9/embed">
-                                        </iframe>
-                                        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
-                                            <a
-                                                href="https://sketchfab.com/3d-models/coloured-0886f5da859c4cd0893dcab9a1e50ab9?utm_medium=embed&utm_campaign=share-popup&utm_content=0886f5da859c4cd0893dcab9a1e50ab9"
-                                                target="_blank" style="font-weight: bold; color: #1CAAD9;">  
-                                            </a> 
-                                            <a
-                                                href="https://sketchfab.com/s.aditya6316?utm_medium=embed&utm_campaign=share-popup&utm_content=0886f5da859c4cd0893dcab9a1e50ab9"
-                                                target="_blank" style="font-weight: bold; color: #1CAAD9;">
-                                            </a>
+                                            <li> Keeping in mind modularity, static and dynamic performance,the frame
+                                                was made using Al 8020</li>
+                                        </ol>
                                         </p>
                                     </div>
-                                    <a href="images/TDRs/Matsya6.pdf" class="get-started-btn" target="_blank">Technical Design Report</a>
-                                    </div>
-                                </div>
-                                
-                                <section id="faq" class="faq">
-                                    <div class="container" data-aos="fade-up">
-                                
-                                        <div class="section-title">
-                                            <h2>SPECS</h2>
-                                        </div>
-                                
-                                        <ul class="faq-list accordion" data-aos="fade-up">
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">DESIGN <i
-                                                        class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-                                                <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li> The bringing of PWM signal wires through a separate penetrator reduced interference and attenuation significantly. 
-                                                    
-                                                        </li>
-                                                        <li> The
-                                                        latest variant of Matsya has cylindrical battery hulls, as opposed to cuboidal hulls used in the previous iteration.</li>
-                                                        <li> This particular change helped reduce disassembly time considerably, thus increasing the ease of removing the batteries
-                                                        for recharging.</li>
-                                                        <li> A dome structure has been added on the front-facing plane of the hull to reduce drag.
-                                                        </li>
-                                                        <li>
-                                                            Heavy parts bearing
-                                                            regions have been designed such that the load-bearing capacity in the vertical direction remains high.</li>                                                        </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">THRUSTERS <i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li> The vehicle has 8 thrusters, which makes movement in all the six DOF (Degrees Of Freedom) achievable.  
-                                                    
-                                                        </li>
-                                                        <li> It also has other
-                                                        manipulation systems, namely the arm, the gripper, torpedo shooter, and the marker dropper (which has a reloading
-                                                        capacity).</li>
-                                                        <li> The latter two are actuated using high-pressure pneumatic actuators. </li>
-                                                        <li>The 1 DOF arm's split-finger gripper is
-                                                        also actuated by a pneumatic actuator.
-                                                        </li>
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">DEBUG BOARD <i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li> It has been installed for easier debugging and management of the electrical subsystem of the machine.   
-                                                        </li>
-                                                        <li> The Debug Board’s
-                                                        job is to capture data from various parts of the machine, like the electrical stack, PWM Channels, thruster current
-                                                        values from the ESCs, and the motherboard itself.</li>
-                                                        <li> The Debug Board sends data to the motherboard for any real-time
-                                                        decisions that would need to be made and stores it in the SD card for future analysis. </li>
-                                                        <li>It also displays the data on an
-                                                        LCD screen for easier debugging.
-                                                        </li>
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">SOFTWARE <i class="bx bx-chevron-down icon-show"></i><i
-                                                        class="bx bx-x icon-close"></i></a>
-                                                <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                    <li> Developed a framework for Dynamic Modelling of the vehicle for further development in controls, localization, and
-                                                    simulation.    
-                                                    </li>
-                                                    <li> We also implemented a MIMO Linear Quadratic Regulator (LQR) Controller to replace our 6 SISO PID
-                                                    Controllers.</li>
-                                                    <li> Mission planner was also simplified to take minimal parameters just before deployment, making it very
-                                                    competition-friendly.</li>
-                                                    <li>The decision-making process is almost linear, and it inherits task-grouping from the previous
-                                                    design.
-                                                    </li>
-                                                    <li>A New Artificial
-                                                    Potential Field based Path Planner was developed for obstacle avoidance.
-                                                    </li>
-                                                    <li>A plugin was developed for Gazebo to automatically detect tasks in the camera frame and draw bounding boxes around them
-                                                    for ML training. This labelling process was previously done manually and took a long time due to the size of the dataset
-                                                    (~1000 images per task).
+                                </li>
 
-                                                    </li>
-                                                    
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                            <li>
-                                                <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">NEW FEATURES<i
-                                                        class="bx bx-chevron-down icon-show"></i><i class="bx bx-x icon-close"></i></a>
-                                                <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-                                                    <p><ol style="list-style-type:disc;">
-                                                        <li> A new hull, the ESC Hull has been designed exclusively for ESCs (Electronic Speed Controllers) that would house all the
-                                                        ESCs along with the related circuitry.
-                                                        </li>
-                                                        <li> A power distribution box to avoid wire clutter was added along with a mechanical latch relay which implements Hard-kill
-                                                        by physically disconnecting the batteries should there be any failures. 
-</li>
-                                                        <li> Real-time current and PWM monitoring is done for
-                                                        the thrusters so that any issues can easily be resolved and debugged.</li>
-                                                        
-                                                    
-                                                    </ol>
-                                                    </p>
-                                                </div>
-                                            </li>
-                                
-                                        </ul>
-                                
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">THRUSTERS <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> The vehicle has five thrusters which give it 5 degrees of freedom,
+                                                namely heave, surge, yaw, pitch and roll.</li>
+                                            <li>The vehicle takes feedback from on-board Inertial Measurement Unit (IMU)
+                                                which functions as an Attitude and Heading
+                                                Reference System (AHRS), cameras and pressure sensors.</li>
+                                        </ol>
+                                        </p>
                                     </div>
-                                </section>
-                                </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">VELOCITY AND
+                                        WEIGHT <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                                        <p>The vehicle can operate at a maximum velocity of 0.6m/s and weighs only 20kgs
+                                            which made it the lightest vehicle to
+                                            participate in Robosub 2012.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">HARDWARE
+                                        ARCHITECTURE <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> The processing platforms are chosen based on the basic needs of vision
+                                                processing, controls and power
+                                                management, and
+                                                are designed with an emphasis on modularity and scalability in the
+                                                future.
+                                            </li>
+                                            <li>There are three main boards in the electrical stack:
+                                                <ol>
+                                                    <li>Power Board, which is an 8-bit microcontroller (Atmega 2560)
+                                                        that ensures the power management of the
+                                                        vehicle by aiding
+                                                        in battery management, temperature control, Water seepage
+                                                        Detection, Kill switches and Power
+                                                        Distribution.</li>
+                                                    <li>PandaBoardES is used for vision processing and communication to
+                                                        on-board processors serially and to
+                                                        off-board processors
+                                                        via Ethernet. </li>
+                                                    <li> The motion controller of the vehicle takes feedback from the
+                                                        inertial sensors, the pressure sensor, the
+                                                        SBC and controls the thrusters.</li>
+                                                </ol>
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">SENSORS AND
+                                        ACTUATORS <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                            The final part of the electronics division are the sensors and actuators
+                                            which consist of Pressure Sensor, Attitude
+                                            Heading Reference System (AHRS), Cameras, Current Sensors, Actuators and
+                                            driver.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">SOFTWARE
+                                        STACK<i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li>The software stack in Matsya 1 was responsible for mission planning,
+                                                image processing, and handling the communication
+                                                between the hardware modules, power board and motion controller board.
+                                            </li>
+                                            <li>We implemented Underwater Image Enhancement in Vision, which was built
+                                                on Intel’s OpenCV library, and also implemented
+                                                Color Contrast Stretching and Gate Pass Detection.</li>
+                                            <li>The debugging platform of Matsya 1 was implemented using C, JavaScript
+                                                and AJAX. Two cameras were used, a front camera
+                                                for localization and a bottom camera for getting the orientation of the
+                                                vehicle.</li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </section>
+                </div>
+                <div class="tab-pane" id="tab-2">
+                    <div class="row">
+                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                            <h3>Matsya 2</h3>
+                            <p class="fst-italic">
+                                The second iteration of Matsya is complete and more modular than its predecessor, with
+                                separate enclosures for
+                                electronics, batteries, cameras, and torpedo shooting actuators. The design aimed to
+                                ensure robust waterproofing, ease
+                                of assembly, and efficient heat sinking.
+                            </p>
+                            <table id="customers">
+                                <tr>
+                                    <th style="background-color: rgb(68, 160, 235); color: white;"><b>Specifications</b>
+                                    </th>
+                                    <th style="background-color: rgb(68, 160, 235); color: white;"> <b>Vehicle
+                                            Details</b> </th>
+
+
+                                </tr>
+                                <tr>
+                                    <td>DoF</td>
+                                    <td>5 (Roll, Pitch, Yaw, Surge, Heave)</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Weight </td>
+                                    <td>24 kgs</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Dimensions </td>
+                                    <td>930mm x 410mm x 650mm</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Endurance </td>
+                                    <td>90 Minutes</td>
+
+                                <tr>
+                                    <td>Depth Rating </td>
+                                    <td>100 feet</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Pressure Vessels </td>
+                                    <td>Separate hulls for Electronics, Batteries, Camera and Hydrophones.</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Actuation System</td>
+                                    <td>Assembly of Six thrusters, Markers</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Power </td>
+                                    <td>Lithium Polymer Batteries</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Feedback Control </td>
+                                    <td>Visual, Inertial, Pressure</td>
+
+                                </tr>
+
+
+                            </table>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                            <img src="images/vehicles/M2.png" alt="" class="img-fluid"><br><br>
+                            <a href="images/TDRs/Matsya2.pdf" class="get-started-btn" target="_blank">Technical Design
+                                Report</a>
+                        </div>
+                    </div>
+                    <section id="faq" class="faq">
+                        <div class="container" data-aos="fade-up">
+
+                            <div class="section-title">
+                                <h2>SPECS</h2>
+                            </div>
+
+                            <ul class="faq-list accordion" data-aos="fade-up">
+
+                                <li>
+                                    <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">DOF AND
+                                        HULLS<i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li>Matsya 2.0 has five degrees of freedom, with sway being a new addition.
+                                            </li>
+                                            <li>A cuboidal main hull with peripherals for better space optimization.
+                                            </li>
+                                            <li>The main hull houses the electronics of the vehicle, which are mounted
+                                                on an acrylic rack. Al 6061 is used for the hull
+                                                body due to its thermal conductivity, high strength, and
+                                                non-corrosiveness.</li>
+                                            <li>An acrylic end cap seals the hull using a latch mechanism, which uses an
+                                                E-clip and O-ring.</li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">FRAME <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li>The frame acts as a mount for many peripherals.
+                                            </li>
+                                            <li>It has a bottom-heavy, open-frame design that exhibits high symmetry,
+                                                modularity, and, most of all, stability.</li>
+
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">ADDITIONAL
+                                        FEATURES<i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                                        <p>The vehicle has a gripper, marker dropper, and torpedo shooter, all of which
+                                            are actuated pneumatically.
+
+                                            </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq4"
+                                        class="collapsed">MICROCONTROLLERS<i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li>All the microcontrollers on the system have been separated out of the
+                                                main electronics board using microcontroller caps.
+                                                This approach provides the ease of microcontroller replaceability,
+                                                off-board microcontroller programming and
+                                                accumulating the same number of components in much less area.
+                                            </li>
+                                            <li>The dual-core 1.2GHz Arm cortex-A9 CPU, 384 MHz GPU, 1GB RAM PandaBoard
+                                                ES SBC used in Matsya 1 was replaced by
+                                                Axiomtek's SBC86860 Mini ITX motherboard with an Intel Core 2 Duo
+                                                Processor clocked at 3.0 GHz and 4GB of RAM.
+                                            </li>
+                                            <li>Serial interface for a separate LCD has also been facilitated for
+                                                debugging the algorithms running on Motion Controller.
+                                                A separate pneumatic system has been developed in Matsya 2.0 for
+                                                facilitating a separate path to allow large currents to
+                                                be drawn from the battery when switching the six pneumatic valves
+                                                separately.
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">ACOUSTIC
+                                        LOCALIZATION<i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li>The Acoustic Localization Unit was introduced in Matsya 2.0, using
+                                                hydrophones in the Ultra Short Base Line arrangement.
+                                            </li>
+                                            <li>This Is useful for the system to detect pingers at different
+                                                frequencies. Atmel's 8 bit AT90CAN64 microcontroller has
+                                                been used for power management replacing the 8 bit Atmega 2560.
+                                            </li>
+                                            <li>Additional features include RGB LEDs for battery status, extra power
+                                                lines for scalability and JTAG interface from
+                                                debugging perspective. We used VectorNav’s VN200 as IMU replacing the
+                                                VN100 used in Matsya 1.0.
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">SOFTWARE<i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li>A new codebase was designed to implement ROS, introducing several new
+                                                features to the software stack.
+                                            </li>
+                                            <li>A Gazebo simulator was also implemented for simulation and testing of
+                                                Matsya.
+                                            </li>
+                                            <li>Implementation of Mission Planner allowed us to plan our task execution
+                                                resulting in better performance during
+                                                competitions. The mission planner consisted of a finite state machine
+                                                implementation along with the four nodes -
+                                                Planner, Transition State, Scan State and Execution State.
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </section>
+                </div>
+                <div class="tab-pane" id="tab-3">
+                    <div class="row">
+                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                            <h3>Matsya 3</h3>
+                            <p class="fst-italic">
+                                Matsya 3 was the third vehicle built by the team in 2013. Matsya-3 has a modular design
+                                and weighs 42 kg. It is highly
+                                optimised for strength and buoyancy.
+                            </p>
+                            <table id="customers">
+                                <tr>
+                                    <th style="background-color: rgb(68, 160, 235); color: white;"><b>Specifications</b>
+                                    </th>
+                                    <th style="background-color: rgb(68, 160, 235); color: white;"> <b>Vehicle
+                                            Details</b> </th>
+
+
+                                </tr>
+                                <tr>
+                                    <td>DoF</td>
+                                    <td>5 (Roll, Pitch, Yaw, Surge, Heave)</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Weight </td>
+                                    <td>44 kgs</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Dimensions </td>
+                                    <td>NA</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Endurance </td>
+                                    <td>120 Minutes</td>
+
+                                <tr>
+                                    <td>Depth Rating </td>
+                                    <td>150 feet</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Pressure Vessels </td>
+                                    <td>Separate hulls for Electronics, Batteries, IMU and <br> Cameras.</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Actuation System</td>
+                                    <td>Assembly of Six thrusters, Markers and Torpedos.</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Power </td>
+                                    <td>Lithium Polymer Batteries</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Feedback Control </td>
+                                    <td>Visual, Inertial, Pressure and Acoustic
+                                    </td>
+
+                                </tr>
+
+
+                            </table>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                            <img src="images/vehicles/M3.png" alt="" class="img-fluid"><br><br>
+                            <a href="images/TDRs/Matsya3.pdf" class="get-started-btn" target="_blank">Technical Design
+                                Report</a>
+                        </div>
+                    </div>
+                    <section id="faq" class="faq">
+                        <div class="container" data-aos="fade-up">
+
+                            <div class="section-title">
+                                <h2>SPECS</h2>
+                            </div>
+
+                            <ul class="faq-list accordion" data-aos="fade-up">
+
+                                <li>
+                                    <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">DOPPLER
+                                        VELOCITY LOG <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li>This version of Matsya saw the integration of a DVL (Doppler Velocity
+                                                Log), which greatly improved the accuracy and
+                                                flexibility in localisation.
+                                            </li>
+                                            <li>A major addition to the vehicle, separate enclosures were designed for
+                                                DVL, Battery and IMU to provide modularity to the
+                                                system.
+                                            </li>
+                                            <li>The new enclosure for IMU was made from acrylic to cut off electrical
+                                                noise due to other Electrical components of the
+                                                vehicle.
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">GRIPPERS AND
+                                        CONNECTORS <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li>A total of four grippers, and improved gripper design.
+                                            </li>
+                                            <li>Newly developed underwater connectors for connecting different hulls and
+                                                thrusters.
+                                            </li>
+                                            <li>These connectors were cheap to manufacture and convenient to use.
+                                            </li>
+                                            <ol style="list-style-type:disc;">
+                                                </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">THRUSTERS <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> Matsya-3 has 6 thrusters capable of producing a total of 2.2 kgf of
+                                                continuous thrust and a peak thrust of 2.9 kgf.</li>
+                                            <li> The thruster mounts are designed in such a way that the thrusters do
+                                                not produce any skin friction drag on the side
+                                                frame of the vehicle.</li>
+                                            <li> Due to this Maysta-3 has a maximum speed of 0.5 m/s and is capable of
+                                                navigation along five degrees of freedom.</li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">INERTIAL
+                                        MEASUREMENT UNIT <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> Inertial Measurement Unit: The IMU used in Matsya 2.0 was VectorNav's
+                                                VN 200 but this was replaced by 3DM-GX3-25
+                                                Attitude Heading Reference System (AHRS) from Lord Microstrain Sensing
+                                                Systems in Matsya 3.0 due to its low-drift and
+                                                precise orientation measurement.</li>
+                                            <li> The new enclosure for IMU was made from acrylic to cut off electrical
+                                                noise due to other Electrical components of the
+                                                vehicle.</li>
+                                        </ol>
+
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">SOFTWARE<i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> A new ethernet based inter-board communication, and a new Navigator
+                                                package to help bridge the gap between the Mission
+                                                Planner and Controller.</li>
+                                            <li> It provides a common platform where all task-executors can launch
+                                                commands.</li>
+                                            <li> The navigator is what steers the vehicle from point to point using
+                                                feedback from localization.</li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">VISION <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> In vision, we implemented a new framework with OpenCV as a single C++
+                                                library with a single ROS Node to handle
+                                                communication between Vision and the rest of the software stack.</li>
+                                            <li> There was also an ML based object detection module consisting of a
+                                                sliding window detector, feature vector extractors
+                                                and classifiers.</li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq7" class="collapsed">INERTIAL
+                                        MEASUREMENT UNIT <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq7" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> The new inertial measurement unit offers low drift and precise
+                                                orientation measurement, and was enhanced with an acrylic
+                                                enclosure to cut off disturbances from other electrical components in
+                                                the system.</li>
+                                            <li>Two additional grippers and an improved gripper design ensured greater
+                                                functionality of the vehicle, along with newly
+                                                manufactured, convenient and more cost efficient connectors for the
+                                                different hulls and thrusters.</li>
+                                            <li>Powered with six thrusters to produce a total of 2.2 kgf and a peak of
+                                                2.9kgf thrust, Matsya-3 was enabled with
+                                                navigation along five degrees of freedom and could attain a maximum
+                                                speed of 0.5m/s.</li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </section>
+                </div>
+                <div class="tab-pane" id="tab-4">
+                    <div class="row">
+                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                            <h3>Matsya 4</h3>
+                            <p class="fst-italic">
+                                Matsya 4 is the fourth AUV in the Matsya series. Although it has a similar design
+                                philosophy to Matsya 3, it has majorly improved in terms of weight
+                                optimization, reliability, endurance, speed, aesthetics, and cognition.
+                            </p>
+                            <table id="customers">
+                                <tr>
+                                    <th style="background-color: rgb(68, 160, 235); color: white;"><b>Specifications</b>
+                                    </th>
+                                    <th style="background-color: rgb(68, 160, 235); color: white;"> <b>Vehicle
+                                            Details</b> </th>
+
+
+                                </tr>
+                                <tr>
+                                    <td>DoF</td>
+                                    <td>5 (Sway, Pitch, Yaw, Surge, Heave)</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Weight </td>
+                                    <td>41.4 kgs</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Dimensions </td>
+                                    <td>1070mm x 770mm x 550mm</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Endurance </td>
+                                    <td>240 Minutes</td>
+
+                                <tr>
+                                    <td>Depth Rating </td>
+                                    <td>150 feet</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Pressure Vessels </td>
+                                    <td>Separate hulls for Electronics, Batteries, Cameras, IMU and DVL.</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Actuation System</td>
+                                    <td>Assembly of eight thrusters, Markers, Gripper and Torpedos</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Power </td>
+                                    <td>Lithium Polymer Batteries</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Feedback Control </td>
+                                    <td>Visual, Inertial, Pressure, DVL and Acoustic</td>
+
+                                </tr>
+
+
+                            </table>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                            <div class="sketchfab-embed-wrapper"> <iframe title="Matsya 4" frameborder="0"
+                                    allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                                    allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                                    execution-while-out-of-viewport execution-while-not-rendered web-share width="100%"
+                                    height="480px"
+                                    src="https://sketchfab.com/models/7e5789625a32456aa68a3e61902f1ceb/embed"> </iframe>
+                                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                                        href="https://sketchfab.com/3d-models/matsya-4-7e5789625a32456aa68a3e61902f1ceb?utm_medium=embed&utm_campaign=share-popup&utm_content=7e5789625a32456aa68a3e61902f1ceb"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> </a> <a
+                                        href="https://sketchfab.com/s.aditya6316?utm_medium=embed&utm_campaign=share-popup&utm_content=7e5789625a32456aa68a3e61902f1ceb"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> </a> <a
+                                        href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=7e5789625a32456aa68a3e61902f1ceb"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"></a></p>
+                                <a href="images/TDRs/Matsya4.pdf" class="get-started-btn" target="_blank">Technical
+                                    Design Report</a>
+                            </div>
+                        </div>
+                    </div>
+                    <section id="faq" class="faq">
+                        <div class="container" data-aos="fade-up">
+
+                            <div class="section-title">
+                                <h2>SPECS</h2>
+                            </div>
+
+                            <ul class="faq-list accordion" data-aos="fade-up">
+
+                                <li>
+                                    <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">HULLS <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> Two battery hulls which increased the vehicle's Endurance Time to 240
+                                                minutes.</li>
+                                            <li> Separate hulls for Electronics, Batteries, Cameras, IMU and newly
+                                                designed DVL hulls are used.</li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">THRUSTERS AND
+                                        DOFs <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> High voltage (30V) rated thrusters were chosen for surge direction in
+                                                order to provide a higher surge speed.</li>
+                                            <li> The outdated intel core 2 was replaced with the latest i7 processor.
+                                            </li>
+                                            <li> The vehicle also got a redesigned control system to provide 5 degrees
+                                                of freedom (surge, sway, heave, pitch and yaw).</li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">OPTIMIZATION
+                                        <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> The optimization process has been divided into two parts: Unit
+                                                optimization and integrated optimization.</li>
+                                            <li> In unit
+                                                optimization, only the sub-assembly was optimized on the basis of
+                                                weight, strength, impact resistance, and space.</li>
+                                            <li> While
+                                                in the integrated optimization, the entire assembly of Matsya was
+                                                optimized.
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">HARDWARE <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> The camera was upgraded to a newer version, the number of hydrophones
+                                                were increased from 2 to 4.</li>
+                                            <li> Based on power requirements the initial 2x 6.6Ah 4 cell was changed to
+                                                2x 16Ah 5 cell.</li>
+                                            <li> The signal sampling device was upgraded to a more robust NI9223.
+                                            </li>
+                                            <li> The pressure sensing and motion controlling board were incorporated
+                                                into a single GPIO board.
+                                            </li>
+                                            <li> DVL and Acoustic Localization systems were incorporated into the
+                                                navigation framework.
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">CONTROLS <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> A cascaded control architecture consisting of a kinematic and a dynamic
+                                                controller was developed.</li>
+                                            <li> This kinematic-dynamic controller pair achieved both global position
+                                                and velocity control using reference tracking.</li>
+                                            <li> A 3D motion simulation tool was used to test motion planning,
+                                                navigation, and performance of the motion controller.
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+
+
+                            </ul>
+
+                        </div>
+                    </section>
+                </div>
+                <div class="tab-pane" id="tab-5">
+                    <div class="row">
+                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                            <h3>Matsya 5</h3>
+                            <p class="fst-italic">
+                                Matsya 5 is the fifth AUV in the Matsya series. To permit easier access to the
+                                components of the vehicle, the surface was split into 6 parts, each of which was
+                                detachable.
+                            </p>
+                            <table id="customers">
+                                <tr>
+                                    <th style="background-color: rgb(68, 160, 235); color: white;"><b>Specifications</b>
+                                    </th>
+                                    <th style="background-color: rgb(68, 160, 235); color: white;"> <b>Vehicle
+                                            Details</b> </th>
+
+
+                                </tr>
+                                <tr>
+                                    <td>DoF</td>
+                                    <td>6 (Roll, Pitch, Yaw, Surge, Sway, Heave)</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Weight </td>
+                                    <td>47 kgs</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Dimensions </td>
+                                    <td>1750mm x 780mm x 640mm</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Endurance </td>
+                                    <td>240 Minutes</td>
+
+                                <tr>
+                                    <td>Depth Rating </td>
+                                    <td>150 feet</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Pressure Vessels </td>
+                                    <td>Separate hulls for Electronics, Batteries, Cameras, IMU and DVL.</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Actuation System</td>
+                                    <td>Assembly of eight thrusters, Markers, Gripper and Torpedos</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Power </td>
+                                    <td>Lithium Polymer Batteries</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Feedback Control </td>
+                                    <td>Visual, Inertial, Pressure, DVL and Acoustic</td>
+
+                                </tr>
+
+
+                            </table>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                            <div class="sketchfab-embed-wrapper"> <iframe title="Matsya 5" frameborder="0"
+                                    allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"
+                                    allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking
+                                    execution-while-out-of-viewport execution-while-not-rendered web-share width="100%"
+                                    height="480px"
+                                    src="https://sketchfab.com/models/bc4506692fe74c53866ca0cde16b67df/embed"> </iframe>
+                                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;"> <a
+                                        href="https://sketchfab.com/3d-models/matsya-5-bc4506692fe74c53866ca0cde16b67df?utm_medium=embed&utm_campaign=share-popup&utm_content=bc4506692fe74c53866ca0cde16b67df"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> </a> <a
+                                        href="https://sketchfab.com/s.aditya6316?utm_medium=embed&utm_campaign=share-popup&utm_content=bc4506692fe74c53866ca0cde16b67df"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"> </a> <a
+                                        href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=bc4506692fe74c53866ca0cde16b67df"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;"></a></p>
+                                <a href="images/TDRs/Matsya5.pdf" class="get-started-btn" target="_blank">Technical
+                                    Design Report</a>
+                            </div>
+                        </div>
+                    </div>
+                    <section id="faq" class="faq">
+                        <div class="container" data-aos="fade-up">
+
+                            <div class="section-title">
+                                <h2>SPECS</h2>
+                            </div>
+
+                            <ul class="faq-list accordion" data-aos="fade-up">
+
+                                <li>
+                                    <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">THRUSTERS <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> A total of 8 thrusters have been used in Matsya 5 as compared to Matsya
+                                                4 in which 6 thrusters were only used . </li>
+                                            <li> These 8
+                                                thrusters provide all possible 6 degrees of freedom to the vehicle.</li>
+                                            <li> The centroid of the isosceles triangle of heave
+                                                thrusters, the midpoint of the sway thrusters and the Centre of Gravity
+                                                (CG) of the vehicle have been made collinear for
+                                                maximum overall stability.
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">GRIPPERS<i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> Matsya 5 has only one gripper mounted on the right side of the frame.
+                                                Matsya 4 had two grippers, one on each side of the
+                                                frame.
+
+                                            </li>
+                                            <li> Matsya 5 has two marker droppers and the actuation system has been
+                                                optimized to use only one pneumatic piston as
+                                                opposed to two in Matsya 4A.</li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq3" class="collapsed">MISSION
+                                        PLANNING <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> A Dynamic Mission Planner was implemented that is capable of switching
+                                                tasks in between based on the feedback from
+                                                vision.
+
+                                            </li>
+                                            <li> The Mission Planner design was also changed to provide more layers of
+                                                abstractions, thereby creating a more
+                                                modular structure that made writing tasks easier and less error-prone.
+                                            </li>
+                                            <li> The modular structure was achieved by grouping
+                                                all tasks related to one physical object as subtasks of one parent task.
+                                            </li>
+                                            <li> Whenever the parent task is executed, the
+                                                vehicle scans for the corresponding physical object. When the object is
+                                                found, the vehicle executes each of the subtasks
+                                                one by one.
+                                            </li>
+                                            <li> The state machine was shifted to a probabilistic model, where the
+                                                decisions are based on the probability of
+                                                pose detection from vision.
+                                            </li>
+                                            </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">NEW FEATURES
+                                        <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> Added CAN communication system for more robustness. In the motor
+                                                driving board, we used 8 BlueESC from BlueRobotics.
+
+                                            </li>
+                                            <li> Instead of Beagle-Bone Black (ARM Cortex-A8 processor), we used
+                                                Atmega328p on the GPIO board.</li>
+                                            <li> We built our transmission and receiver system on UART for communicating
+                                                between two vehicles.
+                                            </li>
+                                            <li> In addition, safety features such as reverse battery voltage
+                                                protection, over-current protection and soft kill for
+                                                thrusters are also added.
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">NAVIGATION <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> The Navigator module’s algorithms were improved to break down set
+                                                points to minimize the time taken in transition from
+                                                one point to another with an auto timeout being implemented by
+                                                estimating the time for transition.
+
+
+                                            </li>
+                                            <li> The DAQ system used
+                                                to collect acoustics data from the hydrophones was earlier run on a
+                                                virtual machine running Windows (as that is the only
+                                                OS supported by the manufacturer).</li>
+                                            <li> It was reverse engineered in Matsya 5 to enable us to run it natively
+                                                on Ubuntu, thus
+                                                improving speed and eliminating the stability issues arising from VM.
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+
+
+                            </ul>
+
+                        </div>
+                    </section>
+                </div>
+                <div class="tab-pane" id="tab-6">
+                    <div class="row">
+                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                            <h3>Matsya 6</h3>
+                            <p class="fst-italic">
+                                The sixth variant of Matsya saw major design changes to address pressing issues such as
+                                heating leading
+                                to multiple
+                                electrical failures and reducing the size of the vehicle in general for better control.
+                            </p>
+                            <table id="customers">
+                                <tr>
+                                    <th style="background-color: rgb(68, 160, 235); color: white;"><b>Specifications</b>
+                                    </th>
+                                    <th style="background-color: rgb(68, 160, 235); color: white;"> <b>Vehicle
+                                            Details</b> </th>
+
+
+                                </tr>
+                                <tr>
+                                    <td>DoF</td>
+                                    <td>6 (Roll, Pitch, Yaw, Surge, Sway, Heave)</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Weight </td>
+                                    <td>37 kgs</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Dimensions </td>
+                                    <td>1051mm x 442mm x 609mm</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Endurance </td>
+                                    <td>240 Minutes</td>
+
+                                <tr>
+                                    <td>Depth Rating </td>
+                                    <td>150 feet</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Pressure Vessels </td>
+                                    <td>Separate hulls for Electronics, Batteries, Cameras, IMU and DVL.</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Actuation System</td>
+                                    <td>Assembly of eight thrusters, Markers, Gripper and Torpedos</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Power </td>
+                                    <td>Lithium Polymer Batteries</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Feedback Control </td>
+                                    <td>Visual, Inertial, Pressure, DVL and Acoustic</td>
+
+                                </tr>
+
+
+                            </table>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                            <div class="sketchfab-embed-wrapper">
+                                <iframe title="coloured" frameborder="0" allowfullscreen mozallowfullscreen="true"
+                                    webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                    xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                    web-share width="100%" height="480px"
+                                    src="https://sketchfab.com/models/0886f5da859c4cd0893dcab9a1e50ab9/embed">
+                                </iframe>
+                                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                                    <a href="https://sketchfab.com/3d-models/coloured-0886f5da859c4cd0893dcab9a1e50ab9?utm_medium=embed&utm_campaign=share-popup&utm_content=0886f5da859c4cd0893dcab9a1e50ab9"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;">
+                                    </a>
+                                    <a href="https://sketchfab.com/s.aditya6316?utm_medium=embed&utm_campaign=share-popup&utm_content=0886f5da859c4cd0893dcab9a1e50ab9"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;">
+                                    </a>
+                                </p>
+                            </div>
+                            <a href="images/TDRs/Matsya6.pdf" class="get-started-btn" target="_blank">Technical Design
+                                Report</a>
+                        </div>
+                    </div>
+
+                    <section id="faq" class="faq">
+                        <div class="container" data-aos="fade-up">
+
+                            <div class="section-title">
+                                <h2>SPECS</h2>
+                            </div>
+
+                            <ul class="faq-list accordion" data-aos="fade-up">
+
+                                <li>
+                                    <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">DESIGN <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> The bringing of PWM signal wires through a separate penetrator reduced
+                                                interference and attenuation significantly.
+
+                                            </li>
+                                            <li> The
+                                                latest variant of Matsya has cylindrical battery hulls, as opposed to
+                                                cuboidal hulls used in the previous iteration.</li>
+                                            <li> This particular change helped reduce disassembly time considerably,
+                                                thus increasing the ease of removing the batteries
+                                                for recharging.</li>
+                                            <li> A dome structure has been added on the front-facing plane of the hull
+                                                to reduce drag.
+                                            </li>
+                                            <li>
+                                                Heavy parts bearing
+                                                regions have been designed such that the load-bearing capacity in the
+                                                vertical direction remains high.</li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">THRUSTERS <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> The vehicle has 8 thrusters, which makes movement in all the six DOF
+                                                (Degrees Of Freedom) achievable.
+
+                                            </li>
+                                            <li> It also has other
+                                                manipulation systems, namely the arm, the gripper, torpedo shooter, and
+                                                the marker dropper (which has a reloading
+                                                capacity).</li>
+                                            <li> The latter two are actuated using high-pressure pneumatic actuators.
+                                            </li>
+                                            <li>The 1 DOF arm's split-finger gripper is
+                                                also actuated by a pneumatic actuator.
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">DEBUG BOARD <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> It has been installed for easier debugging and management of the
+                                                electrical subsystem of the machine.
+                                            </li>
+                                            <li> The Debug Board’s
+                                                job is to capture data from various parts of the machine, like the
+                                                electrical stack, PWM Channels, thruster current
+                                                values from the ESCs, and the motherboard itself.</li>
+                                            <li> The Debug Board sends data to the motherboard for any real-time
+                                                decisions that would need to be made and stores it in the SD card for
+                                                future analysis. </li>
+                                            <li>It also displays the data on an
+                                                LCD screen for easier debugging.
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">SOFTWARE <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> Developed a framework for Dynamic Modelling of the vehicle for further
+                                                development in controls, localization, and
+                                                simulation.
+                                            </li>
+                                            <li> We also implemented a MIMO Linear Quadratic Regulator (LQR) Controller
+                                                to replace our 6 SISO PID
+                                                Controllers.</li>
+                                            <li> Mission planner was also simplified to take minimal parameters just
+                                                before deployment, making it very
+                                                competition-friendly.</li>
+                                            <li>The decision-making process is almost linear, and it inherits
+                                                task-grouping from the previous
+                                                design.
+                                            </li>
+                                            <li>A New Artificial
+                                                Potential Field based Path Planner was developed for obstacle avoidance.
+                                            </li>
+                                            <li>A plugin was developed for Gazebo to automatically detect tasks in the
+                                                camera frame and draw bounding boxes around them
+                                                for ML training. This labelling process was previously done manually and
+                                                took a long time due to the size of the dataset
+                                                (~1000 images per task).
+
+                                            </li>
+
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">NEW FEATURES<i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> A new hull, the ESC Hull has been designed exclusively for ESCs
+                                                (Electronic Speed Controllers) that would house all the
+                                                ESCs along with the related circuitry.
+                                            </li>
+                                            <li> A power distribution box to avoid wire clutter was added along with a
+                                                mechanical latch relay which implements Hard-kill
+                                                by physically disconnecting the batteries should there be any failures.
+                                            </li>
+                                            <li> Real-time current and PWM monitoring is done for
+                                                the thrusters so that any issues can easily be resolved and debugged.
+                                            </li>
+
+
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </section>
                 </div>
 
+                <!-- Matsya 7 -->
+
+                <div class="tab-pane active show" id="tab-7">
+                    <div class="row">
+                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                            <h3>Matsya 7</h3>
+                            <p class="fst-italic">
+                                The latest variant of Matsya introduced key improvements such as the OakD stereo camera
+                                for precise depth sensing, a symmetrical thruster layout for easier tuning, a monohull
+                                design for better accessibility, and carbon fibre handles for improved handling.
+
+                            </p>
+                            <table id="customers">
+                                <tr>
+                                    <th style="background-color: rgb(68, 160, 235); color: white;"><b>Specifications</b>
+                                    </th>
+                                    <th style="background-color: rgb(68, 160, 235); color: white;"> <b>Vehicle
+                                            Details</b> </th>
+
+
+                                </tr>
+                                <tr>
+                                    <td>DoF</td>
+                                    <td>6 (Roll, Pitch, Yaw, Surge, Sway, Heave)</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Weight </td>
+                                    <td>42 kgs</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Dimensions </td>
+                                    <td>900mm x 650mm x 400mm </td>
+
+                                </tr>
+                                <tr>
+                                    <td>Endurance </td>
+                                    <td>180 Minutes</td>
+
+                                <tr>
+                                    <td>Depth Rating </td>
+                                    <td>180 feet</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Pressure Vessels </td>
+                                    <td>Monohull design, housing on board computer, ESCs, Cameras, Acoustic Data
+                                        Acquisition Unit </td>
+
+                                </tr>
+                                <tr>
+                                    <td>Actuation System</td>
+                                    <td>Eight thrusters, Electromechanical Marker Dropper, Torpedo Shooter, Gripper</td>
+
+                                </tr>
+                                <tr>
+                                    <td>Power </td>
+                                    <td>2 LiPo Batteries </td>
+
+                                </tr>
+                                <tr>
+                                    <td>Feedback Control </td>
+                                    <td>OakD (sterevision camera), DVL, IMU (Inertial Measurement Unit), Depth Sensor
+                                    </td>
+
+                                </tr>
+
+
+                            </table>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="200">
+                            <div class="sketchfab-embed-wrapper">
+                                <iframe title="coloured" frameborder="0" allowfullscreen mozallowfullscreen="true"
+                                    webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
+                                    xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered
+                                    web-share width="100%" height="480px"
+                                    src="https://sketchfab.com/models/0886f5da859c4cd0893dcab9a1e50ab9/embed">
+                                </iframe>
+                                <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+                                    <a href="https://sketchfab.com/3d-models/coloured-0886f5da859c4cd0893dcab9a1e50ab9?utm_medium=embed&utm_campaign=share-popup&utm_content=0886f5da859c4cd0893dcab9a1e50ab9"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;">
+                                    </a>
+                                    <a href="https://sketchfab.com/s.aditya6316?utm_medium=embed&utm_campaign=share-popup&utm_content=0886f5da859c4cd0893dcab9a1e50ab9"
+                                        target="_blank" style="font-weight: bold; color: #1CAAD9;">
+                                    </a>
+                                </p>
+                            </div>
+                            <a href="images/TDRs/Matsya6.pdf" class="get-started-btn" target="_blank">Technical Design
+                                Report</a>
+                        </div>
+                    </div>
+
+                    <section id="faq" class="faq">
+                        <div class="container" data-aos="fade-up">
+
+                            <div class="section-title">
+                                <h2>SPECS</h2>
+                            </div>
+
+                            <ul class="faq-list accordion" data-aos="fade-up">
+
+                                <li>
+                                    <a data-bs-toggle="collapse" class="collapsed" data-bs-target="#faq1">MONOHULL <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                                        <p>After two iterations of a modular hull design, we're shifting back to a
+                                            monohull this year. <br><br>
+                                        <ol style="list-style-type:disc; line-height:30% ;">
+                                            <li>Easier and faster stack assembly</li>
+                                            <li> Greater accessibility to all components, especially the cameras</li>
+                                            <li> Moved to wetlink penetrators, a more robust solution than our in-house
+                                                epoxied ones</li>
+                                            <li>Continuing to use our in-house debug connector, 60x cheaper than it's
+                                                industrial equivalent</li>
+                                            <li>Adding fans for thermal management of the cameras</li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq2" class="collapsed">FRAME<i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li>Hollow carbon fibre rods provide buoyancy and make the vehicle easier to
+                                                handle than ever before
+                                            </li>
+                                            <li>Custom thruster mounts and shrouds providing greater structural
+                                                integrity and protection to the thrusters
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq4" class="collapsed">SINGLE-BOARD
+                                        STACK <i class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li>Shifted from AVR Atmega to RPi Pico. It handles power distribution and
+                                                toggling to the onboard computer and sensors, actuator control with
+                                                sensing feedback and failsafes, and data logging.
+                                            </li>
+                                            <li>All control and localisation (input, output) data is channeled through a
+                                                single USB connection, over a custom communication protocol we set up
+                                                between the onboard computer and the Pico. </li>
+                                            <li>This board monitors voltage and current on main power lines to detect
+                                                low voltage and early signs of component failure. It also tracks
+                                                actuator current to protect high-torque servos from stall conditions and
+                                                verify successful gripping.</li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq5" class="collapsed">ACTUATORS <i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li> The torpedo shooter was redesigned for easier operation, allowing
+                                                torpedoes to be loaded in a 'disengaged' state and engaged by a servo at
+                                                the start of each run.
+                                            </li>
+                                            <li>The moving part of the marker dropper was changed such that the
+                                                mechanism is now robust to stall conditions while actuating.
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <a data-bs-toggle="collapse" data-bs-target="#faq6" class="collapsed">SOFTWARE<i
+                                            class="bx bx-chevron-down icon-show"></i><i
+                                            class="bx bx-x icon-close"></i></a>
+                                    <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                                        <p>
+                                        <ol style="list-style-type:disc;">
+                                            <li>Shifted to an OakD camera which uses stereovision to provide depth
+                                                information in an image.
+                                            </li>
+                                            <li>The camera is also able to run image processing with YOLO models, easing
+                                                the processing load on the onboard computer.
+                                            </li>
+                                            <li>A custom GUI has been developedthis year to accelerate software testing
+                                                and debugging, featuring an ROV mode, low latency camera feed,
+                                                pose data and a map.
+                                            </li>
+                                        </ol>
+                                        </p>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </section>
+                </div>
             </div>
-        </section><!-- End Tabs Section -->
 
-        <!-- ======= Frequently Asked Questions Section ======= -->
-        <!-- End Frequently Asked Questions Section -->
-        
-        
-        </main><!-- End #main -->
-        
-        <!-- ======= Footer ======= -->
-        <div id="footer-placeholder"></div>
+        </div>
+    </section><!-- End Tabs Section -->
 
-<script>
-  fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading navbar:', error));
-</script><!-- End Footer -->
-        
-        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-                class="bi bi-arrow-up-short"></i></a>
-        
-        <!-- Vendor JS Files -->
-        <script src="assets/vendor/aos/aos.js"></script>
-        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-        <script src="assets/vendor/php-email-form/validate.js"></script>
-        <script src="assets/vendor/purecounter/purecounter.js"></script>
-        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-        
-        <!-- Template Main JS File -->
-        <script src="assets/js/main.js"></script>
-        
-        </body>
-        
-        </html>
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <!-- End Frequently Asked Questions Section -->
+
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
