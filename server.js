@@ -10,6 +10,12 @@ app.use((req, res, next) => {
     res.set('Content-Security-Policy', 
         "frame-src https://www.youtube.com https://www.youtube-nocookie.com https://sketchfab.com https://*.sketchfab.com;"
     );
+
+    res.on('finish', () => {
+        console.log('Headers sent for', req.url);
+        console.log(res.getHeaders());
+    });
+
     next();
 });
 
