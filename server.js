@@ -1,29 +1,33 @@
-const express=require("express");
-const path=require("path");
+const express = require("express");
+const path = require("path");
 
-const app=express()
+const app = express();
 
-// Add security headers (CSP + COEP + COOP)
-app.use((req, res, next) => {
+// app.use((req, res, next) => {
+//   res.set('Cross-Origin-Embedder-Policy', 'require-corp');
+//   res.set('Cross-Origin-Opener-Policy', 'same-origin');
+//   res.set('Content-Security-Policy',
+//     "frame-src https://www.youtube.com https://www.youtube-nocookie.com https://sketchfab.com https://*.sketchfab.com;"
+//   );
+
+//   res.on('finish', () => {
+//     console.log('Headers for:', req.url);
+//     console.log(res.getHeaders());
+//   });
+
+//   next();
+// });
+
+app.use(express.static(path.join(__dirname, 'public'), {
+  setHeaders: (res, path, stat) => {
     res.set('Cross-Origin-Embedder-Policy', 'require-corp');
     res.set('Cross-Origin-Opener-Policy', 'same-origin');
-    res.set('Content-Security-Policy', 
-        "frame-src https://www.youtube.com https://www.youtube-nocookie.com https://sketchfab.com https://*.sketchfab.com;"
+    res.set('Content-Security-Policy',
+      "frame-src https://www.youtube.com https://www.youtube-nocookie.com https://sketchfab.com https://*.sketchfab.com;"
     );
+  }
+}));
 
-    res.on('finish', () => {
-        console.log('Headers sent for', req.url);
-        console.log(res.getHeaders());
-    });
-
-    next();
+app.listen(3000, () => {
+  console.log("Server is running on port 3000");
 });
-
-// Serve static files
-app.use(express.static(path.join(__dirname, 'public')));
-app.use("/game",express.static(path.join(__dirname, 'game')));
-
-// Start server
-app.listen(3000, ()=>{
-    console.log("Sever is running")
-})
