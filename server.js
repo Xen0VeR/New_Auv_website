@@ -28,7 +28,7 @@ app.use(
         "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://use.fontawesome.com; " +
         "font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; " +
         "frame-src https://sketchfab.com https://*.sketchfab.com https://www.youtube.com https://www.youtube-nocookie.com; " +
-        "connect-src 'self' http://localhost:3000 https://sketchfab.com https://*.sketchfab.com; " +
+        "connect-src 'self' https://auv-iitb.org https://sketchfab.com https://*.sketchfab.com; " +
         "img-src 'self' https://sketchfab.com https://*.sketchfab.com data:;"
       );
       // res.set('Cross-Origin-Embedder-Policy', 'require-corp');
