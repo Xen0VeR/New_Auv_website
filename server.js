@@ -20,11 +20,18 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'public'), {
   setHeaders: (res, path, stat) => {
-    res.set('Cross-Origin-Embedder-Policy', 'require-corp');
-    res.set('Cross-Origin-Opener-Policy', 'same-origin');
+    res.set('Access-Control-Allow-Origin', '*');
     res.set('Content-Security-Policy',
-      "frame-src https://www.youtube.com https://www.youtube-nocookie.com https://sketchfab.com https://*.sketchfab.com;"
+      "default-src 'self'; " +
+      "script-src 'self' https://static.sketchfab.com https://sketchfab.com; " +
+      "frame-src https://sketchfab.com https://*.sketchfab.com; " +
+      "connect-src https://sketchfab.com https://*.sketchfab.com; " +
+      "img-src 'self' https://sketchfab.com https://*.sketchfab.com data:; " +
+      "style-src 'self' 'unsafe-inline';"
     );
+
+    // res.set('Cross-Origin-Embedder-Policy', 'require-corp');
+    // res.set('Cross-Origin-Opener-Policy', 'same-origin');
   }
 }));
 
