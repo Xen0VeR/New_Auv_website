@@ -9,7 +9,8 @@
     <meta content="" name="description">
     <meta content="" name="keywords">
 
-    <meta http-equiv="Content-Security-Policy" content="frame-src https://www.youtube.com https://www.youtube-nocookie.com;">
+    <meta http-equiv="Content-Security-Policy"
+        content="frame-src https://www.youtube.com https://www.youtube-nocookie.com;">
 
     <!-- Favicons -->
     <link href="images/logo.jfif" rel="icon">
@@ -17,7 +18,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -51,14 +54,6 @@
             }
         }
     </style>
-
-
-    <!-- =======================================================
-  * Template Name: Presento - v3.3.0
-  * Template URL: https://bootstrapmade.com/presento-bootstrap-corporate-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -66,12 +61,10 @@
     <div id="navbar-placeholder"></div>
 
     <script>
-        fetch('navbar.html')
+        fetch('/navbar.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('navbar-placeholder').innerHTML = data;
-
-
 
                 const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
                 const navbar = document.querySelector("#navbar");
@@ -112,7 +105,6 @@
             })
             .catch(error => console.error('Error loading navbar:', error));
     </script>
-
     <!-- End Header -->
 
     <section id="about-us" class="d-flex align-items-center"
@@ -127,7 +119,6 @@
                             <span class="btn-txt"> Dive In</a></span>
                     </button> -->
                 </div>
-
             </div>
         </div>
     </section>
@@ -139,15 +130,12 @@
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <p>
                         AUV-IITB comprises 55+ highly enthusiastic and hard-working technocrats on underwater robotics
-                        ranging from freshmen
-                        to driven senior undergraduates and experienced post-graduates spanning various branches of
-                        engineering at the Indian
-                        Institute of Technology Bombay. We work on Matsya, a series of Autonomous Underwater Vehicles
-                        (AUVs) to deliver a research platform
-                        in underwater robotics and promote autonomous systems. Significant architectural changes have
-                        been made to the subsystems by designing
-                        them to handle tasks in real-time. Some of the key features include improved heat dissipation,
-                        debug board, competition friendly mission planner.
+                        ranging from freshmen to driven senior undergraduates and experienced post-graduates spanning
+                        various branches of engineering at the Indian Institute of Technology Bombay. We work on Matsya,
+                        a series of Autonomous Underwater Vehicles (AUVs) to deliver a research platform in underwater
+                        robotics and promote autonomous systems. Significant architectural changes have been made to the
+                        subsystems by designing them to handle tasks in real-time. Some of the key features include
+                        improved heat dissipation, debug board, competition friendly mission planner.
                     </p> <br>
                 </div>
                 <!-- <div class="col-lg-6 col-md-6 col-sm-12">
@@ -158,14 +146,17 @@
                     </iframe>
                 </div> -->
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Kr68oZ-BFoU"
+                    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Kr68oZ-BFoU"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen>
+                    </iframe> -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Kr68oZ-BFoU?si=dOpsfvmidr-tayI_"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                     </iframe>
-
                 </div>
-
             </div>
             <!-- content ends -->
         </div>
@@ -625,7 +616,7 @@
     <div id="footer-placeholder"></div>
 
     <script>
-        fetch('footer.html')
+        fetch('/footer.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('footer-placeholder').innerHTML = data;
