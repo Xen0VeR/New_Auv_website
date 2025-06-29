@@ -58,9 +58,11 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+        console.log("Live JS ran");
         fetch('/navbar.html')
             .then(response => response.text())
             .then(data => {
+                console.log("Navbar loaded");
                 document.getElementById('navbar-placeholder').innerHTML = data;
 
                 const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
