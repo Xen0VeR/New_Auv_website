@@ -29,9 +29,8 @@ app.use(express.static(path.join(__dirname, 'public'), {
       "img-src 'self' https://sketchfab.com https://*.sketchfab.com data:; " +
       "style-src 'self' 'unsafe-inline';"
     );
-
-    // res.set('Cross-Origin-Embedder-Policy', 'require-corp');
-    // res.set('Cross-Origin-Opener-Policy', 'same-origin');
+    res.set('Cross-Origin-Embedder-Policy', 'require-corp');
+    res.set('Cross-Origin-Opener-Policy', 'same-origin');
   }
 }));
 
