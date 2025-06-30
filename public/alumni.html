@@ -67,10 +67,10 @@
       .then(response => response.text())
       .then(data => {
         document.getElementById('navbar-placeholder').innerHTML = data;
-  
+
         const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
         const navbar = document.querySelector("#navbar");
-  
+
         if (mobileNavToggle && navbar) {
           mobileNavToggle.addEventListener("click", function () {
             navbar.classList.toggle("navbar-mobile");
@@ -419,17 +419,64 @@
   </section> -->
   <!-- End of Testimonials Section -->
 
+  <!--Alumni Section-->
+  <!-- Same Code as that of sponsors so section id has not been changed -->
+
+  <section id=sponsors>
+    <!-- <br>       -->
+    <div class="container" data-aos="zoom-in">
+      <div class="section-title">
+        <h2>Our Alumni Network</h2>
+      </div>
+
+      <section id="clients" class="clients" style="overflow: visible;">
+        <!-- Row 1: Left to Right -->
+        <div class="carousel-container" style = "padding = 0px !important">
+          <div class="carousel scroll-left">
+            <div class="carousel-track">
+              <div class="card-clients"><img src="images/Alumni/adobe.png" alt="Adobe"></div>
+              <div class="card-clients"><img src="images/Alumni/georgia.png" alt="Georgia Institute of Technology"></div>
+              <div class="card-clients"><img src="images/Alumni/goldmansachs.png" alt="Goldman Sachs"></div>
+              <div class="card-clients"><img src="images/Alumni/honda.png" alt="Honda"></div>
+              <div class="card-clients"><img src="images/Alumni/imc.png" alt="IMC Trading"></div>
+              <div class="card-clients"><img src="images/Alumni/jaguar.png" alt="Jaguar"></div>
+              <div class="card-clients"><img src="images/Alumni/landrover.png" alt="Land Rover"></div>
+              <div class="card-clients"><img src="images/Alumni/microsoft.png" alt="Microsoft"></div>
+              <div class="card-clients"><img src="images/Alumni/mit.png" alt="Masachusetts Institute of Technology"></div>
+              <div class="card-clients"><img src="images/Alumni/morganstanley.png" alt="Morgan Stanley"></div>
+              <div class="card-clients"><img src="images/Alumni/nvidia.png" alt="Nvidia"></div>
+              <div class="card-clients"><img src="images/Alumni/optiver.png" alt="Optiver"></div>
+
+              <div class="card-clients"><img src="images/Alumni/adobe.png" alt="Adobe"></div>
+              <div class="card-clients"><img src="images/Alumni/georgia.png" alt="Georgia Institute of Technology"></div>
+              <div class="card-clients"><img src="images/Alumni/goldmansachs.png" alt="Goldman Sachs"></div>
+              <div class="card-clients"><img src="images/Alumni/honda.png" alt="Honda"></div>
+              <div class="card-clients"><img src="images/Alumni/imc.png" alt="IMC Trading"></div>
+              <div class="card-clients"><img src="images/Alumni/jaguar.png" alt="Jaguar"></div>
+              <div class="card-clients"><img src="images/Alumni/landrover.png" alt="Land Rover"></div>
+              <div class="card-clients"><img src="images/Alumni/microsoft.png" alt="Microsoft"></div>
+              <div class="card-clients"><img src="images/Alumni/mit.png" alt="Masachusetts Institute of Technology"></div>
+              <div class="card-clients"><img src="images/Alumni/morganstanley.png" alt="Morgan Stanley"></div>
+              <div class="card-clients"><img src="images/Alumni/nvidia.png" alt="Nvidia"></div>
+              <div class="card-clients"><img src="images/Alumni/optiver.png" alt="Optiver"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
   <!-- ======= Footer ======= -->
   <div id="footer-placeholder"></div>
 
-<script>
-  fetch('/footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading navbar:', error));
-</script><!-- End Footer -->
+  <script>
+    fetch('/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script><!-- End Footer -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
