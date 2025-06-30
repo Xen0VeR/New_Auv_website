@@ -186,7 +186,7 @@ h4 {
 
 .main-timeline .timeline {
   display: inline-block;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   position: relative
 }
 
