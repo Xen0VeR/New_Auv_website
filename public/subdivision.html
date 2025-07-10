@@ -43,24 +43,24 @@
     <!-- ======= Header ======= -->
     <div id="navbar-placeholder"></div>
 
-<script>
-    fetch('/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
-  
-        const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
-        const navbar = document.querySelector("#navbar");
-  
-        if (mobileNavToggle && navbar) {
-          mobileNavToggle.addEventListener("click", function () {
-            navbar.classList.toggle("navbar-mobile");
-            this.classList.toggle("bi-x");
-          });
-        }
-      })
-      .catch(error => console.error('Error loading navbar:', error));
-  </script>
+    <script>
+        fetch('/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-placeholder').innerHTML = data;
+
+                const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
+                const navbar = document.querySelector("#navbar");
+
+                if (mobileNavToggle && navbar) {
+                    mobileNavToggle.addEventListener("click", function () {
+                        navbar.classList.toggle("navbar-mobile");
+                        this.classList.toggle("bi-x");
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script>
     <!-- End Header -->
 
 
@@ -98,7 +98,7 @@
             <div class="tab-content">
                 <div class="tab-pane active show" id="tab-1">
                     <div class="row">
-                        <div  class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                        <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                             <p>
                                 The <b>Mechanical Subdivision</b> works tirelessly to bring in every possible physical
                                 advancement in the vehicle. The main interests of the subdivision include planning,
@@ -118,7 +118,8 @@
 
                             </p>
                         </div>
-                        <div style="padding-left:100px ;" class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                        <div style="padding-left:100px ;" class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0"
+                            data-aos="fade-up" data-aos-delay="100">
                             <img src="assets/img/Main_hull.jpg" class="img-fluid" alt="">
                         </div>
                     </div>
@@ -160,11 +161,12 @@
                 <div class="tab-pane" id="tab-2">
                     <div class="row">
                         <p>
-                            The <b>Electrical Subdivision</b>  is the link between the mechanical and software subdivisions,
+                            The <b>Electrical Subdivision</b> is the link between the mechanical and software
+                            subdivisions,
                             responsible for designing, manufacturing and managing the power requirements and controlling
                             the thrusters and actuator systems with the help of customized PCBs.
                         </p>
-                        <div style="padding-top:20px ;"  class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                        <div style="padding-top:20px ;" class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                             <h4><b>Designing and Manufacturing</b></h4>
                             <p class="fst-italic">
                                 A schematic of the board is prepared from the pre-designed circuit diagram, after which
@@ -182,7 +184,7 @@
                             </p>
                         </div>
                         <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
-                            <img  src="assets/img/elec1.png" class="img-fluid" alt="">
+                            <img src="assets/img/elec1.png" class="img-fluid" alt="">
                         </div>
                     </div>
                     <div class="row">
@@ -190,7 +192,8 @@
                             data-aos-delay="100">
                             <img src="assets/img/elec2.png" class="img-fluid" alt="">
                         </div>
-                        <div style="margin-top:60px ;" class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
+                        <div style="margin-top:60px ;" class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left"
+                            data-aos-delay="100">
                             <h4 style="padding-left:50px;"><b>Task and Testing</b></h4>
                             <p style="padding-left:50px;" class="fst-italic">
                                 During the run, the dropping of markers and torpedo shooting is accomplished by us. With
@@ -211,47 +214,45 @@
                             data-aos-delay="100">
                             <img style="margin-top:40px ;" src="assets/img/soft2.png" class="img-fluid" alt="">
                         </div>
-                        <div style="margin-bottom:50px;" class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
+                        <div style="margin-bottom:50px;" class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left"
+                            data-aos-delay="100">
                             <p class="fst-italic">
-                                The <b>Software Subdivision</b>  is responsible for making Matsya Autonomous! The software stack
-                                is written majorly in C,
-                                C++ and Python. The main packages in the software stack include drivers, localisation,
-                                controller, navigator, simulator,
-                                state machine, mission planner, vision and acoustics, all of which have been written
-                                from scratch with the help of
-                                libraries such as <b>Robot Operating System</b> (ROS) for inter-process communication
-                                and OpenCV for image processing.
-                                All these packages combined provide autonomous capabilities to the vehicle, making it
-                                capable of taking its own decisions. The overall architecture of the stack is <b>highly
-                                    object-oriented</b> and majorly <b>independent of the vehicles</b>. The code
-                                conforms to the LLVM standard and PEP 8 style guide, supported by inbuilt tests and
-                                extensive documentation. The tasks and environment are simulated in <b>Gazebo</b> to
-                                test any code we write. Post testing in the simulator, another important task for the
-                                subdivision is real-life testing, where the code is physically tested on the vehicle
-                                in-water. Thus, the main aim of the software subdivision is to write software that is
-                                generic and error-free, in order to get the vehicles working at their full potential.
+                                The <b>Software Subdivision</b> is responsible for making Matsya Autonomous! The
+                                software stack is written majorly in<b>Python</b>. The main packages in the software
+                                stack
+                                include drivers, localisation, controller, navigator, mission control, vision and
+                                acoustics, all of which have been written from scratch with the help of libraries such
+                                as <b>Robot Operating System 2(ROS2)</b> for inter-process communication and libraries
+                                like
+                                OpenCV, or ML models like <b>YOLOv8</b> for image processing. All these packages
+                                combined
+                                provide autonomous capabilities to the vehicle, making it capable of taking its own
+                                decisions. The overall architecture of the stack is highly object-oriented and majorly
+                                independent of the vehicles. Another important task for the subdivision is real-life
+                                testing, where the code is physically tested on the vehicle in-water. Thus, the main aim
+                                of the software subdivision is to write software that is generic and error-free, in
+                                order to get the vehicles working at their full potential.
+
                             </p>
                         </div>
                         <div style="padding-top:20px ;" class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                             <h4><b>Controller and Navigator</b></h4>
                             <p class="fst-italic">
                                 This module is responsible for autonomous control of the vehicle's motion. The
-                                Controller is responsible for the vehicle achieving
-                                given positions and velocities in all <b>6 Degrees Of Freedom</b> using feedback from
-                                localization. The controller uses a <b>PID</b>
-                                Controller (Proportional-Integral-Derivative) and an allocator which divides the forces
-                                among our thrusters. We are currently working
-                                on more advanced Optimal Control Laws and Improved Modelling of Vehicle’s Dynamics.
-                                The Navigator helps our vehicle traverse the pool via complex paths. It features an
-                                <b>Artificial Potential Fields</b> Based Obstacle
-                                Avoidance and Trajectory Following Algorithms. It is responsible for commanding the
-                                required positions and velocities from the controller.
-                                This module allows our vehicle to navigate complex underwater environments.
+                                Controller is responsible for the vehicle achieving given positions and velocities in
+                                all <b>6 Degrees Of Freedom</b> using feedback from localization. The Controller
+                                consists of a
+                                <b> PID controller</b> (Proportional-Integral-Derivative) and a matrix allocator to
+                                divide the
+                                forces among our thrusters. The Navigator allows the vehicle to traverse complex paths
+                                given by Mission Control by breaking them down into simple setpoints that the controller
+                                can execute.
+
                             </p>
                         </div>
                         <div class="col-lg-6 order-1 order-lg-2 text-center"
                             class="embed-responsive embed-responsive-1by1">
-                            <iframe style="margin-bottom:50px;"style="margin-top:50px;" width="450" height="315"
+                            <iframe style="margin-bottom:50px;" style="margin-top:50px;" width="450" height="315"
                                 src="https://www.youtube.com/embed/YcIayyNmwTc">
                             </iframe>
                         </div>
@@ -265,35 +266,27 @@
                             <h4><b>Localization And Perception</b></h4>
                             <p class="fst-italic">
                                 Our vehicle relies heavily on knowledge of its current location to be able to control
-                                itself , find underwater tasks and make autonomous
-                                decisions. The Localization module achieves this by combining data from our sensors to
-                                get a good estimate of localization. We are currently
-                                working on <b>sensor fusion</b> algorithms that can combine sensor data with our
-                                knowledge of the vehicle's dynamics for better estimation.
-                                Vehicle Autonomy requires that the vehicle is able to see and hear its environment and
-                                use that information to identify and locate key objects
-                                and tasks. We use both ML based <b>Yolo V3</b> and classical Computer Vision techniques
-                                to identify objects in the environment.
-                                A Time Difference Of Arrival (TDOA) based algorithm is applied on hydrophone data to
-                                locate underwater pingers.
+                                itself , find underwater tasks and make autonomous decisions. The vehicle must be aware
+                                of its pose and orientation at all times underwater, in order to find objects or tasks,
+                                and make autonomous decisions. The Localization module achieves this by combining data
+                                from our sensors to get a good estimate of localization. Vehicle Autonomy requires that
+                                the vehicle is able to see and hear its environment and use that information to identify
+                                and locate key objects and tasks. In 2025, we upgraded our stack by integrating the
+                                OAK-D, using its stereovision features for precise depth estimation, and offloading the
+                                YOLOv8 image processing onto the camera itself. A Time Difference Of Arrival (TDOA)
+                                based algorithm is applied on hydrophone data to locate underwater pingers.
+
                             </p>
                         </div>
                         <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                             <h4><b>Sensors</b></h4>
                             <p class="fst-italic">
                                 This module handles all communication with our sensors, namely the IMU, DVL, Pressure
-                                Sensors, Camera and Hydrophones. The main task of
-                                our custom serial and socket drivers is to read sensor data and pass it on to the
-                                localization and perception module. We have also developed
-                                an <b>in-house calibration software</b> for the IMU, so the drivers also occasionally
-                                write the calibration matrices to the sensors.
-                                After the force outputs to the 8 thrusters are calculated in the controller, they need
-                                to be sent to the thrusters. For this, they are
-                                first converted to Pulse-Width Modulation (PWM) Values, using a mapping calculated from
-                                the thruster manufacturer’s data. These PWM Values
-                                are then written onto the CAN Bus, which carries the signals to the individual
-                                thrusters. The CAN Bus also carries the actuation signal for
-                                the arm, sent directly by the mission planner.
+                                Sensors, Camera and Hydrophones. The main task of our custom serial and socket drivers
+                                is to read sensor data and pass it on to the localization and perception modules. We
+                                have also developed an in-house calibration software for the IMU, so the drivers also
+                                occasionally write the calibration matrices to the sensors.
+
                             </p>
                         </div>
                         <div style="margin-bottom:50px ;" class="col-lg-6 order-1 order-lg-2 text-center">
@@ -305,7 +298,8 @@
                             data-aos-delay="100">
                             <img src="assets/img/features-1.png" class="img-fluid" alt="">
                         </div>
-                        <div style="margin-top:50px;"class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
+                        <div style="margin-top:50px;" class="col-md-7 pt-4 aos-init aos-animate" data-aos="fade-left"
+                            data-aos-delay="100">
                             <h4><b>State and Mission Planner</b></h4>
                             <p class="fst-italic">
                                 State and Mission Planner collectively act as the brain of our vehicle. After receiving
@@ -325,7 +319,7 @@
                     <div class="row">
                         <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
                             <p class="fst-italic">
-                                The <b>Business Subdivision</b>  is the public face of the team, involved in aspects of
+                                The <b>Business Subdivision</b> is the public face of the team, involved in aspects of
                                 marketing, media, PR, web development, event management and design.
                                 With an aim to publicize AUV amongst prospective customers, investors, partners and
                                 stakeholders, we establish and maintain the team’s corporate relations.<br>
@@ -363,14 +357,14 @@
     <!-- ======= Footer ======= -->
     <div id="footer-placeholder"></div>
 
-<script>
-  fetch('/footer.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('footer-placeholder').innerHTML = data;
-    })
-    .catch(error => console.error('Error loading navbar:', error));
-</script><!-- End Footer -->
+    <script>
+        fetch('/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading navbar:', error));
+    </script><!-- End Footer -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>

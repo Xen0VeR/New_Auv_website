@@ -159,7 +159,7 @@
 
         <div class="col-lg-6 col-md-6 col-sm-12">
           <br><br>
-          <iframe width="560" height="305" src="https://www.youtube.com/embed/3WjeCINRMRI" title="YouTube video player"
+          <iframe width="560" height="305" src="https://www.youtube.com/embed/W-8da-KMKlc?si=RZMg-41vaCtUiL8S" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen style="margin-top: -2em; @media (maxwidth: 800px) {
@@ -186,7 +186,8 @@
       </nav>
 
       <section class="timeline__section">
-        <div class="wrapper">
+        <div class="timeline-scroll-wrapper">
+          <!-- <div class="wrapper"> -->
           <div class="milestone-item" id="1024">
             <h2 class="milestone">Oct, 2024</h2>
             <p>The side walls for Matsya 7 were custom-designed and manufactured to ensure optimal hydrodynamics and
@@ -196,7 +197,8 @@
 
           <div class="milestone-item" id="1124">
             <h2 class="milestone">Nov, 2024</h2>
-            <p>Matsya 6 successfully returned from RoboSub 2024 (RS24), marking the end of its competitive journey. The
+            <p>Matsya 6 successfully returned from RoboSub 2024 (RS24), marking the end of its competitive journey.
+              The
               vehicle’s performance and learnings now pave the way for Matsya 7’s development and future missions.</p>
           </div>
           <div class="milestone-item" id="1224">
@@ -215,11 +217,14 @@
             <h2 class="milestone">Jan, 2025</h2>
             <p>The new marker dropper assembly was manufactured with improved precision and reliability for underwater
               task execution.</p>
-            <p>Preliminary testing of the marker dropper confirmed that its deployment mechanism functions as intended.
+            <p>Preliminary testing of the marker dropper confirmed that its deployment mechanism functions as
+              intended.
             </p>
-            <p>The frames were anodized to enhance their resistance to corrosion and wear in harsh marine environments.
+            <p>The frames were anodized to enhance their resistance to corrosion and wear in harsh marine
+              environments.
             </p>
-            <p>The main hull was welded to provide a strong, watertight enclosure for the vehicle’s internal components.
+            <p>The main hull was welded to provide a strong, watertight enclosure for the vehicle’s internal
+              components.
             </p>
           </div>
 
@@ -241,10 +246,13 @@
               1-hour and 8-hour waterproof tests, after which it was officially declared waterproof.</p>
             <p>Preliminary electrical stack testing and assembly were completed, culminating in the first full
               electrical assembly and in-air testing during an intense overnight session.</p>
-            <p>A working solution for servo integration was successfully figured out through jugaad and experimentation.</p>
-            <p>All thruster shrouds were 3D printed and prepared for integration, contributing to safe and efficient propulsion.</p>
+            <p>A working solution for servo integration was successfully figured out through jugaad and
+              experimentation.</p>
+            <p>All thruster shrouds were 3D printed and prepared for integration, contributing to safe and efficient
+              propulsion.</p>
           </div>
         </div>
+        <!-- </div> -->
       </section>
     </article>
 
@@ -262,9 +270,17 @@
         link.addEventListener('click', () => {
           const year = link.getAttribute('data-year');
           const target = document.getElementById(year);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
+          
+            const scrollContainer = document.querySelector('.timeline-scroll-wrapper');
+            if (scrollContainer && target) {
+              scrollContainer.scrollTo({
+                top: target.offsetTop,
+                behavior: 'smooth'
+              });
+            }
+
+
+          
         });
       });
 

@@ -2834,16 +2834,16 @@ section {
   background: #e0e0e0;
 }
 
-.timeline__nav span.active {
+/* .timeline__nav span.active {
   background: #0077aa;
   color: white;
   font-weight: bold;
-}
+} */
 
 .timeline__section {
   flex: 3;
-  padding-left: 20px;
-  overflow-y: auto;
+  padding-top: revert-layer;
+  /* overflow-y: auto; */
   height: 90vh;
 }
 
@@ -2852,6 +2852,17 @@ section {
   flex-direction: column;
   gap: 40px;
 }
+
+.timeline-scroll-wrapper {
+  max-height: 500px;
+  /* adjust as needed */
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding-right: 10px;
+  /* optional, avoids scrollbar overlap */
+  position: relative;
+}
+
 
 .milestone-item {
   background: #fff;
